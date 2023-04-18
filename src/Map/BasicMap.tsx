@@ -6,7 +6,7 @@ import 'ol/ol.css';
 import { fromLonLat } from 'ol/proj';
 // import { fetchBoundaries, fetchJakarta } from './fetches';
 // import { villages } from '../data/villages-with-boundaries-600';
-import { villages } from '../data/villages-with-boundaries-265-20chunks.json';
+import { villages } from '../data/villages-with-boundaries-150.json';
 
 import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
@@ -60,17 +60,19 @@ export function BasicMap() {
     });
     layer.attachToMap(map);
 
-    const features = villages.map((village) => {
-      const coordinates = village.members
-        .filter((member) => member.role === 'outer')
-        .flatMap((member) =>
-          member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
-        );
+    const features = villages
+      .filter((village) => village.tags['is_in:province'] === 'DKI Jakarta')
+      .map((village) => {
+        const coordinates = village.members
+          .filter((member) => member.role === 'outer')
+          .flatMap((member) =>
+            member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
+          );
 
-      const polygon = new Polygon([coordinates]);
-      const feature = new Feature({ geometry: polygon });
-      return feature;
-    });
+        const polygon = new Polygon([coordinates]);
+        const feature = new Feature({ geometry: polygon });
+        return feature;
+      });
 
     // Create a vector source from the features
     const vectorSource = new VectorSource({
