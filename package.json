@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@turf/turf": "^6.5.0",
     "mapbox-gl": "1",
     "maplibre-gl": "2",
     "mobility-toolbox-js": "2.0.0-beta.78",

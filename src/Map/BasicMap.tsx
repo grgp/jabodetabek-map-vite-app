@@ -12,6 +12,8 @@ import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
 import { Style, Stroke, Fill } from 'ol/style';
 import { Polygon } from 'ol/geom';
+import GeoJSON from 'ol/format/GeoJSON.js';
+
 import TileLayer from 'ol/layer/Tile';
 import { OSM } from 'ol/source';
 import { kebonJerok } from '../data/kebonJeruk';
@@ -61,23 +63,38 @@ export function BasicMap() {
     });
     layer.attachToMap(map);
 
-    const features = villages
+    const geoJsonFeatures = villages
       .filter((village) => village.tags['is_in:province'] === 'DKI Jakarta')
       .map((village) => {
-        const coordinates = village.members
-          .filter((member) => member.role === 'outer')
-          .flatMap((member) =>
-            member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
-          );
+        const geometry = {
+          type: 'Polygon',
+          coordinates: [
+            village.members
+              .filter((member) => member.role === 'outer')
+              .flatMap((member) =>
+                member.geometry.map((point) => [point.lon, point.lat])
+              )
+          ]
+        };
 
-        const polygon = new Polygon([coordinates]);
-        const feature = new Feature({ geometry: polygon });
-        return feature;
+        return {
+          type: 'Feature',
+          geometry,
+          properties: village.tags
+        };
       });
 
-    // Create a vector source from the features
+    const geoJson = {
+      type: 'FeatureCollection',
+      features: geoJsonFeatures
+    };
+
+    // Create a vector source from the GeoJSON data
     const vectorSource = new VectorSource({
-      features
+      features: new GeoJSON().readFeatures(geoJson, {
+        dataProjection: 'EPSG:4326',
+        featureProjection: 'EPSG:3857'
+      })
     });
 
     // Create a vector layer with a simple stroke style
@@ -85,7 +102,7 @@ export function BasicMap() {
       source: vectorSource,
       style: new Style({
         stroke: new Stroke({
-          color: '#455fe1',
+          color: '#00a5b1',
           width: 1
         })
         // fill: new Fill({
