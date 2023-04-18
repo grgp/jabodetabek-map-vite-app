@@ -21,7 +21,7 @@ export function BasicMap() {
     });
 
     const basemapEnum = 'ArcGIS:Streets';
-    const apiKey = import.meta.env.ARC_GIS_API_KEY;
+    const apiKey = import.meta.env.VITE_ARC_GIS_API_KEY;
 
     const layer = new MaplibreLayer({
       url: `https://basemaps-api.arcgis.com/arcgis/rest/services/styles/${basemapEnum}?type=style&token=${apiKey}`
