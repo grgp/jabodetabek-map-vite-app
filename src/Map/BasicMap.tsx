@@ -4,8 +4,18 @@ import { Map, View } from 'ol';
 import { RealtimeLayer, MaplibreLayer } from 'mobility-toolbox-js/ol';
 import 'ol/ol.css';
 import { fromLonLat } from 'ol/proj';
+import { fetchBoundaries, fetchJakarta } from './fetches';
 
 export function BasicMap() {
+  useEffect(() => {
+    fetchBoundaries().then((data) => {
+      console.log('what is data?', data);
+    });
+    fetchJakarta().then((data) => {
+      console.log('what is jakarta data?', data);
+    });
+  });
+
   useEffect(() => {
     const longitude = 106.8256;
     const latitude = -6.2088;
@@ -29,7 +39,6 @@ export function BasicMap() {
 
     const layer = new MaplibreLayer({
       url: `https://basemaps-api.arcgis.com/arcgis/rest/services/styles/${basemapEnum}?type=style&token=${apiKey}`
-      // styleUrl: `https://basemaps-api.arcgis.com/arcgis/rest/services/styles/${basemapEnum}?type=style&token=${apiKey}`
     });
     layer.attachToMap(map);
 
