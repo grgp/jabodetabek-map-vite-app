@@ -1,20 +1,24 @@
 import React, { useEffect } from 'react';
 
 import { Map, View } from 'ol';
-import {
-  RealtimeLayer,
-  MaplibreLayer,
-  CopyrightControl
-} from 'mobility-toolbox-js/ol';
+import { RealtimeLayer, MaplibreLayer } from 'mobility-toolbox-js/ol';
 import 'ol/ol.css';
+import { fromLonLat } from 'ol/proj';
 
 export function BasicMap() {
   useEffect(() => {
+    const longitude = 106.8256;
+    const latitude = -6.2088;
+
+    const jktCoordinates = fromLonLat([longitude, latitude]);
+
+    console.log('what are jktCoordinates?', jktCoordinates);
+
     const map = new Map({
       target: 'map',
       view: new View({
-        center: [831634, 5933959],
-        zoom: 13,
+        center: jktCoordinates,
+        zoom: 11,
         minZoom: 5
       }),
       controls: []
@@ -42,6 +46,10 @@ export function BasicMap() {
     //     console.log(feature.getProperties());
     //   }
     // });
+
+    return () => {
+      map.setTarget(undefined);
+    };
   });
 
   return (
