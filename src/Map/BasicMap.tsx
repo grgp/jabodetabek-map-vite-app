@@ -51,7 +51,7 @@ export function BasicMap() {
     });
     layer.attachToMap(map);
 
-    const geoJsonFeatures = villages.map((village) => {
+    const geoJsonFeatures = villages.slice(0, 30).map((village) => {
       const geometry = {
         type: 'Polygon',
         coordinates: [
