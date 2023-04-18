@@ -8,13 +8,13 @@ import { fromLonLat } from 'ol/proj';
 // import { villages } from '../data/villages-with-boundaries-600';
 import { villages } from '../data/villages-with-boundaries-265-20chunks.json';
 
-import GeoJSON from 'ol/format/GeoJSON.js';
 import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
 import { Style, Stroke, Fill } from 'ol/style';
 import { Polygon } from 'ol/geom';
 import TileLayer from 'ol/layer/Tile';
 import { OSM } from 'ol/source';
+import { kebonJerok } from '../data/kebonJeruk';
 
 export function BasicMap() {
   // const [villages, setVillages] = React.useState([]);
@@ -45,9 +45,9 @@ export function BasicMap() {
       }),
 
       layers: [
-        new TileLayer({
-          source: new OSM()
-        })
+        // new TileLayer({
+        //   source: new OSM()
+        // })
       ],
       controls: []
     });
@@ -63,7 +63,7 @@ export function BasicMap() {
     const features = villages.map((village) => {
       const coordinates = village.members
         .filter((member) => member.role === 'outer')
-        .map((member) =>
+        .flatMap((member) =>
           member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
         );
 
@@ -82,17 +82,21 @@ export function BasicMap() {
       source: vectorSource,
       style: new Style({
         stroke: new Stroke({
-          color: 'blue',
-          width: 2
-        }),
-        fill: new Fill({
-          color: '#ff9090'
+          color: '#455fe1',
+          width: 1
         })
+        // fill: new Fill({
+        //   color: '#ff9090'
+        // })
       })
     });
 
     // Add the vector layer to the map
     map.addLayer(vectorLayer);
+
+    // function createKebonJerukPolygons() {
+    //   const polygon = new Polygon(kebonJerok.members.);
+    // }
 
     function createJakartaBoundingBoxLayer() {
       // Bounding box coordinates
@@ -131,7 +135,7 @@ export function BasicMap() {
       return vectorLayer;
     }
 
-    map.addLayer(createJakartaBoundingBoxLayer());
+    // map.addLayer(createJakartaBoundingBoxLayer());
 
     // const tracker = new RealtimeLayer({
     //   url: 'wss://api.geops.io/tracker-ws/v1/',
