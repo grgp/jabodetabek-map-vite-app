@@ -1,10 +1,10 @@
-import React, { ReactElement, useState } from 'react'
-import logo from './logo.svg'
-import viteLogo from './vite.svg'
-import tailwindLogo from './tailwind.svg'
+import React, { ReactElement, useState } from 'react';
+import logo from './logo.svg';
+import viteLogo from './vite.svg';
+import tailwindLogo from './tailwind.svg';
 
 function App(): ReactElement {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="p-20 border shadow-xl border-gray-50 rounded-xl">
@@ -64,7 +64,7 @@ function App(): ReactElement {
         </p>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

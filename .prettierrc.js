@@ -5,7 +5,6 @@ module.exports = {
   quoteProps: 'as-needed',
   trailingComma: 'none',
   bracketSpacing: true,
-  semi: false,
   useTabs: false,
   bracketSameLine: false,
   proseWrap: 'never'
