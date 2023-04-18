@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { Map, View } from 'ol';
+import { Feature, Map, View } from 'ol';
 import { RealtimeLayer, MaplibreLayer } from 'mobility-toolbox-js/ol';
 import 'ol/ol.css';
 import { fromLonLat } from 'ol/proj';
@@ -12,6 +12,9 @@ import GeoJSON from 'ol/format/GeoJSON.js';
 import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
 import { Style, Stroke, Fill } from 'ol/style';
+import { Polygon } from 'ol/geom';
+import TileLayer from 'ol/layer/Tile';
+import { OSM } from 'ol/source';
 
 export function BasicMap() {
   // const [villages, setVillages] = React.useState([]);
@@ -40,6 +43,12 @@ export function BasicMap() {
         zoom: 11,
         minZoom: 5
       }),
+
+      layers: [
+        new TileLayer({
+          source: new OSM()
+        })
+      ],
       controls: []
     });
 
@@ -51,40 +60,21 @@ export function BasicMap() {
     });
     layer.attachToMap(map);
 
-    const geoJsonFeatures = villages.slice(0, 30).map((village) => {
-      const geometry = {
-        type: 'Polygon',
-        coordinates: [
-          village.members
-            .filter((member) => member.role === 'outer')
-            .map((member) =>
-              member.geometry.map((point) => [point.lon, point.lat])
-            )
-        ]
-      };
+    const features = villages.map((village) => {
+      const coordinates = village.members
+        .filter((member) => member.role === 'outer')
+        .map((member) =>
+          member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
+        );
 
-      console.log('geometry', { geometry });
-
-      return {
-        type: 'Feature',
-        geometry,
-        properties: village.tags
-      };
+      const polygon = new Polygon([coordinates]);
+      const feature = new Feature({ geometry: polygon });
+      return feature;
     });
 
-    console.log('what are geojson features', { geoJsonFeatures });
-
-    const geoJson = {
-      type: 'FeatureCollection',
-      features: geoJsonFeatures
-    };
-
-    // Create a vector source from the GeoJSON data
+    // Create a vector source from the features
     const vectorSource = new VectorSource({
-      features: new GeoJSON().readFeatures(geoJson, {
-        dataProjection: 'EPSG:4326',
-        featureProjection: 'EPSG:4326'
-      })
+      features
     });
 
     // Create a vector layer with a simple stroke style
@@ -103,6 +93,45 @@ export function BasicMap() {
 
     // Add the vector layer to the map
     map.addLayer(vectorLayer);
+
+    function createJakartaBoundingBoxLayer() {
+      // Bounding box coordinates
+      const jakartaBbox = [-6.3744575, -6.071689, 106.677916, 106.997127];
+
+      // Convert the bounding box coordinates to map projection (EPSG:3857)
+      const bottomLeft = fromLonLat([jakartaBbox[2], jakartaBbox[0]]);
+      const topLeft = fromLonLat([jakartaBbox[2], jakartaBbox[1]]);
+      const topRight = fromLonLat([jakartaBbox[3], jakartaBbox[1]]);
+      const bottomRight = fromLonLat([jakartaBbox[3], jakartaBbox[0]]);
+
+      // Create a polygon geometry for the bounding box
+      const polygon = new Polygon([
+        [bottomLeft, topLeft, topRight, bottomRight, bottomLeft]
+      ]);
+
+      // Create a feature with the polygon geometry
+      const feature = new Feature({ geometry: polygon });
+
+      // Create a vector source with the feature
+      const vectorSource = new VectorSource({
+        features: [feature]
+      });
+
+      // Create a vector layer with a simple stroke style
+      const vectorLayer = new VectorLayer({
+        source: vectorSource,
+        style: new Style({
+          stroke: new Stroke({
+            color: '#736bed',
+            width: 3
+          })
+        })
+      });
+
+      return vectorLayer;
+    }
+
+    map.addLayer(createJakartaBoundingBoxLayer());
 
     // const tracker = new RealtimeLayer({
     //   url: 'wss://api.geops.io/tracker-ws/v1/',
