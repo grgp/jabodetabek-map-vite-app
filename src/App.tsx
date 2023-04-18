@@ -2,6 +2,7 @@ import React, { ReactElement, useState } from 'react';
 import logo from './logo.svg';
 import viteLogo from './vite.svg';
 import tailwindLogo from './tailwind.svg';
+import { BasicMap } from './Map/BasicMap';
 
 function App(): ReactElement {
   const [count, setCount] = useState(0);
@@ -63,6 +64,7 @@ function App(): ReactElement {
           </a>
         </p>
       </header>
+      <BasicMap />
     </div>
   );
 }
