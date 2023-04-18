@@ -31,25 +31,53 @@ async function fetchJakartaBoundingBox(): Promise<
 async function fetchVillagesInJakarta(
   bbox: [number, number, number, number]
 ): Promise<any> {
+  const numChunks = 10;
+  const latDelta = (bbox[1] - bbox[0]) / numChunks;
+  const lonDelta = (bbox[3] - bbox[2]) / numChunks;
+
   const overpassUrl = 'https://overpass-api.de/api/interpreter';
-  const query = `
+
+  const fetchVillageChunk = async (
+    chunkBbox: [number, number, number, number]
+  ): Promise<any> => {
+    const query = `
       [out:json];
       (
-        node["place"="village"](${bbox[0]},${bbox[2]},${bbox[1]},${bbox[3]});
-        way["place"="village"](${bbox[0]},${bbox[2]},${bbox[1]},${bbox[3]});
-        relation["place"="village"](${bbox[0]},${bbox[2]},${bbox[1]},${bbox[3]});
+          relation["boundary"="administrative"]["admin_level"="6"](${chunkBbox[0]},${chunkBbox[2]},${chunkBbox[1]},${chunkBbox[3]});
       );
-      out center;
+      out geom;
     `;
-  const response = await fetch(overpassUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    body: `data=${encodeURIComponent(query.trim())}`
-  });
-  const data = await response.json();
-  return data.elements;
+
+    const response = await fetch(overpassUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: `data=${encodeURIComponent(query.trim())}`
+    });
+
+    const data = await response.json();
+    return data.elements;
+  };
+
+  const villageChunks = [];
+
+  for (let i = 0; i < numChunks; i++) {
+    for (let j = 0; j < numChunks; j++) {
+      const chunkBbox: [number, number, number, number] = [
+        bbox[0] + i * latDelta,
+        bbox[0] + (i + 1) * latDelta,
+        bbox[2] + j * lonDelta,
+        bbox[2] + (j + 1) * lonDelta
+      ];
+      villageChunks.push(fetchVillageChunk(chunkBbox));
+    }
+  }
+
+  const results = await Promise.all(villageChunks);
+  const villages = results.flat();
+
+  return villages;
 }
 
 export async function fetchJakarta(): Promise<any> {
