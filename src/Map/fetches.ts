@@ -22,16 +22,38 @@ async function fetchJakartaBoundingBox(): Promise<
     'https://nominatim.openstreetmap.org/search?city=Jakarta&country=Indonesia&format=json&limit=1';
   const response = await fetch(nominatimUrl);
   const data = await response.json();
-  const bbox = data[0].boundingbox.map((coord: string) =>
-    parseFloat(coord)
-  ) as [number, number, number, number];
+
+  let bbox = data[0].boundingbox.map((coord: string) => parseFloat(coord)) as [
+    number,
+    number,
+    number,
+    number
+  ];
+
+  console.log('what are jakartas bbox', bbox);
+  const bboxOverride = [-6.491239, -5.994594, 106.577164, 107.101736] as [
+    number,
+    number,
+    number,
+    number
+  ];
+
+  const bboxOverrideSmaller = [-6.3744575, -6.071689, 106.677916, 106.997127] as [
+    number,
+    number,
+    number,
+    number
+  ];
+
+  bbox = bboxOverrideSmaller;
+
   return bbox;
 }
 
 async function fetchVillagesInJakarta(
   bbox: [number, number, number, number]
 ): Promise<any> {
-  const numChunks = 10;
+  const numChunks = 15;
   const latDelta = (bbox[1] - bbox[0]) / numChunks;
   const lonDelta = (bbox[3] - bbox[2]) / numChunks;
 

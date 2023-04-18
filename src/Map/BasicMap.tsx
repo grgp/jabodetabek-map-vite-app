@@ -5,12 +5,15 @@ import { RealtimeLayer, MaplibreLayer } from 'mobility-toolbox-js/ol';
 import 'ol/ol.css';
 import { fromLonLat } from 'ol/proj';
 import { fetchBoundaries, fetchJakarta } from './fetches';
+// import { villages } from '../data/villages-with-boundaries-600';
 
 export function BasicMap() {
+  // const [villages, setVillages] = React.useState([]);
+
   useEffect(() => {
-    fetchBoundaries().then((data) => {
-      console.log('what is data?', data);
-    });
+    // fetchBoundaries().then((data) => {
+    //   console.log('what is data?', data);
+    // });
     fetchJakarta().then((data) => {
       console.log('what is jakarta data?', data);
     });
@@ -64,6 +67,7 @@ export function BasicMap() {
   return (
     <div>
       <h1>Basic Map</h1>
+      {/* <textarea>{JSON.stringify(villages.map(village => village.tags.name))}</textarea> */}
       <div id="map" style={{ width: 500, height: 500 }}></div>
     </div>
   );
