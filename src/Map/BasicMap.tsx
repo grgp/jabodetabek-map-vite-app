@@ -87,8 +87,8 @@ export function BasicMap() {
       source: vectorSource,
       style: new Style({
         stroke: new Stroke({
-          color: '#00a5b1',
-          width: 1
+          color: '#0080e3',
+          width: 2
         })
         // fill: new Fill({
         //   color: '#ff9090'
