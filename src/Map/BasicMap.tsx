@@ -26,9 +26,9 @@ export function BasicMap() {
     // fetchBoundaries().then((data) => {
     //   console.log('what is data?', data);
     // });
-    fetchJakarta().then((data) => {
-      console.log('what is jakarta data?', data);
-    });
+    // fetchJakarta().then((data) => {
+    //   console.log('what is jakarta data?', data);
+    // });
   });
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export function BasicMap() {
       target: 'map',
       view: new View({
         center: jktCoordinates,
-        zoom: 11,
+        zoom: 12,
         minZoom: 5
       }),
 
@@ -63,38 +63,23 @@ export function BasicMap() {
     });
     layer.attachToMap(map);
 
-    const geoJsonFeatures = villages
+    const features = villages
       .filter((village) => village.tags['is_in:province'] === 'DKI Jakarta')
       .map((village) => {
-        const geometry = {
-          type: 'Polygon',
-          coordinates: [
-            village.members
-              .filter((member) => member.role === 'outer')
-              .flatMap((member) =>
-                member.geometry.map((point) => [point.lon, point.lat])
-              )
-          ]
-        };
+        const coordinates = village.members
+          .filter((member) => member.role === 'outer')
+          .flatMap((member) =>
+            member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
+          );
 
-        return {
-          type: 'Feature',
-          geometry,
-          properties: village.tags
-        };
+        const polygon = new Polygon([coordinates]).getSimplifiedGeometry(-5000);
+        const feature = new Feature({ geometry: polygon });
+        return feature;
       });
 
-    const geoJson = {
-      type: 'FeatureCollection',
-      features: geoJsonFeatures
-    };
-
-    // Create a vector source from the GeoJSON data
+    // Create a vector source from the features
     const vectorSource = new VectorSource({
-      features: new GeoJSON().readFeatures(geoJson, {
-        dataProjection: 'EPSG:4326',
-        featureProjection: 'EPSG:3857'
-      })
+      features
     });
 
     // Create a vector layer with a simple stroke style
@@ -174,7 +159,7 @@ export function BasicMap() {
     return () => {
       map.setTarget(undefined);
     };
-  });
+  }, []);
 
   return (
     <div>
@@ -182,7 +167,7 @@ export function BasicMap() {
       <textarea>
         {JSON.stringify(villages.map((village) => village.tags.name))}
       </textarea>
-      <div id="map" style={{ width: 500, height: 500 }}></div>
+      <div id="map" style={{ width: 1000, height: 1000 }}></div>
     </div>
   );
 }

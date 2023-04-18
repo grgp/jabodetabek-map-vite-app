@@ -10,16 +10,6 @@ function App(): ReactElement {
   return (
     <div className="p-20 border shadow-xl border-gray-50 rounded-xl">
       <header>
-        <div className="flex justify-center">
-          <img src={viteLogo} className="w-32 h-32" alt="vite logo" />
-          <img src={logo} className="w-32 h-32" alt="React logo" />
-          <img
-            src={tailwindLogo}
-            className="w-32 h-32"
-            alt="Tailwind CSS logo"
-          />
-        </div>
-        <p className="pb-3 text-2xl">Hello Vite + React + Tailwind CSS!</p>
         <p>
           <button
             className="pt-1 pb-1 pl-2 pr-2 text-sm text-purple-100 bg-purple-400 rounded"
