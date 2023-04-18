@@ -6,7 +6,7 @@ import 'ol/ol.css';
 import { fromLonLat } from 'ol/proj';
 // import { fetchBoundaries, fetchJakarta } from './fetches';
 // import { villages } from '../data/villages-with-boundaries-600';
-import { villages } from '../data/villages-with-boundaries-150.json';
+import { villages } from '../data/actual-villages-1115.json';
 
 import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
@@ -15,6 +15,7 @@ import { Polygon } from 'ol/geom';
 import TileLayer from 'ol/layer/Tile';
 import { OSM } from 'ol/source';
 import { kebonJerok } from '../data/kebonJeruk';
+import { fetchJakarta } from './fetches';
 
 export function BasicMap() {
   // const [villages, setVillages] = React.useState([]);
@@ -23,9 +24,9 @@ export function BasicMap() {
     // fetchBoundaries().then((data) => {
     //   console.log('what is data?', data);
     // });
-    // fetchJakarta().then((data) => {
-    //   console.log('what is jakarta data?', data);
-    // });
+    fetchJakarta().then((data) => {
+      console.log('what is jakarta data?', data);
+    });
   });
 
   useEffect(() => {

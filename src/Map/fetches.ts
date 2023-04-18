@@ -38,12 +38,9 @@ async function fetchJakartaBoundingBox(): Promise<
     number
   ];
 
-  const bboxOverrideSmaller = [-6.3744575, -6.071689, 106.677916, 106.997127] as [
-    number,
-    number,
-    number,
-    number
-  ];
+  const bboxOverrideSmaller = [
+    -6.3744575, -6.071689, 106.677916, 106.997127
+  ] as [number, number, number, number];
 
   bbox = bboxOverrideSmaller;
 
@@ -65,7 +62,7 @@ async function fetchVillagesInJakarta(
     const query = `
       [out:json];
       (
-          relation["boundary"="administrative"]["admin_level"="6"](${chunkBbox[0]},${chunkBbox[2]},${chunkBbox[1]},${chunkBbox[3]});
+          relation["boundary"="administrative"]["admin_level"="7"](${chunkBbox[0]},${chunkBbox[2]},${chunkBbox[1]},${chunkBbox[3]});
       );
       out geom;
     `;
