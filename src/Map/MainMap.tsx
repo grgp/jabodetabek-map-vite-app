@@ -27,12 +27,13 @@ const getColor = (totalPopulation: number, polygonArea: number) => {
   const colorStart = Color('#ccffcc');
   const colorEnd = Color('#006400');
 
+  const useDensity = false;
+  const densityModifier = useDensity ? (1 / polygonArea) * RATIO_NUM : 3;
+
   const ratio = Math.min(
     Math.max(
-      ((totalPopulation - minPopulation) /
-        (maxPopulation - minPopulation) /
-        polygonArea) *
-        RATIO_NUM,
+      ((totalPopulation - minPopulation) / (maxPopulation - minPopulation)) *
+        densityModifier,
       0
     ),
     1
@@ -101,7 +102,7 @@ export function MainMap() {
       controls: []
     });
 
-    const basemapEnum = 'ArcGIS:Streets';
+    const basemapEnum = 'ArcGIS:LightGray';
     const apiKey = import.meta.env.VITE_ARC_GIS_API_KEY;
 
     const layer = new MaplibreLayer({
@@ -174,12 +175,6 @@ export function MainMap() {
 
     if (mapInstance) {
       mapInstance.on('pointermove', (event) => {
-        if (hoveredFeature) {
-          // Reset the style of the previously hovered feature
-          hoveredFeature?.setStyle(defaultStyleFunction);
-          hoveredFeature = null;
-        }
-
         const feature = mapInstance.forEachFeatureAtPixel(
           event.pixel,
           (feature: any) => feature
@@ -189,6 +184,24 @@ export function MainMap() {
           console.log('on pointermove', event, feature);
           const village = feature.get('villageData') as Village;
           const polygonArea = feature.get('polygonArea') as number;
+
+          if (
+            hoveredFeature?.get('villageData').tags.name !== village.tags.name
+          ) {
+            // what are cthose, console
+            // Places the popup just to the right and down of cursor
+            const popupElement = document.getElementById('popup');
+            if (popupElement) {
+              popupElement.style.left = `${event.originalEvent.clientX + 16}px`;
+              popupElement.style.top = `${event.originalEvent.clientY + 16}px`;
+            }
+          }
+
+          if (hoveredFeature) {
+            // Reset the style of the previously hovered feature
+            hoveredFeature?.setStyle(defaultStyleFunction);
+            hoveredFeature = null;
+          }
 
           setPopupData({
             data: village,
@@ -228,9 +241,10 @@ export function MainMap() {
           className="ol-popup"
           style={{
             position: 'absolute',
-            // transform: `translate(${popupData?.coordinate[0]}px, ${popupData?.coordinate[1]}px)`,
-            bottom: 16,
-            right: 16,
+            // bottom: 16,
+            // right: 16,
+            top: -999,
+            right: -999,
             backgroundColor: 'white',
             padding: 16,
             boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)',
