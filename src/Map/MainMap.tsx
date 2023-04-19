@@ -36,6 +36,30 @@ const getColor = (totalPopulation: number) => {
   return colorStart.mix(colorEnd, ratio).alpha(0.8).toString();
 };
 
+let hoveredFeature: Feature | null = null;
+
+const defaultStyleFunction = (feature) => {
+  const village = feature.get('villageData') as Village;
+  const villagePopData = villagesPopsData[village.tags?.name?.toUpperCase()];
+
+  return new Style({
+    stroke: new Stroke({
+      color: Color('#3f97da').alpha(0.8).toString(),
+      width: 2
+    }),
+    fill: new Fill({
+      color: getColor(villagePopData ? villagePopData.total_population : null)
+    }),
+    text: new Text({
+      text: village.tags.name,
+      scale: 1.5,
+      fill: new Fill({
+        color: '#000000'
+      })
+    })
+  });
+};
+
 export function MainMap() {
   const mapRef = useRef<Map | null>(null);
   const [mapInstance, setMapInstance] = useState<Map | null>(null);
@@ -95,30 +119,7 @@ export function MainMap() {
 
     const vectorLayer = new VectorLayer({
       source: vectorSource,
-      style: (feature) => {
-        const village = feature.get('villageData') as Village;
-        const villagePopData =
-          villagesPopsData[village.tags?.name?.toUpperCase()];
-
-        return new Style({
-          stroke: new Stroke({
-            color: Color('#3f97da').alpha(0.8).toString(),
-            width: 2
-          }),
-          fill: new Fill({
-            color: getColor(
-              villagePopData ? villagePopData.total_population : null
-            )
-          }),
-          text: new Text({
-            text: village.tags.name,
-            scale: 1.5,
-            fill: new Fill({
-              color: '#000000'
-            })
-          })
-        });
-      }
+      style: defaultStyleFunction
     });
 
     map.addLayer(vectorLayer);
@@ -158,10 +159,17 @@ export function MainMap() {
 
     if (mapInstance) {
       mapInstance.on('pointermove', (event) => {
+        if (hoveredFeature) {
+          // Reset the style of the previously hovered feature
+          hoveredFeature?.setStyle(defaultStyleFunction);
+          hoveredFeature = null;
+        }
+
         const feature = mapInstance.forEachFeatureAtPixel(
           event.pixel,
           (feature: any) => feature
         );
+
         if (feature) {
           console.log('on pointermove', event, feature);
           const village = feature.get('villageData') as Village;
@@ -170,6 +178,20 @@ export function MainMap() {
             popData: villagesPopsData[village.tags?.name?.toUpperCase()],
             coordinate: event.coordinate
           });
+
+          feature.setStyle(
+            new Style({
+              stroke: new Stroke({
+                color: Color('#ffffff').alpha(0.95).toString(),
+                width: 4
+              }),
+              fill: new Fill({
+                color: Color('#148be6').alpha(0.85).toString()
+              })
+            })
+          );
+
+          hoveredFeature = feature;
         } else {
           setPopupData(null);
         }
