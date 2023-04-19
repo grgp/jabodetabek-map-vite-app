@@ -19,8 +19,9 @@ import { Village, VillagePopData } from '../types/structure';
 
 const villages = data as Village[];
 const villagesPopsData = popsData as Record<string, any>;
+const RATIO_NUM = 9000000;
 
-const getColor = (totalPopulation: number) => {
+const getColor = (totalPopulation: number, polygonArea: number) => {
   const minPopulation = 5000; // Define the minimum population here
   const maxPopulation = 180000; // Define the maximum population here
   const colorStart = Color('#ccffcc');
@@ -28,7 +29,10 @@ const getColor = (totalPopulation: number) => {
 
   const ratio = Math.min(
     Math.max(
-      (totalPopulation - minPopulation) / (maxPopulation - minPopulation),
+      ((totalPopulation - minPopulation) /
+        (maxPopulation - minPopulation) /
+        polygonArea) *
+        RATIO_NUM,
       0
     ),
     1
@@ -40,6 +44,7 @@ let hoveredFeature: Feature | null = null;
 
 const defaultStyleFunction = (feature) => {
   const village = feature.get('villageData') as Village;
+  const polygonArea = feature.get('polygonArea') as number;
   const villagePopData = villagesPopsData[village.tags?.name?.toUpperCase()];
 
   return new Style({
@@ -48,7 +53,10 @@ const defaultStyleFunction = (feature) => {
       width: 2
     }),
     fill: new Fill({
-      color: getColor(villagePopData ? villagePopData.total_population : null)
+      color: getColor(
+        villagePopData ? villagePopData.total_population : null,
+        polygonArea
+      )
     }),
     text: new Text({
       text: village.tags.name,
@@ -68,6 +76,7 @@ export function MainMap() {
     data: Village;
     popData: VillagePopData;
     coordinate: number[];
+    polygonArea: number;
   } | null>(null);
 
   useEffect(() => {
@@ -107,8 +116,14 @@ export function MainMap() {
           member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
         );
 
-      const polygon = new Polygon([coordinates]).getSimplifiedGeometry(-5000);
-      const feature = new Feature({ geometry: polygon, villageData: village });
+      const polygon = new Polygon([coordinates]);
+      const polygonArea = polygon.getArea();
+
+      const feature = new Feature({
+        geometry: polygon,
+        villageData: village,
+        polygonArea
+      });
       return feature;
     });
 
@@ -173,10 +188,13 @@ export function MainMap() {
         if (feature) {
           console.log('on pointermove', event, feature);
           const village = feature.get('villageData') as Village;
+          const polygonArea = feature.get('polygonArea') as number;
+
           setPopupData({
             data: village,
             popData: villagesPopsData[village.tags?.name?.toUpperCase()],
-            coordinate: event.coordinate
+            coordinate: event.coordinate,
+            polygonArea
           });
 
           feature.setStyle(
@@ -229,6 +247,9 @@ export function MainMap() {
           </div>
           <div>{popupData.popData?.nama_kecamatan}</div>
           <div>Population: {popupData.popData?.total_population}</div>
+          <div style={{ fontSize: 8 }}>
+            Polygon Area: {popupData.polygonArea}
+          </div>
         </div>
       )}
     </>
