@@ -22,7 +22,7 @@ const villagesPopsData = popsData as Record<string, any>;
 
 const getColor = (totalPopulation: number) => {
   const minPopulation = 0; // Define the minimum population here
-  const maxPopulation = 10000; // Define the maximum population here
+  const maxPopulation = 180000; // Define the maximum population here
   const colorStart = Color('#ccffcc');
   const colorEnd = Color('#006400');
 
