@@ -1,23 +1,16 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import { Feature, Map, View } from 'ol';
-import { RealtimeLayer, MaplibreLayer } from 'mobility-toolbox-js/ol';
+import { MaplibreLayer } from 'mobility-toolbox-js/ol';
 import 'ol/ol.css';
-import { fromLonLat } from 'ol/proj';
-// import { fetchBoundaries, fetchJakarta } from './fetches';
-// import { villages } from '../data/villages-with-boundaries-600';
-import { villages } from '../data/actual-villages-1115.json';
 
+import { fromLonLat } from 'ol/proj';
 import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
-import { Style, Stroke, Fill } from 'ol/style';
+import { Style, Stroke } from 'ol/style';
 import { Polygon } from 'ol/geom';
-import GeoJSON from 'ol/format/GeoJSON.js';
 
-import TileLayer from 'ol/layer/Tile';
-import { OSM } from 'ol/source';
-import { kebonJerok } from '../data/kebonJeruk';
-import { fetchJakarta } from './fetches';
+import { villages } from '../data/actual-villages-1115.json';
 
 export function BasicMap() {
   // const [villages, setVillages] = React.useState([]);
@@ -103,43 +96,6 @@ export function BasicMap() {
     //   const polygon = new Polygon(kebonJerok.members.);
     // }
 
-    function createJakartaBoundingBoxLayer() {
-      // Bounding box coordinates
-      const jakartaBbox = [-6.3744575, -6.071689, 106.677916, 106.997127];
-
-      // Convert the bounding box coordinates to map projection (EPSG:3857)
-      const bottomLeft = fromLonLat([jakartaBbox[2], jakartaBbox[0]]);
-      const topLeft = fromLonLat([jakartaBbox[2], jakartaBbox[1]]);
-      const topRight = fromLonLat([jakartaBbox[3], jakartaBbox[1]]);
-      const bottomRight = fromLonLat([jakartaBbox[3], jakartaBbox[0]]);
-
-      // Create a polygon geometry for the bounding box
-      const polygon = new Polygon([
-        [bottomLeft, topLeft, topRight, bottomRight, bottomLeft]
-      ]);
-
-      // Create a feature with the polygon geometry
-      const feature = new Feature({ geometry: polygon });
-
-      // Create a vector source with the feature
-      const vectorSource = new VectorSource({
-        features: [feature]
-      });
-
-      // Create a vector layer with a simple stroke style
-      const vectorLayer = new VectorLayer({
-        source: vectorSource,
-        style: new Style({
-          stroke: new Stroke({
-            color: '#736bed',
-            width: 3
-          })
-        })
-      });
-
-      return vectorLayer;
-    }
-
     // map.addLayer(createJakartaBoundingBoxLayer());
 
     // const tracker = new RealtimeLayer({
@@ -161,13 +117,10 @@ export function BasicMap() {
     };
   }, []);
 
-  return (
-    <div>
-      <h1>Basic Map</h1>
-      <textarea>
-        {JSON.stringify(villages.map((village) => village.tags.name))}
-      </textarea>
-      <div id="map" style={{ width: 1000, height: 1000 }}></div>
-    </div>
-  );
+  // <h1>Basic Map</h1>
+  // <textarea>
+  //   {JSON.stringify(villages.map((village) => village.tags.name))}
+  // </textarea>
+
+  return <div id="map" style={{ width: '100%', height: '100%' }}></div>;
 }
