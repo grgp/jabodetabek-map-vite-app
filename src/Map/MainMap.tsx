@@ -10,23 +10,13 @@ import VectorLayer from 'ol/layer/Vector';
 import { Style, Stroke } from 'ol/style';
 import { Polygon } from 'ol/geom';
 
-import data from '../data/final/villages-unique-368.json';
+// import data from '../data/final/villages-unique-jkt-tgt-349.json';
+import data from '../data/final/villages-unique-jkt-262.json';
 import { Village } from '../types/structure';
 
 const villages = data as Village[];
 
 export function MainMap() {
-  // const [villages, setVillages] = React.useState([]);
-
-  useEffect(() => {
-    // fetchBoundaries().then((data) => {
-    //   console.log('what is data?', data);
-    // });
-    // fetchJakarta().then((data) => {
-    //   console.log('what is jakarta data?', data);
-    // });
-  });
-
   useEffect(() => {
     const longitude = 106.8256;
     const latitude = -6.2088;
