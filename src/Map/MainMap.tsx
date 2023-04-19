@@ -11,7 +11,7 @@ import { Style, Stroke } from 'ol/style';
 import { Polygon } from 'ol/geom';
 
 // import data from '../data/final/villages-unique-jkt-tgt-349.json';
-import data from '../data/final/villages-unique-jkt-262.json';
+import data from '../data/final/villages-unique-jkt-262-minified.json';
 import { Village } from '../types/structure';
 
 const villages = data as Village[];
@@ -78,38 +78,12 @@ export function MainMap() {
       })
     });
 
-    // Add the vector layer to the map
     map.addLayer(vectorLayer);
-
-    // function createKebonJerukPolygons() {
-    //   const polygon = new Polygon(kebonJerok.members.);
-    // }
-
-    // map.addLayer(createJakartaBoundingBoxLayer());
-
-    // const tracker = new RealtimeLayer({
-    //   url: 'wss://api.geops.io/tracker-ws/v1/',
-    //   apiKey: window.apiKey,
-    //   debug: true
-    // });
-    // tracker.attachToMap(map);
-
-    // tracker.onClick(([feature]: any[]) => {
-    //   if (feature) {
-    //     // eslint-disable-next-line no-console
-    //     console.log(feature.getProperties());
-    //   }
-    // });
 
     return () => {
       map.setTarget(undefined);
     };
   }, []);
-
-  // <h1>Basic Map</h1>
-  // <textarea>
-  //   {JSON.stringify(villages.map((village) => village.tags.name))}
-  // </textarea>
 
   return <div id="map" style={{ width: '100%', height: '100%' }}></div>;
 }

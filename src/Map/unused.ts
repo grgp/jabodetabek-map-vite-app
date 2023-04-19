@@ -43,3 +43,28 @@ export function createJakartaBoundingBoxLayer() {
 
   return vectorLayer;
 }
+
+// function createKebonJerukPolygons() {
+//   const polygon = new Polygon(kebonJerok.members.);
+// }
+
+// map.addLayer(createJakartaBoundingBoxLayer());
+
+// const tracker = new RealtimeLayer({
+//   url: 'wss://api.geops.io/tracker-ws/v1/',
+//   apiKey: window.apiKey,
+//   debug: true
+// });
+// tracker.attachToMap(map);
+
+// tracker.onClick(([feature]: any[]) => {
+//   if (feature) {
+//     // eslint-disable-next-line no-console
+//     console.log(feature.getProperties());
+//   }
+// });
+
+// <h1>Basic Map</h1>
+// <textarea>
+//   {JSON.stringify(villages.map((village) => village.tags.name))}
+// </textarea>

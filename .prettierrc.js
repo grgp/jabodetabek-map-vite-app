@@ -7,5 +7,5 @@ module.exports = {
   bracketSpacing: true,
   useTabs: false,
   bracketSameLine: false,
-  proseWrap: 'never'
-}
+  proseWrap: 'never',
+};

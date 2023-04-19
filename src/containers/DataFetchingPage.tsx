@@ -2,6 +2,7 @@ import * as React from 'react';
 import { uniqBy } from 'lodash';
 import { fetchJakarta } from '../map/fetches';
 import { Village } from '../types/structure';
+import CSVUploader from './CSVUploader';
 
 const buttonStyle =
   'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded';
@@ -41,9 +42,12 @@ export function DataFetchingPage() {
       >
         {isFetchJakartaLoading ? 'Loading...' : 'Fetch Jakarta'}
       </button>
+
       <button className={buttonStyle} onClick={() => {}}>
         Fetch Data 2
       </button>
+
+      <CSVUploader />
     </div>
   );
 }

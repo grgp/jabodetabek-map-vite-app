@@ -28,3 +28,13 @@ export type MemberItem = {
     lon: number;
   }>;
 };
+
+export type VillagePopData = {
+  nama_kelurahan: string;
+  nama_kecamatan: string;
+  nama_kabupaten: string;
+  nama_provinsi: string;
+  occupations: Record<string, number>;
+  occupation_groups: Record<string, number>;
+  total_population: number;
+};
