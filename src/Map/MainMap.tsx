@@ -10,10 +10,10 @@ import VectorLayer from 'ol/layer/Vector';
 import { Style, Stroke } from 'ol/style';
 import { Polygon } from 'ol/geom';
 
-import data from '../data/actual-villages-1115.json';
+import data from '../data/final/villages-unique-368.json';
 import { Village } from '../types/structure';
 
-const villages = (data as { villages: Village[] }).villages;
+const villages = data as Village[];
 
 export function MainMap() {
   // const [villages, setVillages] = React.useState([]);

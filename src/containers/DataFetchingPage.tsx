@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { uniqBy } from 'lodash';
 import { fetchJakarta } from '../map/fetches';
 
 const buttonStyle =
@@ -18,6 +19,9 @@ export function DataFetchingPage() {
           fetchJakarta().then((data) => {
             setIsFetchJakartaLoading(false);
             console.log('fetchJakarta done', data);
+
+            const uniqueFetchJakarta = uniqBy(data.villages, 'id');
+            console.log('uniqueFetchJakarta', uniqueFetchJakarta);
           });
         }}
       >
