@@ -10,7 +10,10 @@ import VectorLayer from 'ol/layer/Vector';
 import { Style, Stroke } from 'ol/style';
 import { Polygon } from 'ol/geom';
 
-import { villages } from '../data/actual-villages-1115.json';
+import data from '../data/actual-villages-1115.json';
+import { Village } from '../types/structure';
+
+const villages = (data as { villages: Village[] }).villages;
 
 export function MainMap() {
   // const [villages, setVillages] = React.useState([]);
@@ -41,9 +44,7 @@ export function MainMap() {
       }),
 
       layers: [
-        // new TileLayer({
-        //   source: new OSM()
-        // })
+        /* new TileLayer({ source: new OSM() }) */
       ],
       controls: []
     });
