@@ -12,7 +12,7 @@ import { Polygon } from 'ol/geom';
 
 import { villages } from '../data/actual-villages-1115.json';
 
-export function BasicMap() {
+export function MainMap() {
   // const [villages, setVillages] = React.useState([]);
 
   useEffect(() => {

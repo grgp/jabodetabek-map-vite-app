@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from 'react';
-import { BasicMap } from '../Map/BasicMap';
+import { MainMap } from '../map/MainMap';
 
 function App(): ReactElement {
   const [count, setCount] = useState(0);
@@ -8,7 +8,7 @@ function App(): ReactElement {
     <div style={{ width: '100%' }}>
       <div className="flex flex-col md:flex-row h-screen">
         <div className="flex-1 h-full bg-gray-300">
-          <BasicMap />
+          <MainMap />
         </div>
 
         <div className={sidebarStyles}>
