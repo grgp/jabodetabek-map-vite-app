@@ -53,28 +53,35 @@ const CSVUploader = () => {
 
       kelurahanData[nama_kelurahan].occupations[jenis_pekerjaan] =
         parseInt(jumlah);
+    });
 
-      kelurahanData[nama_kelurahan].total_population = Object.values(
-        kelurahanData[nama_kelurahan].occupations
-      ).reduce((a: number, b: number) => (a || 0) + (b || 0), 0);
+    // Update occupation groups after processing all rows
+    Object.keys(kelurahanData).forEach((nama_kelurahan) => {
+      const kelurahan = kelurahanData[nama_kelurahan];
 
-      Object.keys(kelurahanData[nama_kelurahan].occupations).forEach(
-        (occup) => {
-          if (
-            [
-              'Mengurus Rumah Tangga',
-              'Belum/Tidak Bekerja',
-              'Pelajar/Mahasiswa'
-            ].includes(occup)
-          ) {
-            kelurahanData[nama_kelurahan].occupation_groups[occup] =
-              kelurahanData[nama_kelurahan].occupations[occup];
-          } else {
-            kelurahanData[nama_kelurahan].occupation_groups['Pekerjaan Lain'] +=
-              kelurahanData[nama_kelurahan].occupations[occup];
-          }
-        }
+      kelurahan.total_population = Object.values(kelurahan.occupations).reduce(
+        (a: number, b: number) => (a || 0) + (b || 0),
+        0
       );
+
+      kelurahan.occupation_groups = {
+        'Pekerjaan Lain': 0
+      };
+
+      Object.keys(kelurahan.occupations).forEach((occup) => {
+        if (
+          [
+            'Mengurus Rumah Tangga',
+            'Belum/Tidak Bekerja',
+            'Pelajar/Mahasiswa'
+          ].includes(occup)
+        ) {
+          kelurahan.occupation_groups[occup] = kelurahan.occupations[occup];
+        } else {
+          kelurahan.occupation_groups['Pekerjaan Lain'] +=
+            kelurahan.occupations[occup];
+        }
+      });
     });
 
     setKelurahanData(kelurahanData);
