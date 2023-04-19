@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Color from 'color';
 import { Feature, Map, Overlay, View } from 'ol';
@@ -37,6 +37,9 @@ const getColor = (totalPopulation: number) => {
 };
 
 export function MainMap() {
+  const mapRef = useRef<Map | null>(null);
+  const [mapInstance, setMapInstance] = useState<Map | null>(null);
+
   const [popupData, setPopupData] = useState<{
     data: Village;
     popData: VillagePopData;
@@ -120,23 +123,6 @@ export function MainMap() {
 
     map.addLayer(vectorLayer);
 
-    map.on('pointermove', (event) => {
-      const feature = map.forEachFeatureAtPixel(
-        event.pixel,
-        (feature) => feature
-      );
-      if (feature) {
-        const village = feature.get('villageData') as Village;
-        setPopupData({
-          data: village,
-          popData: villagesPopsData[village.tags?.name?.toUpperCase()],
-          coordinate: event.coordinate
-        });
-      } else {
-        setPopupData(null);
-      }
-    });
-
     map.on('click', (event) => {
       const feature = map.forEachFeatureAtPixel(
         event.pixel,
@@ -153,6 +139,15 @@ export function MainMap() {
       // Do something with the clicked village data
     };
 
+    mapRef.current = map;
+    setMapInstance(map);
+
+    return () => {
+      map.setTarget(undefined);
+    };
+  }, []);
+
+  useEffect(() => {
     // Add a popup overlay to the map
     const popup = new Overlay({
       element: document.getElementById('popup')!,
@@ -160,12 +155,29 @@ export function MainMap() {
       offset: [0, -10],
       stopEvent: true
     });
-    map.addOverlay(popup);
 
-    return () => {
-      map.setTarget(undefined);
-    };
-  }, []);
+    if (mapInstance) {
+      mapInstance.on('pointermove', (event) => {
+        const feature = mapInstance.forEachFeatureAtPixel(
+          event.pixel,
+          (feature: any) => feature
+        );
+        if (feature) {
+          console.log('on pointermove', event, feature);
+          const village = feature.get('villageData') as Village;
+          setPopupData({
+            data: village,
+            popData: villagesPopsData[village.tags?.name?.toUpperCase()],
+            coordinate: event.coordinate
+          });
+        } else {
+          setPopupData(null);
+        }
+      });
+
+      mapInstance.addOverlay(popup);
+    }
+  }, [mapInstance]);
 
   return (
     <>
@@ -176,18 +188,25 @@ export function MainMap() {
           className="ol-popup"
           style={{
             position: 'absolute',
-            transform: `translate(${popupData.coordinate[0]}px, ${popupData.coordinate[1]}px)`,
+            // transform: `translate(${popupData?.coordinate[0]}px, ${popupData?.coordinate[1]}px)`,
+            bottom: 16,
+            right: 16,
             backgroundColor: 'white',
-            padding: '8px',
-            borderRadius: '4px',
-            boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)'
+            padding: 16,
+            boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)',
+            zIndex: 999999,
+            width: '260px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            borderRadius: 8
           }}
         >
           <div>
-            <strong>{popupData.popData.nama_kelurahan}</strong>
+            <strong>{popupData.popData?.nama_kelurahan}</strong>
           </div>
-          <div>{popupData.popData.nama_kecamatan}</div>
-          <div>Population: {popupData.popData.total_population}</div>
+          <div>{popupData.popData?.nama_kecamatan}</div>
+          <div>Population: {popupData.popData?.total_population}</div>
         </div>
       )}
     </>
