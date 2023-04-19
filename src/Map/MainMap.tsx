@@ -21,7 +21,7 @@ const villages = data as Village[];
 const villagesPopsData = popsData as Record<string, any>;
 
 const getColor = (totalPopulation: number) => {
-  const minPopulation = 0; // Define the minimum population here
+  const minPopulation = 5000; // Define the minimum population here
   const maxPopulation = 180000; // Define the maximum population here
   const colorStart = Color('#ccffcc');
   const colorEnd = Color('#006400');
@@ -33,7 +33,7 @@ const getColor = (totalPopulation: number) => {
     ),
     1
   );
-  return colorStart.mix(colorEnd, ratio).toString();
+  return colorStart.mix(colorEnd, ratio).alpha(0.8).toString();
 };
 
 export function MainMap() {
@@ -102,7 +102,7 @@ export function MainMap() {
 
         return new Style({
           stroke: new Stroke({
-            color: '#0080e3',
+            color: Color('#3f97da').alpha(0.8).toString(),
             width: 2
           }),
           fill: new Fill({
