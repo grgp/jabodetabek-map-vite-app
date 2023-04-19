@@ -16,6 +16,7 @@ import data from '../data/final/villages-unique-jkt-262-minified.json';
 import popsData from '../data/final/villages-pop-data-v1.json';
 
 import { Village, VillagePopData } from '../types/structure';
+import { capitalizeWords } from './utils';
 
 const villages = data as Village[];
 const villagesPopsData = popsData as Record<string, any>;
@@ -76,7 +77,7 @@ export function MainMap() {
 
   const [popupData, setPopupData] = useState<{
     data: Village;
-    popData: VillagePopData;
+    popData?: VillagePopData;
     coordinate: number[];
     polygonArea: number;
   } | null>(null);
@@ -246,22 +247,25 @@ export function MainMap() {
             // right: 16,
             top: -999,
             right: -999,
+            // background: 'linear-gradient(to bottom, #d1e9ffe4, #a2caedde)',
+            // color: '#064e91',
+            // border: '3px solid #216aad',
             background: 'linear-gradient(to bottom, #2d6daa, #155e92)',
-            padding: 16,
+            color: 'white',
+            padding: 14,
             boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)',
             zIndex: 999999,
             width: '260px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            borderRadius: 8,
-            color: 'white'
+            borderRadius: 8
           }}
         >
           <div>
-            <strong>{popupData.popData?.nama_kelurahan}</strong>
+            <strong>{capitalizeWords(popupData.data.tags?.name)}</strong>
           </div>
-          <div>{popupData.popData?.nama_kecamatan}</div>
+          <div>{capitalizeWords(popupData.popData?.nama_kecamatan)}</div>
           <div>Population: {popupData.popData?.total_population}</div>
           <div style={{ fontSize: 8 }}>
             Polygon Area: {popupData.polygonArea}
