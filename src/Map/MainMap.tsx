@@ -27,7 +27,7 @@ const getColor = (totalPopulation: number, polygonArea: number) => {
   const colorStart = Color('#ccffcc');
   const colorEnd = Color('#006400');
 
-  const useDensity = false;
+  const useDensity = true;
   const densityModifier = useDensity ? (1 / polygonArea) * RATIO_NUM : 3;
 
   const ratio = Math.min(
@@ -61,7 +61,8 @@ const defaultStyleFunction = (feature) => {
     }),
     text: new Text({
       text: village.tags.name,
-      scale: 1.5,
+      scale: 1.1,
+      font: 'sans-serif',
       fill: new Fill({
         color: '#000000'
       })
@@ -245,7 +246,7 @@ export function MainMap() {
             // right: 16,
             top: -999,
             right: -999,
-            backgroundColor: 'white',
+            background: 'linear-gradient(to bottom, #2d6daa, #155e92)',
             padding: 16,
             boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)',
             zIndex: 999999,
@@ -253,7 +254,8 @@ export function MainMap() {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            borderRadius: 8
+            borderRadius: 8,
+            color: 'white'
           }}
         >
           <div>
