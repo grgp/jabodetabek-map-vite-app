@@ -57,19 +57,17 @@ export function MainMap() {
     });
     layer.attachToMap(map);
 
-    const features = villages
-      .filter((village) => village.tags['is_in:province'] === 'DKI Jakarta')
-      .map((village) => {
-        const coordinates = village.members
-          .filter((member) => member.role === 'outer')
-          .flatMap((member) =>
-            member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
-          );
+    const features = villages.map((village) => {
+      const coordinates = village.members
+        .filter((member) => member.role === 'outer')
+        .flatMap((member) =>
+          member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
+        );
 
-        const polygon = new Polygon([coordinates]).getSimplifiedGeometry(-5000);
-        const feature = new Feature({ geometry: polygon });
-        return feature;
-      });
+      const polygon = new Polygon([coordinates]).getSimplifiedGeometry(-5000);
+      const feature = new Feature({ geometry: polygon });
+      return feature;
+    });
 
     // Create a vector source from the features
     const vectorSource = new VectorSource({
