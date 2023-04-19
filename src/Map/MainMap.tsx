@@ -1,22 +1,48 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-import { Feature, Map, View } from 'ol';
+import Color from 'color';
+import { Feature, Map, Overlay, View } from 'ol';
 import { MaplibreLayer } from 'mobility-toolbox-js/ol';
 import 'ol/ol.css';
 
 import { fromLonLat } from 'ol/proj';
 import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
-import { Style, Stroke } from 'ol/style';
+import { Style, Stroke, Fill, Text } from 'ol/style';
 import { Polygon } from 'ol/geom';
 
 // import data from '../data/final/villages-unique-jkt-tgt-349.json';
 import data from '../data/final/villages-unique-jkt-262-minified.json';
-import { Village } from '../types/structure';
+import popsData from '../data/final/villages-pop-data-v1.json';
+
+import { Village, VillagePopData } from '../types/structure';
 
 const villages = data as Village[];
+const villagesPopsData = popsData as Record<string, any>;
+
+const getColor = (totalPopulation: number) => {
+  const minPopulation = 0; // Define the minimum population here
+  const maxPopulation = 10000; // Define the maximum population here
+  const colorStart = Color('#ccffcc');
+  const colorEnd = Color('#006400');
+
+  const ratio = Math.min(
+    Math.max(
+      (totalPopulation - minPopulation) / (maxPopulation - minPopulation),
+      0
+    ),
+    1
+  );
+  return colorStart.mix(colorEnd, ratio).toString();
+};
 
 export function MainMap() {
+  const [popupData, setPopupData] = useState<{
+    data: Village;
+    popData: VillagePopData;
+    coordinate: number[];
+  } | null>(null);
+
   useEffect(() => {
     const longitude = 106.8256;
     const latitude = -6.2088;
@@ -55,7 +81,7 @@ export function MainMap() {
         );
 
       const polygon = new Polygon([coordinates]).getSimplifiedGeometry(-5000);
-      const feature = new Feature({ geometry: polygon });
+      const feature = new Feature({ geometry: polygon, villageData: village });
       return feature;
     });
 
@@ -64,26 +90,106 @@ export function MainMap() {
       features
     });
 
-    // Create a vector layer with a simple stroke style
     const vectorLayer = new VectorLayer({
       source: vectorSource,
-      style: new Style({
-        stroke: new Stroke({
-          color: '#0080e3',
-          width: 2
-        })
-        // fill: new Fill({
-        //   color: '#ff9090'
-        // })
-      })
+      style: (feature) => {
+        const village = feature.get('villageData') as Village;
+        const villagePopData =
+          villagesPopsData[village.tags?.name?.toUpperCase()];
+
+        return new Style({
+          stroke: new Stroke({
+            color: '#0080e3',
+            width: 2
+          }),
+          fill: new Fill({
+            color: getColor(
+              villagePopData ? villagePopData.total_population : null
+            )
+          }),
+          text: new Text({
+            text: village.tags.name,
+            scale: 1.5,
+            fill: new Fill({
+              color: '#000000'
+            })
+          })
+        });
+      }
     });
 
     map.addLayer(vectorLayer);
+
+    map.on('pointermove', (event) => {
+      const feature = map.forEachFeatureAtPixel(
+        event.pixel,
+        (feature) => feature
+      );
+      if (feature) {
+        const village = feature.get('villageData') as Village;
+        setPopupData({
+          data: village,
+          popData: villagesPopsData[village.tags?.name?.toUpperCase()],
+          coordinate: event.coordinate
+        });
+      } else {
+        setPopupData(null);
+      }
+    });
+
+    map.on('click', (event) => {
+      const feature = map.forEachFeatureAtPixel(
+        event.pixel,
+        (feature) => feature
+      );
+      if (feature) {
+        const village = feature.get('villageData') as Village;
+        onClick(village);
+      }
+    });
+
+    const onClick = (data: Village) => {
+      console.log('Clicked on:', data);
+      // Do something with the clicked village data
+    };
+
+    // Add a popup overlay to the map
+    const popup = new Overlay({
+      element: document.getElementById('popup')!,
+      positioning: 'bottom-center',
+      offset: [0, -10],
+      stopEvent: true
+    });
+    map.addOverlay(popup);
 
     return () => {
       map.setTarget(undefined);
     };
   }, []);
 
-  return <div id="map" style={{ width: '100%', height: '100%' }}></div>;
+  return (
+    <>
+      <div id="map" style={{ width: '100%', height: '100%' }}></div>
+      {popupData && (
+        <div
+          id="popup"
+          className="ol-popup"
+          style={{
+            position: 'absolute',
+            transform: `translate(${popupData.coordinate[0]}px, ${popupData.coordinate[1]}px)`,
+            backgroundColor: 'white',
+            padding: '8px',
+            borderRadius: '4px',
+            boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)'
+          }}
+        >
+          <div>
+            <strong>{popupData.popData.nama_kelurahan}</strong>
+          </div>
+          <div>{popupData.popData.nama_kecamatan}</div>
+          <div>Population: {popupData.popData.total_population}</div>
+        </div>
+      )}
+    </>
+  );
 }
