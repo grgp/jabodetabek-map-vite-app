@@ -83,12 +83,16 @@ export function DataFetchingPage() {
               console.log('Downloaded #', i + batchSize, ' of schedules...');
 
               await new Promise((resolve) => setTimeout(resolve, 4000));
+
+              if (i % 100 === 0) {
+                console.log('Current schedules in ' + i, schedules);
+              }
             }
 
             console.log('Total schedules:', schedules);
           }
 
-          fetchTrainSchedules(trainsInJakartaUnique);
+          fetchTrainSchedules(trainsInJakartaUnique as any);
         }}
       >
         Fetch Train Schedules in Jakarta
