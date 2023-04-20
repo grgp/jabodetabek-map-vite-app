@@ -6,7 +6,7 @@ import CSVUploader from './CSVUploader';
 import { Train, TrainSchedule } from '../types/unparsedStructures';
 
 import trainsInJakarta from '../data/trains/trains-passing-jakarta.json';
-import trainsInJakartaUnique from '../data/trains/trains-passing-jakarta-sample.json';
+import trainsInJakartaUnique from '../data/trains/trains-passing-jakarta-unique.json';
 
 const buttonStyle =
   'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded';
@@ -79,13 +79,10 @@ export function DataFetchingPage() {
 
                 schedules.push(data);
               }
-              await new Promise((resolve) => setTimeout(resolve, 4000));
 
-              console.log(
-                'Downloaded batch ',
-                i + batchSize,
-                ' of schedules...'
-              );
+              console.log('Downloaded #', i + batchSize, ' of schedules...');
+
+              await new Promise((resolve) => setTimeout(resolve, 4000));
             }
 
             console.log('Total schedules:', schedules);
