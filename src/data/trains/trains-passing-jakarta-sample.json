@@ -1,0 +1,65 @@
+[
+  {
+    "train_id": "4450",
+    "ka_name": "BOGOR LINE",
+    "route_name": "JAKARTAKOTA-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "00:09:00",
+    "color": "#E30A16",
+    "dest_time": "01:19:00"
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "route_name": "ANGKE-BEKASI",
+    "dest": "BEKASI",
+    "time_est": "00:16:00",
+    "color": "#0084D8",
+    "dest_time": "00:48:00"
+  },
+  {
+    "train_id": "5002A",
+    "ka_name": "BEKASI LINE",
+    "route_name": "MANGGARAI-CIKARANG",
+    "dest": "CIKARANG",
+    "time_est": "04:15:00",
+    "color": "#0084D8",
+    "dest_time": "05:08:00"
+  },
+  {
+    "train_id": "5013B",
+    "ka_name": "BEKASI LINE",
+    "route_name": "MANGGARAI-ANGKE",
+    "dest": "ANGKE",
+    "time_est": "04:26:00",
+    "color": "#0084D8",
+    "dest_time": "04:50:00"
+  },
+  {
+    "train_id": "4024",
+    "ka_name": "BOGOR LINE",
+    "route_name": "MANGGARAI-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "04:34:00",
+    "color": "#E30A16",
+    "dest_time": "05:44:00"
+  },
+  {
+    "train_id": "5006A",
+    "ka_name": "BEKASI LINE",
+    "route_name": "MANGGARAI-BEKASI",
+    "dest": "BEKASI",
+    "time_est": "04:40:00",
+    "color": "#0084D8",
+    "dest_time": "05:12:00"
+  },
+  {
+    "train_id": "5008B",
+    "ka_name": "BEKASI LINE",
+    "route_name": "MANGGARAI-BEKASI",
+    "dest": "BEKASI",
+    "time_est": "04:57:00",
+    "color": "#0084D8",
+    "dest_time": "05:28:00"
+  }
+]

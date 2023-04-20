@@ -3,9 +3,10 @@ import { uniqBy } from 'lodash';
 import { fetchJakarta } from '../map/fetches';
 import { Village } from '../types/structure';
 import CSVUploader from './CSVUploader';
-import { Train } from '../types/unparsedStructures';
+import { Train, TrainSchedule } from '../types/unparsedStructures';
 
-import trainsInJakarta from '../data/trains/trains-passing-jakarta.jsonc';
+import trainsInJakarta from '../data/trains/trains-passing-jakarta.json';
+import trainsInJakartaUnique from '../data/trains/trains-passing-jakarta-sample.json';
 
 const buttonStyle =
   'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded';
@@ -50,23 +51,50 @@ export function DataFetchingPage() {
         className={buttonStyle}
         onClick={() => {
           // Get unique trains
+          const uniqueTrains = uniqBy(trainsInJakarta, 'train_id');
 
+          console.log('what are non-uniqueTrains', trainsInJakarta);
+          console.log('what are uniqueTrains', uniqueTrains);
+        }}
+      >
+        Get Unique Trains
+      </button>
+
+      <button
+        className={buttonStyle}
+        onClick={() => {
           async function fetchTrainSchedules(trains: Train[]): Promise<void> {
             const batchSize = 3;
+
+            const schedules: TrainSchedule[] = [];
+
+            console.log('Downloading schedules...');
+
             for (let i = 0; i < trains.length; i += batchSize) {
               const batch = trains.slice(i, i + batchSize);
               for (const train of batch) {
                 const url = `https://api-partner.krl.co.id/krlweb/v1/schedule-train?trainid=${train.train_id}`;
-                const response = await axios.get(url);
-                // Do something with the response data, e.g. log it
-                console.log(response.data);
+                const response = await fetch(url);
+                const data = await response.json();
+
+                schedules.push(data);
               }
-              await new Promise((resolve) => setTimeout(resolve, 5000)); // Wait 5 seconds before processing the next batch
+              await new Promise((resolve) => setTimeout(resolve, 4000));
+
+              console.log(
+                'Downloaded batch ',
+                i + batchSize,
+                ' of schedules...'
+              );
             }
+
+            console.log('Total schedules:', schedules);
           }
+
+          fetchTrainSchedules(trainsInJakartaUnique);
         }}
       >
-        Get Unique Trains in Jakarta
+        Fetch Train Schedules in Jakarta
       </button>
 
       <CSVUploader />

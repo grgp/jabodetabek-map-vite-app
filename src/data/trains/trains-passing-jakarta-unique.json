@@ -1,5 +1,4 @@
 [
-  // START MANGGARAI
   {
     "train_id": "4450",
     "ka_name": "BOGOR LINE",
@@ -4635,8 +4634,6 @@
     "color": "#0084D8",
     "dest_time": "00:54:00"
   },
-  // END MANGGARAI
-  // START JATINEGARA
   {
     "train_id": "5079A",
     "ka_name": "BEKASI LINE",
@@ -4645,24 +4642,6 @@
     "time_est": "00:03:00",
     "color": "#0084D8",
     "dest_time": "00:10:00"
-  },
-  {
-    "train_id": "6096B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "00:07:00",
-    "color": "#0084D8",
-    "dest_time": "00:54:00"
-  },
-  {
-    "train_id": "5076B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "00:24:00",
-    "color": "#0084D8",
-    "dest_time": "00:48:00"
   },
   {
     "train_id": "5131A",
@@ -4674,15 +4653,6 @@
     "dest_time": "00:41:00"
   },
   {
-    "train_id": "5002A",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "04:23:00",
-    "color": "#0084D8",
-    "dest_time": "05:08:00"
-  },
-  {
     "train_id": "6000",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-CIKARANG",
@@ -4692,33 +4662,6 @@
     "dest_time": "05:30:00"
   },
   {
-    "train_id": "5006A",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "04:48:00",
-    "color": "#0084D8",
-    "dest_time": "05:12:00"
-  },
-  {
-    "train_id": "5008B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "05:06:00",
-    "color": "#0084D8",
-    "dest_time": "05:28:00"
-  },
-  {
-    "train_id": "5019C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "05:10:00",
-    "color": "#0084D8",
-    "dest_time": "05:42:00"
-  },
-  {
     "train_id": "6005",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -4726,24 +4669,6 @@
     "time_est": "05:16:00",
     "color": "#0084D8",
     "dest_time": "05:38:00"
-  },
-  {
-    "train_id": "5010A",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "05:18:00",
-    "color": "#0084D8",
-    "dest_time": "05:42:00"
-  },
-  {
-    "train_id": "5101B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "05:24:00",
-    "color": "#0084D8",
-    "dest_time": "06:04:00"
   },
   {
     "train_id": "D1/14168",
@@ -4764,15 +4689,6 @@
     "dest_time": "05:52:00"
   },
   {
-    "train_id": "5012A",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-TAMBUN",
-    "dest": "TAMBUN",
-    "time_est": "05:30:00",
-    "color": "#0084D8",
-    "dest_time": "06:01:00"
-  },
-  {
     "train_id": "6002A",
     "ka_name": "BEKASI LINE",
     "route_name": "JAKARTAKOTA-CIKARANG",
@@ -4780,33 +4696,6 @@
     "time_est": "05:35:00",
     "color": "#0084D8",
     "dest_time": "06:23:00"
-  },
-  {
-    "train_id": "5021C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "05:40:00",
-    "color": "#0084D8",
-    "dest_time": "06:11:00"
-  },
-  {
-    "train_id": "5014B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "05:43:00",
-    "color": "#0084D8",
-    "dest_time": "06:31:00"
-  },
-  {
-    "train_id": "5501B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "05:47:00",
-    "color": "#0084D8",
-    "dest_time": "06:27:00"
   },
   {
     "train_id": "D1/5016A",
@@ -4818,24 +4707,6 @@
     "dest_time": "06:15:00"
   },
   {
-    "train_id": "5503B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "05:55:00",
-    "color": "#0084D8",
-    "dest_time": "06:35:00"
-  },
-  {
-    "train_id": "5103B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "06:01:00",
-    "color": "#0084D8",
-    "dest_time": "06:37:00"
-  },
-  {
     "train_id": "6004",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-CIKARANG",
@@ -4843,33 +4714,6 @@
     "time_est": "06:03:00",
     "color": "#0084D8",
     "dest_time": "06:50:00"
-  },
-  {
-    "train_id": "5505B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "06:08:00",
-    "color": "#0084D8",
-    "dest_time": "06:53:00"
-  },
-  {
-    "train_id": "5018B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "06:11:00",
-    "color": "#0084D8",
-    "dest_time": "06:34:00"
-  },
-  {
-    "train_id": "6006B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "06:20:00",
-    "color": "#0084D8",
-    "dest_time": "06:44:00"
   },
   {
     "train_id": "6009A",
@@ -4881,42 +4725,6 @@
     "dest_time": "06:44:00"
   },
   {
-    "train_id": "5507B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "06:25:00",
-    "color": "#0084D8",
-    "dest_time": "07:06:00"
-  },
-  {
-    "train_id": "5020C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "06:30:00",
-    "color": "#0084D8",
-    "dest_time": "07:21:00"
-  },
-  {
-    "train_id": "5105B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "06:36:00",
-    "color": "#0084D8",
-    "dest_time": "07:17:00"
-  },
-  {
-    "train_id": "6008B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "06:36:00",
-    "color": "#0084D8",
-    "dest_time": "06:59:00"
-  },
-  {
     "train_id": "6011",
     "ka_name": "BEKASI LINE",
     "route_name": "TAMBUN-KAMPUNGBANDAN",
@@ -4924,15 +4732,6 @@
     "time_est": "06:44:00",
     "color": "#0084D8",
     "dest_time": "07:07:00"
-  },
-  {
-    "train_id": "5509B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "06:50:00",
-    "color": "#0084D8",
-    "dest_time": "07:30:00"
   },
   {
     "train_id": "5502",
@@ -4944,15 +4743,6 @@
     "dest_time": "07:26:00"
   },
   {
-    "train_id": "5511B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "06:59:00",
-    "color": "#0084D8",
-    "dest_time": "07:43:00"
-  },
-  {
     "train_id": "5504A",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-CIKARANG",
@@ -4962,42 +4752,6 @@
     "dest_time": "07:45:00"
   },
   {
-    "train_id": "5102B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "07:06:00",
-    "color": "#0084D8",
-    "dest_time": "07:30:00"
-  },
-  {
-    "train_id": "5023B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "07:07:00",
-    "color": "#0084D8",
-    "dest_time": "07:41:00"
-  },
-  {
-    "train_id": "5022B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "07:16:00",
-    "color": "#0084D8",
-    "dest_time": "07:40:00"
-  },
-  {
-    "train_id": "5107B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "07:17:00",
-    "color": "#0084D8",
-    "dest_time": "07:55:00"
-  },
-  {
     "train_id": "5506A",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-CIKARANG",
@@ -5005,15 +4759,6 @@
     "time_est": "07:22:00",
     "color": "#0084D8",
     "dest_time": "08:13:00"
-  },
-  {
-    "train_id": "6010B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "07:28:00",
-    "color": "#0084D8",
-    "dest_time": "07:51:00"
   },
   {
     "train_id": "D1/6013A",
@@ -5034,24 +4779,6 @@
     "dest_time": "08:20:00"
   },
   {
-    "train_id": "5104C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "07:38:00",
-    "color": "#0084D8",
-    "dest_time": "08:25:00"
-  },
-  {
-    "train_id": "5513C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "07:38:00",
-    "color": "#0084D8",
-    "dest_time": "08:19:00"
-  },
-  {
     "train_id": "6015",
     "ka_name": "BEKASI LINE",
     "route_name": "CIKARANG-KAMPUNGBANDAN",
@@ -5061,24 +4788,6 @@
     "dest_time": "08:08:00"
   },
   {
-    "train_id": "6012B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "07:49:00",
-    "color": "#0084D8",
-    "dest_time": "08:13:00"
-  },
-  {
-    "train_id": "5515B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "07:51:00",
-    "color": "#0084D8",
-    "dest_time": "08:32:00"
-  },
-  {
     "train_id": "5510",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-CIKARANG",
@@ -5086,15 +4795,6 @@
     "time_est": "07:54:00",
     "color": "#0084D8",
     "dest_time": "08:41:00"
-  },
-  {
-    "train_id": "5025B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "08:00:00",
-    "color": "#0084D8",
-    "dest_time": "08:36:00"
   },
   {
     "train_id": "5512",
@@ -5115,33 +4815,6 @@
     "dest_time": "08:32:00"
   },
   {
-    "train_id": "5106C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "08:12:00",
-    "color": "#0084D8",
-    "dest_time": "09:01:00"
-  },
-  {
-    "train_id": "5517B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "TAMBUN-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "08:15:00",
-    "color": "#0084D8",
-    "dest_time": "08:56:00"
-  },
-  {
-    "train_id": "5027B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "08:29:00",
-    "color": "#0084D8",
-    "dest_time": "09:06:00"
-  },
-  {
     "train_id": "6019",
     "ka_name": "BEKASI LINE",
     "route_name": "CIKARANG-KAMPUNGBANDAN",
@@ -5149,15 +4822,6 @@
     "time_est": "08:36:00",
     "color": "#0084D8",
     "dest_time": "09:00:00"
-  },
-  {
-    "train_id": "6014B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "08:40:00",
-    "color": "#0084D8",
-    "dest_time": "09:04:00"
   },
   {
     "train_id": "5514A",
@@ -5169,15 +4833,6 @@
     "dest_time": "09:09:00"
   },
   {
-    "train_id": "5519B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "08:47:00",
-    "color": "#0084D8",
-    "dest_time": "09:28:00"
-  },
-  {
     "train_id": "6021",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -5187,24 +4842,6 @@
     "dest_time": "09:18:00"
   },
   {
-    "train_id": "5521C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "09:03:00",
-    "color": "#0084D8",
-    "dest_time": "09:45:00"
-  },
-  {
-    "train_id": "5108B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "09:05:00",
-    "color": "#0084D8",
-    "dest_time": "09:52:00"
-  },
-  {
     "train_id": "5516",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-BEKASI",
@@ -5212,24 +4849,6 @@
     "time_est": "09:08:00",
     "color": "#0084D8",
     "dest_time": "09:31:00"
-  },
-  {
-    "train_id": "6018B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "09:13:00",
-    "color": "#0084D8",
-    "dest_time": "10:09:00"
-  },
-  {
-    "train_id": "5029B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "09:15:00",
-    "color": "#0084D8",
-    "dest_time": "09:48:00"
   },
   {
     "train_id": "6023A",
@@ -5250,42 +4869,6 @@
     "dest_time": "09:49:00"
   },
   {
-    "train_id": "5523B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "09:28:00",
-    "color": "#0084D8",
-    "dest_time": "10:15:00"
-  },
-  {
-    "train_id": "5026C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "09:31:00",
-    "color": "#0084D8",
-    "dest_time": "10:21:00"
-  },
-  {
-    "train_id": "5031B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "09:39:00",
-    "color": "#0084D8",
-    "dest_time": "10:13:00"
-  },
-  {
-    "train_id": "6020B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "09:41:00",
-    "color": "#0084D8",
-    "dest_time": "10:07:00"
-  },
-  {
     "train_id": "6025A",
     "ka_name": "BEKASI LINE",
     "route_name": "CIKARANG-KAMPUNGBANDAN",
@@ -5295,15 +4878,6 @@
     "dest_time": "10:08:00"
   },
   {
-    "train_id": "5028B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "09:50:00",
-    "color": "#0084D8",
-    "dest_time": "10:43:00"
-  },
-  {
     "train_id": "5520",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-BEKASI",
@@ -5311,33 +4885,6 @@
     "time_est": "09:58:00",
     "color": "#0084D8",
     "dest_time": "10:20:00"
-  },
-  {
-    "train_id": "5109C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "10:01:00",
-    "color": "#0084D8",
-    "dest_time": "10:44:00"
-  },
-  {
-    "train_id": "6022C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "10:04:00",
-    "color": "#0084D8",
-    "dest_time": "10:53:00"
-  },
-  {
-    "train_id": "5033B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "10:09:00",
-    "color": "#0084D8",
-    "dest_time": "10:40:00"
   },
   {
     "train_id": "5522",
@@ -5358,24 +4905,6 @@
     "dest_time": "10:37:00"
   },
   {
-    "train_id": "5035B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "10:28:00",
-    "color": "#0084D8",
-    "dest_time": "11:05:00"
-  },
-  {
-    "train_id": "6024B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "10:30:00",
-    "color": "#0084D8",
-    "dest_time": "11:17:00"
-  },
-  {
     "train_id": "5524",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-BEKASI",
@@ -5383,60 +4912,6 @@
     "time_est": "10:39:00",
     "color": "#0084D8",
     "dest_time": "11:02:00"
-  },
-  {
-    "train_id": "5525C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "10:39:00",
-    "color": "#0084D8",
-    "dest_time": "11:20:00"
-  },
-  {
-    "train_id": "5030B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "10:44:00",
-    "color": "#0084D8",
-    "dest_time": "11:06:00"
-  },
-  {
-    "train_id": "6026B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "10:50:00",
-    "color": "#0084D8",
-    "dest_time": "11:42:00"
-  },
-  {
-    "train_id": "5527B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "10:52:00",
-    "color": "#0084D8",
-    "dest_time": "11:33:00"
-  },
-  {
-    "train_id": "5113B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "10:59:00",
-    "color": "#0084D8",
-    "dest_time": "11:44:00"
-  },
-  {
-    "train_id": "5032B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "11:03:00",
-    "color": "#0084D8",
-    "dest_time": "11:28:00"
   },
   {
     "train_id": "6031",
@@ -5448,15 +4923,6 @@
     "dest_time": "11:26:00"
   },
   {
-    "train_id": "5037B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "11:08:00",
-    "color": "#0084D8",
-    "dest_time": "11:40:00"
-  },
-  {
     "train_id": "6033",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -5464,42 +4930,6 @@
     "time_est": "11:14:00",
     "color": "#0084D8",
     "dest_time": "11:37:00"
-  },
-  {
-    "train_id": "6028C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "11:19:00",
-    "color": "#0084D8",
-    "dest_time": "12:07:00"
-  },
-  {
-    "train_id": "5529C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "11:29:00",
-    "color": "#0084D8",
-    "dest_time": "12:15:00"
-  },
-  {
-    "train_id": "5034B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "11:32:00",
-    "color": "#0084D8",
-    "dest_time": "11:54:00"
-  },
-  {
-    "train_id": "5110B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "11:39:00",
-    "color": "#0084D8",
-    "dest_time": "11:59:00"
   },
   {
     "train_id": "5526A",
@@ -5520,15 +4950,6 @@
     "dest_time": "12:08:00"
   },
   {
-    "train_id": "5039B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "11:48:00",
-    "color": "#0084D8",
-    "dest_time": "12:19:00"
-  },
-  {
     "train_id": "5528",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-CIKARANG",
@@ -5536,24 +4957,6 @@
     "time_est": "11:57:00",
     "color": "#0084D8",
     "dest_time": "12:44:00"
-  },
-  {
-    "train_id": "5115B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "11:59:00",
-    "color": "#0084D8",
-    "dest_time": "12:45:00"
-  },
-  {
-    "train_id": "5112B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "12:04:00",
-    "color": "#0084D8",
-    "dest_time": "12:29:00"
   },
   {
     "train_id": "6037",
@@ -5565,42 +4968,6 @@
     "dest_time": "12:26:00"
   },
   {
-    "train_id": "6032C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "12:10:00",
-    "color": "#0084D8",
-    "dest_time": "12:55:00"
-  },
-  {
-    "train_id": "5531B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "12:17:00",
-    "color": "#0084D8",
-    "dest_time": "12:57:00"
-  },
-  {
-    "train_id": "6034B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "12:19:00",
-    "color": "#0084D8",
-    "dest_time": "12:42:00"
-  },
-  {
-    "train_id": "5038B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-TAMBUN",
-    "dest": "TAMBUN",
-    "time_est": "12:28:00",
-    "color": "#0084D8",
-    "dest_time": "13:02:00"
-  },
-  {
     "train_id": "6039A",
     "ka_name": "BEKASI LINE",
     "route_name": "CIKARANG-KAMPUNGBANDAN",
@@ -5608,24 +4975,6 @@
     "time_est": "12:29:00",
     "color": "#0084D8",
     "dest_time": "12:52:00"
-  },
-  {
-    "train_id": "5041C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "12:37:00",
-    "color": "#0084D8",
-    "dest_time": "13:10:00"
-  },
-  {
-    "train_id": "5114C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "12:38:00",
-    "color": "#0084D8",
-    "dest_time": "13:00:00"
   },
   {
     "train_id": "5530",
@@ -5637,42 +4986,6 @@
     "dest_time": "13:34:00"
   },
   {
-    "train_id": "5533B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "12:48:00",
-    "color": "#0084D8",
-    "dest_time": "13:29:00"
-  },
-  {
-    "train_id": "6036B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "12:54:00",
-    "color": "#0084D8",
-    "dest_time": "13:40:00"
-  },
-  {
-    "train_id": "5117B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "12:58:00",
-    "color": "#0084D8",
-    "dest_time": "13:44:00"
-  },
-  {
-    "train_id": "5040B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "12:59:00",
-    "color": "#0084D8",
-    "dest_time": "13:24:00"
-  },
-  {
     "train_id": "6043",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -5680,24 +4993,6 @@
     "time_est": "13:08:00",
     "color": "#0084D8",
     "dest_time": "13:31:00"
-  },
-  {
-    "train_id": "6038B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "13:09:00",
-    "color": "#0084D8",
-    "dest_time": "13:56:00"
-  },
-  {
-    "train_id": "5043B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "13:11:00",
-    "color": "#0084D8",
-    "dest_time": "13:43:00"
   },
   {
     "train_id": "5532",
@@ -5709,33 +5004,6 @@
     "dest_time": "13:44:00"
   },
   {
-    "train_id": "5535B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "13:22:00",
-    "color": "#0084D8",
-    "dest_time": "14:03:00"
-  },
-  {
-    "train_id": "5045B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "13:36:00",
-    "color": "#0084D8",
-    "dest_time": "14:08:00"
-  },
-  {
-    "train_id": "6040C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "13:38:00",
-    "color": "#0084D8",
-    "dest_time": "14:01:00"
-  },
-  {
     "train_id": "6045",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -5743,24 +5011,6 @@
     "time_est": "13:45:00",
     "color": "#0084D8",
     "dest_time": "14:08:00"
-  },
-  {
-    "train_id": "5116B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "13:48:00",
-    "color": "#0084D8",
-    "dest_time": "14:11:00"
-  },
-  {
-    "train_id": "5537B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "13:52:00",
-    "color": "#0084D8",
-    "dest_time": "14:33:00"
   },
   {
     "train_id": "5534",
@@ -5779,33 +5029,6 @@
     "time_est": "14:02:00",
     "color": "#0084D8",
     "dest_time": "14:25:00"
-  },
-  {
-    "train_id": "5042B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "14:08:00",
-    "color": "#0084D8",
-    "dest_time": "14:32:00"
-  },
-  {
-    "train_id": "5539B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "14:09:00",
-    "color": "#0084D8",
-    "dest_time": "14:50:00"
-  },
-  {
-    "train_id": "6044B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "14:14:00",
-    "color": "#0084D8",
-    "dest_time": "14:36:00"
   },
   {
     "train_id": "6049A",
@@ -5835,33 +5058,6 @@
     "dest_time": "14:51:00"
   },
   {
-    "train_id": "5044B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "14:33:00",
-    "color": "#0084D8",
-    "dest_time": "14:57:00"
-  },
-  {
-    "train_id": "5047C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "14:35:00",
-    "color": "#0084D8",
-    "dest_time": "15:11:00"
-  },
-  {
-    "train_id": "5118B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "14:39:00",
-    "color": "#0084D8",
-    "dest_time": "15:25:00"
-  },
-  {
     "train_id": "6053",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -5871,15 +5067,6 @@
     "dest_time": "15:05:00"
   },
   {
-    "train_id": "6046B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "14:50:00",
-    "color": "#0084D8",
-    "dest_time": "15:14:00"
-  },
-  {
     "train_id": "5538",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-CIKARANG",
@@ -5887,42 +5074,6 @@
     "time_est": "14:57:00",
     "color": "#0084D8",
     "dest_time": "15:44:00"
-  },
-  {
-    "train_id": "5049C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "14:59:00",
-    "color": "#0084D8",
-    "dest_time": "15:36:00"
-  },
-  {
-    "train_id": "5046B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "15:02:00",
-    "color": "#0084D8",
-    "dest_time": "15:27:00"
-  },
-  {
-    "train_id": "6048C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "15:07:00",
-    "color": "#0084D8",
-    "dest_time": "15:31:00"
-  },
-  {
-    "train_id": "5541B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "15:09:00",
-    "color": "#0084D8",
-    "dest_time": "15:54:00"
   },
   {
     "train_id": "6055",
@@ -5943,42 +5094,6 @@
     "dest_time": "16:00:00"
   },
   {
-    "train_id": "5543B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "15:24:00",
-    "color": "#0084D8",
-    "dest_time": "16:05:00"
-  },
-  {
-    "train_id": "6050B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "15:24:00",
-    "color": "#0084D8",
-    "dest_time": "15:51:00"
-  },
-  {
-    "train_id": "6052C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "15:33:00",
-    "color": "#0084D8",
-    "dest_time": "15:56:00"
-  },
-  {
-    "train_id": "5119B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "15:35:00",
-    "color": "#0084D8",
-    "dest_time": "16:15:00"
-  },
-  {
     "train_id": "6057",
     "ka_name": "BEKASI LINE",
     "route_name": "CIKARANG-KAMPUNGBANDAN",
@@ -5986,15 +5101,6 @@
     "time_est": "15:40:00",
     "color": "#0084D8",
     "dest_time": "16:03:00"
-  },
-  {
-    "train_id": "6054B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "15:51:00",
-    "color": "#0084D8",
-    "dest_time": "16:42:00"
   },
   {
     "train_id": "6059",
@@ -6006,24 +5112,6 @@
     "dest_time": "16:16:00"
   },
   {
-    "train_id": "5545B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "15:59:00",
-    "color": "#0084D8",
-    "dest_time": "16:43:00"
-  },
-  {
-    "train_id": "5048B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "16:03:00",
-    "color": "#0084D8",
-    "dest_time": "16:27:00"
-  },
-  {
     "train_id": "6061",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -6033,15 +5121,6 @@
     "dest_time": "16:30:00"
   },
   {
-    "train_id": "5547B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "16:16:00",
-    "color": "#0084D8",
-    "dest_time": "17:02:00"
-  },
-  {
     "train_id": "5542",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-CIKARANG",
@@ -6049,15 +5128,6 @@
     "time_est": "16:18:00",
     "color": "#0084D8",
     "dest_time": "17:03:00"
-  },
-  {
-    "train_id": "6056B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "16:23:00",
-    "color": "#0084D8",
-    "dest_time": "17:13:00"
   },
   {
     "train_id": "6063",
@@ -6078,24 +5148,6 @@
     "dest_time": "16:51:00"
   },
   {
-    "train_id": "5051B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "16:32:00",
-    "color": "#0084D8",
-    "dest_time": "17:06:00"
-  },
-  {
-    "train_id": "5050B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "16:36:00",
-    "color": "#0084D8",
-    "dest_time": "17:23:00"
-  },
-  {
     "train_id": "6065",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -6103,24 +5155,6 @@
     "time_est": "16:39:00",
     "color": "#0084D8",
     "dest_time": "17:02:00"
-  },
-  {
-    "train_id": "5549B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "16:47:00",
-    "color": "#0084D8",
-    "dest_time": "17:28:00"
-  },
-  {
-    "train_id": "6058C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "16:47:00",
-    "color": "#0084D8",
-    "dest_time": "17:10:00"
   },
   {
     "train_id": "6067",
@@ -6132,24 +5166,6 @@
     "dest_time": "17:19:00"
   },
   {
-    "train_id": "6060B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "16:58:00",
-    "color": "#0084D8",
-    "dest_time": "17:43:00"
-  },
-  {
-    "train_id": "5053B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "17:03:00",
-    "color": "#0084D8",
-    "dest_time": "17:35:00"
-  },
-  {
     "train_id": "5546",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-CIKARANG",
@@ -6157,15 +5173,6 @@
     "time_est": "17:05:00",
     "color": "#0084D8",
     "dest_time": "17:52:00"
-  },
-  {
-    "train_id": "5120B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "17:09:00",
-    "color": "#0084D8",
-    "dest_time": "17:31:00"
   },
   {
     "train_id": "6069",
@@ -6177,24 +5184,6 @@
     "dest_time": "17:32:00"
   },
   {
-    "train_id": "6062B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "17:16:00",
-    "color": "#0084D8",
-    "dest_time": "18:04:00"
-  },
-  {
-    "train_id": "5551C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "17:19:00",
-    "color": "#0084D8",
-    "dest_time": "18:02:00"
-  },
-  {
     "train_id": "5548",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-BEKASI",
@@ -6202,15 +5191,6 @@
     "time_est": "17:26:00",
     "color": "#0084D8",
     "dest_time": "17:49:00"
-  },
-  {
-    "train_id": "6064C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "17:31:00",
-    "color": "#0084D8",
-    "dest_time": "18:21:00"
   },
   {
     "train_id": "6071",
@@ -6222,33 +5202,6 @@
     "dest_time": "17:55:00"
   },
   {
-    "train_id": "6066B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "17:43:00",
-    "color": "#0084D8",
-    "dest_time": "18:30:00"
-  },
-  {
-    "train_id": "5052B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "17:50:00",
-    "color": "#0084D8",
-    "dest_time": "18:12:00"
-  },
-  {
-    "train_id": "5057B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "17:51:00",
-    "color": "#0084D8",
-    "dest_time": "18:26:00"
-  },
-  {
     "train_id": "5550",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-CIKARANG",
@@ -6256,42 +5209,6 @@
     "time_est": "17:54:00",
     "color": "#0084D8",
     "dest_time": "18:43:00"
-  },
-  {
-    "train_id": "6068B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "18:01:00",
-    "color": "#0084D8",
-    "dest_time": "18:49:00"
-  },
-  {
-    "train_id": "5553C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "18:03:00",
-    "color": "#0084D8",
-    "dest_time": "18:43:00"
-  },
-  {
-    "train_id": "D1/14104",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "18:07:00",
-    "color": "#0084D8",
-    "dest_time": "18:31:00"
-  },
-  {
-    "train_id": "6070B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "18:14:00",
-    "color": "#0084D8",
-    "dest_time": "18:38:00"
   },
   {
     "train_id": "6073A",
@@ -6303,24 +5220,6 @@
     "dest_time": "18:43:00"
   },
   {
-    "train_id": "D1/5148D",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "18:20:00",
-    "color": "#0084D8",
-    "dest_time": "19:11:00"
-  },
-  {
-    "train_id": "5059B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "18:25:00",
-    "color": "#0084D8",
-    "dest_time": "18:57:00"
-  },
-  {
     "train_id": "5552",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-BEKASI",
@@ -6328,24 +5227,6 @@
     "time_est": "18:27:00",
     "color": "#0084D8",
     "dest_time": "18:51:00"
-  },
-  {
-    "train_id": "5054B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "18:32:00",
-    "color": "#0084D8",
-    "dest_time": "19:01:00"
-  },
-  {
-    "train_id": "5555B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "18:36:00",
-    "color": "#0084D8",
-    "dest_time": "19:17:00"
   },
   {
     "train_id": "6075",
@@ -6357,24 +5238,6 @@
     "dest_time": "19:06:00"
   },
   {
-    "train_id": "6072C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "18:46:00",
-    "color": "#0084D8",
-    "dest_time": "19:36:00"
-  },
-  {
-    "train_id": "5061C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "18:48:00",
-    "color": "#0084D8",
-    "dest_time": "19:19:00"
-  },
-  {
     "train_id": "6077",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -6382,15 +5245,6 @@
     "time_est": "18:53:00",
     "color": "#0084D8",
     "dest_time": "19:17:00"
-  },
-  {
-    "train_id": "5056B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "19:02:00",
-    "color": "#0084D8",
-    "dest_time": "19:25:00"
   },
   {
     "train_id": "D1/5091E",
@@ -6420,42 +5274,6 @@
     "dest_time": "19:31:00"
   },
   {
-    "train_id": "5058B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "19:11:00",
-    "color": "#0084D8",
-    "dest_time": "19:36:00"
-  },
-  {
-    "train_id": "D1/5557C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "19:18:00",
-    "color": "#0084D8",
-    "dest_time": "19:59:00"
-  },
-  {
-    "train_id": "5063B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "19:24:00",
-    "color": "#0084D8",
-    "dest_time": "19:56:00"
-  },
-  {
-    "train_id": "D1/5092D",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "19:28:00",
-    "color": "#0084D8",
-    "dest_time": "19:51:00"
-  },
-  {
     "train_id": "6081",
     "ka_name": "BEKASI LINE",
     "route_name": "CIKARANG-KAMPUNGBANDAN",
@@ -6463,24 +5281,6 @@
     "time_est": "19:30:00",
     "color": "#0084D8",
     "dest_time": "19:54:00"
-  },
-  {
-    "train_id": "D1/6074D",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "19:35:00",
-    "color": "#0084D8",
-    "dest_time": "20:19:00"
-  },
-  {
-    "train_id": "5121B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "19:37:00",
-    "color": "#0084D8",
-    "dest_time": "20:17:00"
   },
   {
     "train_id": "5556",
@@ -6492,33 +5292,6 @@
     "dest_time": "20:34:00"
   },
   {
-    "train_id": "5060B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "19:46:00",
-    "color": "#0084D8",
-    "dest_time": "20:09:00"
-  },
-  {
-    "train_id": "5065B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "19:46:00",
-    "color": "#0084D8",
-    "dest_time": "20:20:00"
-  },
-  {
-    "train_id": "6076B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-TAMBUN",
-    "dest": "TAMBUN",
-    "time_est": "19:52:00",
-    "color": "#0084D8",
-    "dest_time": "20:25:00"
-  },
-  {
     "train_id": "6083",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -6526,33 +5299,6 @@
     "time_est": "19:54:00",
     "color": "#0084D8",
     "dest_time": "20:17:00"
-  },
-  {
-    "train_id": "6078B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "20:02:00",
-    "color": "#0084D8",
-    "dest_time": "20:47:00"
-  },
-  {
-    "train_id": "5062B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "20:07:00",
-    "color": "#0084D8",
-    "dest_time": "20:54:00"
-  },
-  {
-    "train_id": "5067B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "20:07:00",
-    "color": "#0084D8",
-    "dest_time": "20:40:00"
   },
   {
     "train_id": "6085",
@@ -6564,38 +5310,11 @@
     "dest_time": "20:37:00"
   },
   {
-    "train_id": "6080B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "20:14:00",
-    "color": "#0084D8",
-    "dest_time": "20:37:00"
-  },
-  {
-    "train_id": "5123B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "20:15:00",
-    "color": "#0084D8",
-    "dest_time": "20:47:00"
-  },
-  {
     "train_id": "5558",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-CIKARANG",
     "dest": "CIKARANG",
     "time_est": "20:23:00",
-    "color": "#0084D8",
-    "dest_time": "21:05:00"
-  },
-  {
-    "train_id": "5559B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "20:25:00",
     "color": "#0084D8",
     "dest_time": "21:05:00"
   },
@@ -6607,15 +5326,6 @@
     "time_est": "20:32:00",
     "color": "#0084D8",
     "dest_time": "20:39:00"
-  },
-  {
-    "train_id": "6082B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "20:36:00",
-    "color": "#0084D8",
-    "dest_time": "21:05:00"
   },
   {
     "train_id": "D1/5093D",
@@ -6636,33 +5346,6 @@
     "dest_time": "21:08:00"
   },
   {
-    "train_id": "5561B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "20:58:00",
-    "color": "#0084D8",
-    "dest_time": "21:44:00"
-  },
-  {
-    "train_id": "5064B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "21:00:00",
-    "color": "#0084D8",
-    "dest_time": "21:43:00"
-  },
-  {
-    "train_id": "6084B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "21:05:00",
-    "color": "#0084D8",
-    "dest_time": "21:57:00"
-  },
-  {
     "train_id": "6089",
     "ka_name": "BEKASI LINE",
     "route_name": "CIKARANG-KAMPUNGBANDAN",
@@ -6670,33 +5353,6 @@
     "time_est": "21:05:00",
     "color": "#0084D8",
     "dest_time": "21:27:00"
-  },
-  {
-    "train_id": "5069B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "21:09:00",
-    "color": "#0084D8",
-    "dest_time": "21:42:00"
-  },
-  {
-    "train_id": "5066B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "21:13:00",
-    "color": "#0084D8",
-    "dest_time": "21:36:00"
-  },
-  {
-    "train_id": "6086B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "21:26:00",
-    "color": "#0084D8",
-    "dest_time": "22:18:00"
   },
   {
     "train_id": "6091",
@@ -6717,24 +5373,6 @@
     "dest_time": "22:23:00"
   },
   {
-    "train_id": "5563C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "21:39:00",
-    "color": "#0084D8",
-    "dest_time": "22:22:00"
-  },
-  {
-    "train_id": "5068B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "21:45:00",
-    "color": "#0084D8",
-    "dest_time": "22:32:00"
-  },
-  {
     "train_id": "6093",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -6742,42 +5380,6 @@
     "time_est": "21:49:00",
     "color": "#0084D8",
     "dest_time": "22:13:00"
-  },
-  {
-    "train_id": "6088B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "21:50:00",
-    "color": "#0084D8",
-    "dest_time": "22:14:00"
-  },
-  {
-    "train_id": "5071B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "21:56:00",
-    "color": "#0084D8",
-    "dest_time": "22:31:00"
-  },
-  {
-    "train_id": "5124B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "21:59:00",
-    "color": "#0084D8",
-    "dest_time": "22:23:00"
-  },
-  {
-    "train_id": "5073B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "22:08:00",
-    "color": "#0084D8",
-    "dest_time": "22:42:00"
   },
   {
     "train_id": "5562A",
@@ -6789,15 +5391,6 @@
     "dest_time": "22:54:00"
   },
   {
-    "train_id": "5125B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "22:23:00",
-    "color": "#0084D8",
-    "dest_time": "23:07:00"
-  },
-  {
     "train_id": "5127A",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-MANGGARAI",
@@ -6805,15 +5398,6 @@
     "time_est": "22:34:00",
     "color": "#0084D8",
     "dest_time": "22:41:00"
-  },
-  {
-    "train_id": "6092B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "22:40:00",
-    "color": "#0084D8",
-    "dest_time": "23:05:00"
   },
   {
     "train_id": "5564",
@@ -6834,15 +5418,6 @@
     "dest_time": "22:56:00"
   },
   {
-    "train_id": "5070B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "22:51:00",
-    "color": "#0084D8",
-    "dest_time": "23:15:00"
-  },
-  {
     "train_id": "6095",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -6850,15 +5425,6 @@
     "time_est": "22:57:00",
     "color": "#0084D8",
     "dest_time": "23:21:00"
-  },
-  {
-    "train_id": "5075B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "23:02:00",
-    "color": "#0084D8",
-    "dest_time": "23:33:00"
   },
   {
     "train_id": "6097",
@@ -6870,33 +5436,6 @@
     "dest_time": "23:34:00"
   },
   {
-    "train_id": "5072B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "23:12:00",
-    "color": "#0084D8",
-    "dest_time": "23:59:00"
-  },
-  {
-    "train_id": "5077B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "23:22:00",
-    "color": "#0084D8",
-    "dest_time": "23:54:00"
-  },
-  {
-    "train_id": "5074B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "23:33:00",
-    "color": "#0084D8",
-    "dest_time": "00:24:00"
-  },
-  {
     "train_id": "6099",
     "ka_name": "BEKASI LINE",
     "route_name": "BEKASI-KAMPUNGBANDAN",
@@ -6905,8 +5444,6 @@
     "color": "#0084D8",
     "dest_time": "00:22:00"
   },
-  // END JATINEGARA
-  // START DURI
   {
     "status": 200,
     "data": [
@@ -9234,17 +7771,6 @@
       }
     ]
   },
-  // END DURI
-  // START TANAH ABANG
-  {
-    "train_id": "5076B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "00:03:00",
-    "color": "#0084D8",
-    "dest_time": "00:48:00"
-  },
   {
     "train_id": "5078B",
     "ka_name": "BEKASI LINE",
@@ -9253,15 +7779,6 @@
     "time_est": "00:17:00",
     "color": "#0084D8",
     "dest_time": "00:29:00"
-  },
-  {
-    "train_id": "5013B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "04:39:00",
-    "color": "#0084D8",
-    "dest_time": "04:50:00"
   },
   {
     "train_id": "D1/1968A",
@@ -9273,24 +7790,6 @@
     "dest_time": "05:38:00"
   },
   {
-    "train_id": "5014B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "05:15:00",
-    "color": "#0084D8",
-    "dest_time": "06:31:00"
-  },
-  {
-    "train_id": "5017B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "05:15:00",
-    "color": "#0084D8",
-    "dest_time": "05:26:00"
-  },
-  {
     "train_id": "1972",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -9298,15 +7797,6 @@
     "time_est": "05:25:00",
     "color": "#16812B",
     "dest_time": "06:17:00"
-  },
-  {
-    "train_id": "5019C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "05:31:00",
-    "color": "#0084D8",
-    "dest_time": "05:42:00"
   },
   {
     "train_id": "1974",
@@ -9318,15 +7808,6 @@
     "dest_time": "07:27:00"
   },
   {
-    "train_id": "5101B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "05:44:00",
-    "color": "#0084D8",
-    "dest_time": "06:04:00"
-  },
-  {
     "train_id": "1976",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -9334,15 +7815,6 @@
     "time_est": "05:45:00",
     "color": "#16812B",
     "dest_time": "07:42:00"
-  },
-  {
-    "train_id": "5018B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "05:47:00",
-    "color": "#0084D8",
-    "dest_time": "06:34:00"
   },
   {
     "train_id": "1978",
@@ -9354,24 +7826,6 @@
     "dest_time": "06:47:00"
   },
   {
-    "train_id": "5021C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "06:00:00",
-    "color": "#0084D8",
-    "dest_time": "06:11:00"
-  },
-  {
-    "train_id": "6006B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "06:00:00",
-    "color": "#0084D8",
-    "dest_time": "06:44:00"
-  },
-  {
     "train_id": "1982",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-SERPONG",
@@ -9379,33 +7833,6 @@
     "time_est": "06:05:00",
     "color": "#16812B",
     "dest_time": "06:42:00"
-  },
-  {
-    "train_id": "5501B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "06:07:00",
-    "color": "#0084D8",
-    "dest_time": "06:27:00"
-  },
-  {
-    "train_id": "5020C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "06:08:00",
-    "color": "#0084D8",
-    "dest_time": "07:21:00"
-  },
-  {
-    "train_id": "6008B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "06:14:00",
-    "color": "#0084D8",
-    "dest_time": "06:59:00"
   },
   {
     "train_id": "1986",
@@ -9417,15 +7844,6 @@
     "dest_time": "07:07:00"
   },
   {
-    "train_id": "5503B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "06:15:00",
-    "color": "#0084D8",
-    "dest_time": "06:35:00"
-  },
-  {
     "train_id": "1988",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -9433,24 +7851,6 @@
     "time_est": "06:25:00",
     "color": "#16812B",
     "dest_time": "08:19:00"
-  },
-  {
-    "train_id": "5103B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "06:25:00",
-    "color": "#0084D8",
-    "dest_time": "06:37:00"
-  },
-  {
-    "train_id": "5505B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "06:33:00",
-    "color": "#0084D8",
-    "dest_time": "06:53:00"
   },
   {
     "train_id": "1990",
@@ -9462,15 +7862,6 @@
     "dest_time": "08:35:00"
   },
   {
-    "train_id": "5102B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "06:41:00",
-    "color": "#0084D8",
-    "dest_time": "07:30:00"
-  },
-  {
     "train_id": "1992",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -9478,24 +7869,6 @@
     "time_est": "06:45:00",
     "color": "#16812B",
     "dest_time": "07:37:00"
-  },
-  {
-    "train_id": "5507B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "06:46:00",
-    "color": "#0084D8",
-    "dest_time": "07:06:00"
-  },
-  {
-    "train_id": "5022B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "06:52:00",
-    "color": "#0084D8",
-    "dest_time": "07:40:00"
   },
   {
     "train_id": "1994",
@@ -9507,15 +7880,6 @@
     "dest_time": "08:50:00"
   },
   {
-    "train_id": "5105B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "06:57:00",
-    "color": "#0084D8",
-    "dest_time": "07:17:00"
-  },
-  {
     "train_id": "1996",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-SERPONG",
@@ -9523,24 +7887,6 @@
     "time_est": "07:05:00",
     "color": "#16812B",
     "dest_time": "07:42:00"
-  },
-  {
-    "train_id": "6010B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "07:07:00",
-    "color": "#0084D8",
-    "dest_time": "07:51:00"
-  },
-  {
-    "train_id": "5509B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "07:10:00",
-    "color": "#0084D8",
-    "dest_time": "07:30:00"
   },
   {
     "train_id": "1998",
@@ -9552,33 +7898,6 @@
     "dest_time": "08:34:00"
   },
   {
-    "train_id": "D1/5083C",
-    "ka_name": "BEKASI LINE (WEEKDAYS ONLY)",
-    "route_name": "MANGGARAI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "07:15:00",
-    "color": "#0084D8",
-    "dest_time": "07:26:00"
-  },
-  {
-    "train_id": "5104C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "07:16:00",
-    "color": "#0084D8",
-    "dest_time": "08:25:00"
-  },
-  {
-    "train_id": "5511B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "07:24:00",
-    "color": "#0084D8",
-    "dest_time": "07:43:00"
-  },
-  {
     "train_id": "2000",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -9588,24 +7907,6 @@
     "dest_time": "09:20:00"
   },
   {
-    "train_id": "6012B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "07:28:00",
-    "color": "#0084D8",
-    "dest_time": "08:13:00"
-  },
-  {
-    "train_id": "5023B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "07:30:00",
-    "color": "#0084D8",
-    "dest_time": "07:41:00"
-  },
-  {
     "train_id": "2002",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -9613,24 +7914,6 @@
     "time_est": "07:35:00",
     "color": "#16812B",
     "dest_time": "08:27:00"
-  },
-  {
-    "train_id": "5107B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "07:37:00",
-    "color": "#0084D8",
-    "dest_time": "07:55:00"
-  },
-  {
-    "train_id": "D1/13815",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "07:43:00",
-    "color": "#0084D8",
-    "dest_time": "07:53:00"
   },
   {
     "train_id": "D1/5084C",
@@ -9651,15 +7934,6 @@
     "dest_time": "09:37:00"
   },
   {
-    "train_id": "5106C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "07:50:00",
-    "color": "#0084D8",
-    "dest_time": "09:01:00"
-  },
-  {
     "train_id": "2006",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-SERPONG",
@@ -9667,15 +7941,6 @@
     "time_est": "07:55:00",
     "color": "#16812B",
     "dest_time": "08:32:00"
-  },
-  {
-    "train_id": "5513C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "07:59:00",
-    "color": "#0084D8",
-    "dest_time": "08:19:00"
   },
   {
     "train_id": "D1/14086",
@@ -9714,15 +7979,6 @@
     "dest_time": "08:21:00"
   },
   {
-    "train_id": "5515B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "08:12:00",
-    "color": "#0084D8",
-    "dest_time": "08:32:00"
-  },
-  {
     "train_id": "2010",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -9732,24 +7988,6 @@
     "dest_time": "10:07:00"
   },
   {
-    "train_id": "6014B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "08:15:00",
-    "color": "#0084D8",
-    "dest_time": "09:04:00"
-  },
-  {
-    "train_id": "D1/5133C",
-    "ka_name": "BEKASI LINE (WEEKDAYS ONLY)",
-    "route_name": "MANGGARAI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "08:17:00",
-    "color": "#0084D8",
-    "dest_time": "08:36:00"
-  },
-  {
     "train_id": "2012",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -9757,15 +7995,6 @@
     "time_est": "08:25:00",
     "color": "#16812B",
     "dest_time": "10:22:00"
-  },
-  {
-    "train_id": "5025B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "08:25:00",
-    "color": "#0084D8",
-    "dest_time": "08:36:00"
   },
   {
     "train_id": "6016B",
@@ -9795,24 +8024,6 @@
     "dest_time": "09:27:00"
   },
   {
-    "train_id": "5517B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "TAMBUN-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "08:36:00",
-    "color": "#0084D8",
-    "dest_time": "08:56:00"
-  },
-  {
-    "train_id": "5108B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "08:37:00",
-    "color": "#0084D8",
-    "dest_time": "09:52:00"
-  },
-  {
     "train_id": "D1/5086E",
     "ka_name": "BEKASI LINE",
     "route_name": "ANGKE-MANGGARAI",
@@ -9820,15 +8031,6 @@
     "time_est": "08:43:00",
     "color": "#0084D8",
     "dest_time": "08:54:00"
-  },
-  {
-    "train_id": "D1/5135C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "08:43:00",
-    "color": "#0084D8",
-    "dest_time": "09:02:00"
   },
   {
     "train_id": "2016",
@@ -9840,15 +8042,6 @@
     "dest_time": "10:37:00"
   },
   {
-    "train_id": "6018B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "08:54:00",
-    "color": "#0084D8",
-    "dest_time": "10:09:00"
-  },
-  {
     "train_id": "2018",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -9858,24 +8051,6 @@
     "dest_time": "09:47:00"
   },
   {
-    "train_id": "5027B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "08:55:00",
-    "color": "#0084D8",
-    "dest_time": "09:06:00"
-  },
-  {
-    "train_id": "D1/5137C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "09:03:00",
-    "color": "#0084D8",
-    "dest_time": "09:14:00"
-  },
-  {
     "train_id": "2020",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-SERPONG",
@@ -9883,33 +8058,6 @@
     "time_est": "09:05:00",
     "color": "#16812B",
     "dest_time": "09:42:00"
-  },
-  {
-    "train_id": "5026C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "09:07:00",
-    "color": "#0084D8",
-    "dest_time": "10:21:00"
-  },
-  {
-    "train_id": "5519B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "09:08:00",
-    "color": "#0084D8",
-    "dest_time": "09:28:00"
-  },
-  {
-    "train_id": "D1/13575",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "09:11:00",
-    "color": "#0084D8",
-    "dest_time": "09:23:00"
   },
   {
     "train_id": "D1/5134C",
@@ -9948,24 +8096,6 @@
     "dest_time": "09:27:00"
   },
   {
-    "train_id": "6020B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "09:20:00",
-    "color": "#0084D8",
-    "dest_time": "10:07:00"
-  },
-  {
-    "train_id": "5521C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "09:25:00",
-    "color": "#0084D8",
-    "dest_time": "09:45:00"
-  },
-  {
     "train_id": "D1/2024A",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -9975,15 +8105,6 @@
     "dest_time": "10:17:00"
   },
   {
-    "train_id": "5028B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "09:28:00",
-    "color": "#0084D8",
-    "dest_time": "10:43:00"
-  },
-  {
     "train_id": "2026",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -9991,24 +8112,6 @@
     "time_est": "09:35:00",
     "color": "#16812B",
     "dest_time": "10:27:00"
-  },
-  {
-    "train_id": "5029B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "09:37:00",
-    "color": "#0084D8",
-    "dest_time": "09:48:00"
-  },
-  {
-    "train_id": "6022C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "09:40:00",
-    "color": "#0084D8",
-    "dest_time": "10:53:00"
   },
   {
     "train_id": "D1/13844",
@@ -10038,15 +8141,6 @@
     "dest_time": "09:57:00"
   },
   {
-    "train_id": "D1/5139C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "09:46:00",
-    "color": "#0084D8",
-    "dest_time": "10:05:00"
-  },
-  {
     "train_id": "D1/5138D",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-MANGGARAI",
@@ -10065,15 +8159,6 @@
     "dest_time": "10:47:00"
   },
   {
-    "train_id": "5523B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "09:55:00",
-    "color": "#0084D8",
-    "dest_time": "10:15:00"
-  },
-  {
     "train_id": "D1/14090",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-MANGGARAI",
@@ -10081,15 +8166,6 @@
     "time_est": "09:59:00",
     "color": "#0084D8",
     "dest_time": "10:10:00"
-  },
-  {
-    "train_id": "5031B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "10:01:00",
-    "color": "#0084D8",
-    "dest_time": "10:13:00"
   },
   {
     "train_id": "D1/2032A",
@@ -10101,15 +8177,6 @@
     "dest_time": "10:57:00"
   },
   {
-    "train_id": "6024B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "10:09:00",
-    "color": "#0084D8",
-    "dest_time": "11:17:00"
-  },
-  {
     "train_id": "2034",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-MANGGARAI",
@@ -10117,24 +8184,6 @@
     "time_est": "10:13:00",
     "color": "#0084D8",
     "dest_time": "10:25:00"
-  },
-  {
-    "train_id": "5030B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "10:19:00",
-    "color": "#0084D8",
-    "dest_time": "11:06:00"
-  },
-  {
-    "train_id": "5109C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "10:24:00",
-    "color": "#0084D8",
-    "dest_time": "10:44:00"
   },
   {
     "train_id": "2036",
@@ -10146,24 +8195,6 @@
     "dest_time": "12:18:00"
   },
   {
-    "train_id": "5033B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "10:29:00",
-    "color": "#0084D8",
-    "dest_time": "10:40:00"
-  },
-  {
-    "train_id": "6026B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "10:29:00",
-    "color": "#0084D8",
-    "dest_time": "11:42:00"
-  },
-  {
     "train_id": "2038",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -10171,24 +8202,6 @@
     "time_est": "10:35:00",
     "color": "#16812B",
     "dest_time": "11:27:00"
-  },
-  {
-    "train_id": "5032B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "10:39:00",
-    "color": "#0084D8",
-    "dest_time": "11:28:00"
-  },
-  {
-    "train_id": "5111B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "10:44:00",
-    "color": "#0084D8",
-    "dest_time": "11:04:00"
   },
   {
     "train_id": "2040",
@@ -10209,15 +8222,6 @@
     "dest_time": "10:57:00"
   },
   {
-    "train_id": "5035B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "10:54:00",
-    "color": "#0084D8",
-    "dest_time": "11:05:00"
-  },
-  {
     "train_id": "2042",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -10227,24 +8231,6 @@
     "dest_time": "12:47:00"
   },
   {
-    "train_id": "6028C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "10:58:00",
-    "color": "#0084D8",
-    "dest_time": "12:07:00"
-  },
-  {
-    "train_id": "5525C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "11:00:00",
-    "color": "#0084D8",
-    "dest_time": "11:20:00"
-  },
-  {
     "train_id": "2044",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-SERPONG",
@@ -10252,24 +8238,6 @@
     "time_est": "11:05:00",
     "color": "#16812B",
     "dest_time": "11:42:00"
-  },
-  {
-    "train_id": "5034B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "11:09:00",
-    "color": "#0084D8",
-    "dest_time": "11:54:00"
-  },
-  {
-    "train_id": "5527B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "11:13:00",
-    "color": "#0084D8",
-    "dest_time": "11:33:00"
   },
   {
     "train_id": "D1/13856",
@@ -10290,24 +8258,6 @@
     "dest_time": "13:07:00"
   },
   {
-    "train_id": "5110B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "11:19:00",
-    "color": "#0084D8",
-    "dest_time": "11:59:00"
-  },
-  {
-    "train_id": "5113B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "11:24:00",
-    "color": "#0084D8",
-    "dest_time": "11:44:00"
-  },
-  {
     "train_id": "2048",
     "ka_name": "SERPONG LINE (WEEKDAYS ONLY)",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -10315,15 +8265,6 @@
     "time_est": "11:25:00",
     "color": "#16812B",
     "dest_time": "12:17:00"
-  },
-  {
-    "train_id": "5037B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "11:29:00",
-    "color": "#0084D8",
-    "dest_time": "11:40:00"
   },
   {
     "train_id": "2050",
@@ -10344,24 +8285,6 @@
     "dest_time": "11:48:00"
   },
   {
-    "train_id": "5112B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "11:40:00",
-    "color": "#0084D8",
-    "dest_time": "12:29:00"
-  },
-  {
-    "train_id": "D1/5141C",
-    "ka_name": "BEKASI LINE (WEEKENDS ONLY)",
-    "route_name": "MANGGARAI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "11:40:00",
-    "color": "#0084D8",
-    "dest_time": "12:00:00"
-  },
-  {
     "train_id": "2052",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -10369,33 +8292,6 @@
     "time_est": "11:45:00",
     "color": "#16812B",
     "dest_time": "13:37:00"
-  },
-  {
-    "train_id": "6032C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "11:48:00",
-    "color": "#0084D8",
-    "dest_time": "12:55:00"
-  },
-  {
-    "train_id": "5529C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "11:55:00",
-    "color": "#0084D8",
-    "dest_time": "12:15:00"
-  },
-  {
-    "train_id": "6034B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "11:58:00",
-    "color": "#0084D8",
-    "dest_time": "12:42:00"
   },
   {
     "train_id": "2056",
@@ -10407,24 +8303,6 @@
     "dest_time": "12:57:00"
   },
   {
-    "train_id": "5038B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-TAMBUN",
-    "dest": "TAMBUN",
-    "time_est": "12:07:00",
-    "color": "#0084D8",
-    "dest_time": "13:02:00"
-  },
-  {
-    "train_id": "5039B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "12:08:00",
-    "color": "#0084D8",
-    "dest_time": "12:19:00"
-  },
-  {
     "train_id": "2058",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -10434,33 +8312,6 @@
     "dest_time": "14:07:00"
   },
   {
-    "train_id": "5114C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "12:17:00",
-    "color": "#0084D8",
-    "dest_time": "13:00:00"
-  },
-  {
-    "train_id": "5115B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "12:25:00",
-    "color": "#0084D8",
-    "dest_time": "12:45:00"
-  },
-  {
-    "train_id": "6036B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "12:29:00",
-    "color": "#0084D8",
-    "dest_time": "13:40:00"
-  },
-  {
     "train_id": "2060",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -10468,24 +8319,6 @@
     "time_est": "12:30:00",
     "color": "#16812B",
     "dest_time": "13:22:00"
-  },
-  {
-    "train_id": "5531B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "12:38:00",
-    "color": "#0084D8",
-    "dest_time": "12:57:00"
-  },
-  {
-    "train_id": "5040B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "12:39:00",
-    "color": "#0084D8",
-    "dest_time": "13:24:00"
   },
   {
     "train_id": "D1/5142C",
@@ -10506,24 +8339,6 @@
     "dest_time": "14:37:00"
   },
   {
-    "train_id": "6038B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "12:48:00",
-    "color": "#0084D8",
-    "dest_time": "13:56:00"
-  },
-  {
-    "train_id": "5041C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "12:59:00",
-    "color": "#0084D8",
-    "dest_time": "13:10:00"
-  },
-  {
     "train_id": "2064",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-SERPONG",
@@ -10531,24 +8346,6 @@
     "time_est": "13:05:00",
     "color": "#16812B",
     "dest_time": "13:42:00"
-  },
-  {
-    "train_id": "5533B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "13:09:00",
-    "color": "#0084D8",
-    "dest_time": "13:29:00"
-  },
-  {
-    "train_id": "6040C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "13:13:00",
-    "color": "#0084D8",
-    "dest_time": "14:01:00"
   },
   {
     "train_id": "2066",
@@ -10560,42 +8357,6 @@
     "dest_time": "15:07:00"
   },
   {
-    "train_id": "D1/5143C",
-    "ka_name": "BEKASI LINE (WEEKENDS ONLY)",
-    "route_name": "MANGGARAI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "13:17:00",
-    "color": "#0084D8",
-    "dest_time": "13:37:00"
-  },
-  {
-    "train_id": "5116B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "13:21:00",
-    "color": "#0084D8",
-    "dest_time": "14:11:00"
-  },
-  {
-    "train_id": "5117B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "13:24:00",
-    "color": "#0084D8",
-    "dest_time": "13:44:00"
-  },
-  {
-    "train_id": "5043B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "13:32:00",
-    "color": "#0084D8",
-    "dest_time": "13:43:00"
-  },
-  {
     "train_id": "2070",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -10603,33 +8364,6 @@
     "time_est": "13:35:00",
     "color": "#16812B",
     "dest_time": "14:27:00"
-  },
-  {
-    "train_id": "5042B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "13:43:00",
-    "color": "#0084D8",
-    "dest_time": "14:32:00"
-  },
-  {
-    "train_id": "5535B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "13:43:00",
-    "color": "#0084D8",
-    "dest_time": "14:03:00"
-  },
-  {
-    "train_id": "6044B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "13:53:00",
-    "color": "#0084D8",
-    "dest_time": "14:36:00"
   },
   {
     "train_id": "2074",
@@ -10641,15 +8375,6 @@
     "dest_time": "15:47:00"
   },
   {
-    "train_id": "5045B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "13:57:00",
-    "color": "#0084D8",
-    "dest_time": "14:08:00"
-  },
-  {
     "train_id": "2076",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-SERPONG",
@@ -10657,24 +8382,6 @@
     "time_est": "14:05:00",
     "color": "#16812B",
     "dest_time": "14:42:00"
-  },
-  {
-    "train_id": "5044B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "14:09:00",
-    "color": "#0084D8",
-    "dest_time": "14:57:00"
-  },
-  {
-    "train_id": "5537B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "14:13:00",
-    "color": "#0084D8",
-    "dest_time": "14:33:00"
   },
   {
     "train_id": "D1/5144C",
@@ -10695,33 +8402,6 @@
     "dest_time": "16:07:00"
   },
   {
-    "train_id": "5118B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "14:18:00",
-    "color": "#0084D8",
-    "dest_time": "15:25:00"
-  },
-  {
-    "train_id": "6046B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "14:29:00",
-    "color": "#0084D8",
-    "dest_time": "15:14:00"
-  },
-  {
-    "train_id": "5539B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "14:30:00",
-    "color": "#0084D8",
-    "dest_time": "14:50:00"
-  },
-  {
     "train_id": "2082",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -10729,24 +8409,6 @@
     "time_est": "14:35:00",
     "color": "#16812B",
     "dest_time": "16:27:00"
-  },
-  {
-    "train_id": "5046B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "14:39:00",
-    "color": "#0084D8",
-    "dest_time": "15:27:00"
-  },
-  {
-    "train_id": "D1/5145C",
-    "ka_name": "BEKASI LINE (WEEKENDS ONLY)",
-    "route_name": "MANGGARAI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "14:44:00",
-    "color": "#0084D8",
-    "dest_time": "15:04:00"
   },
   {
     "train_id": "2084",
@@ -10758,15 +8420,6 @@
     "dest_time": "16:42:00"
   },
   {
-    "train_id": "6048C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "14:46:00",
-    "color": "#0084D8",
-    "dest_time": "15:31:00"
-  },
-  {
     "train_id": "2086",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-SERPONG",
@@ -10774,24 +8427,6 @@
     "time_est": "14:55:00",
     "color": "#16812B",
     "dest_time": "15:32:00"
-  },
-  {
-    "train_id": "6050B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "14:59:00",
-    "color": "#0084D8",
-    "dest_time": "15:51:00"
-  },
-  {
-    "train_id": "5047C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "15:00:00",
-    "color": "#0084D8",
-    "dest_time": "15:11:00"
   },
   {
     "train_id": "2088",
@@ -10803,15 +8438,6 @@
     "dest_time": "16:57:00"
   },
   {
-    "train_id": "6052C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "15:12:00",
-    "color": "#0084D8",
-    "dest_time": "15:56:00"
-  },
-  {
     "train_id": "2092",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -10819,33 +8445,6 @@
     "time_est": "15:25:00",
     "color": "#16812B",
     "dest_time": "16:17:00"
-  },
-  {
-    "train_id": "5049C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "15:25:00",
-    "color": "#0084D8",
-    "dest_time": "15:36:00"
-  },
-  {
-    "train_id": "6054B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "15:26:00",
-    "color": "#0084D8",
-    "dest_time": "16:42:00"
-  },
-  {
-    "train_id": "5541B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "15:33:00",
-    "color": "#0084D8",
-    "dest_time": "15:54:00"
   },
   {
     "train_id": "D1/5146C",
@@ -10857,15 +8456,6 @@
     "dest_time": "15:50:00"
   },
   {
-    "train_id": "5048B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "15:42:00",
-    "color": "#0084D8",
-    "dest_time": "16:27:00"
-  },
-  {
     "train_id": "2094",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -10873,15 +8463,6 @@
     "time_est": "15:45:00",
     "color": "#16812B",
     "dest_time": "17:37:00"
-  },
-  {
-    "train_id": "5543B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "15:45:00",
-    "color": "#0084D8",
-    "dest_time": "16:05:00"
   },
   {
     "train_id": "2096",
@@ -10893,24 +8474,6 @@
     "dest_time": "17:52:00"
   },
   {
-    "train_id": "5119B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "15:55:00",
-    "color": "#0084D8",
-    "dest_time": "16:15:00"
-  },
-  {
-    "train_id": "6056B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "15:59:00",
-    "color": "#0084D8",
-    "dest_time": "17:13:00"
-  },
-  {
     "train_id": "2098",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-SERPONG",
@@ -10918,15 +8481,6 @@
     "time_est": "16:05:00",
     "color": "#16812B",
     "dest_time": "16:42:00"
-  },
-  {
-    "train_id": "D1/5087C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "16:14:00",
-    "color": "#0084D8",
-    "dest_time": "16:25:00"
   },
   {
     "train_id": "2100",
@@ -10938,24 +8492,6 @@
     "dest_time": "18:07:00"
   },
   {
-    "train_id": "5050B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "16:15:00",
-    "color": "#0084D8",
-    "dest_time": "17:23:00"
-  },
-  {
-    "train_id": "6058C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "16:24:00",
-    "color": "#0084D8",
-    "dest_time": "17:10:00"
-  },
-  {
     "train_id": "2102",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -10963,24 +8499,6 @@
     "time_est": "16:25:00",
     "color": "#16812B",
     "dest_time": "18:22:00"
-  },
-  {
-    "train_id": "5545B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "16:25:00",
-    "color": "#0084D8",
-    "dest_time": "16:43:00"
-  },
-  {
-    "train_id": "D1/5089C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "16:31:00",
-    "color": "#0084D8",
-    "dest_time": "16:43:00"
   },
   {
     "train_id": "2104",
@@ -10992,15 +8510,6 @@
     "dest_time": "17:27:00"
   },
   {
-    "train_id": "6060B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "16:37:00",
-    "color": "#0084D8",
-    "dest_time": "17:43:00"
-  },
-  {
     "train_id": "D1/5088C",
     "ka_name": "BEKASI LINE",
     "route_name": "ANGKE-MANGGARAI",
@@ -11008,15 +8517,6 @@
     "time_est": "16:42:00",
     "color": "#0084D8",
     "dest_time": "16:54:00"
-  },
-  {
-    "train_id": "5547B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "16:43:00",
-    "color": "#0084D8",
-    "dest_time": "17:02:00"
   },
   {
     "train_id": "2106",
@@ -11028,33 +8528,6 @@
     "dest_time": "18:37:00"
   },
   {
-    "train_id": "5120B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "16:47:00",
-    "color": "#0084D8",
-    "dest_time": "17:31:00"
-  },
-  {
-    "train_id": "D1/13829",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "16:47:00",
-    "color": "#0084D8",
-    "dest_time": "17:07:00"
-  },
-  {
-    "train_id": "6062B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "16:53:00",
-    "color": "#0084D8",
-    "dest_time": "18:04:00"
-  },
-  {
     "train_id": "2108",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -11064,15 +8537,6 @@
     "dest_time": "17:47:00"
   },
   {
-    "train_id": "5051B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "16:55:00",
-    "color": "#0084D8",
-    "dest_time": "17:06:00"
-  },
-  {
     "train_id": "2110",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-SERPONG",
@@ -11080,33 +8544,6 @@
     "time_est": "17:05:00",
     "color": "#16812B",
     "dest_time": "17:42:00"
-  },
-  {
-    "train_id": "5549B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "17:08:00",
-    "color": "#0084D8",
-    "dest_time": "17:28:00"
-  },
-  {
-    "train_id": "6064C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "17:10:00",
-    "color": "#0084D8",
-    "dest_time": "18:21:00"
-  },
-  {
-    "train_id": "D1/5147C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "17:14:00",
-    "color": "#0084D8",
-    "dest_time": "17:33:00"
   },
   {
     "train_id": "2112",
@@ -11127,24 +8564,6 @@
     "dest_time": "17:26:00"
   },
   {
-    "train_id": "6066B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "17:23:00",
-    "color": "#0084D8",
-    "dest_time": "18:30:00"
-  },
-  {
-    "train_id": "5053B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "17:24:00",
-    "color": "#0084D8",
-    "dest_time": "17:35:00"
-  },
-  {
     "train_id": "2114",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -11152,15 +8571,6 @@
     "time_est": "17:25:00",
     "color": "#16812B",
     "dest_time": "19:17:00"
-  },
-  {
-    "train_id": "5052B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "17:29:00",
-    "color": "#0084D8",
-    "dest_time": "18:12:00"
   },
   {
     "train_id": "2116",
@@ -11172,24 +8582,6 @@
     "dest_time": "18:27:00"
   },
   {
-    "train_id": "6068B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "17:40:00",
-    "color": "#0084D8",
-    "dest_time": "18:49:00"
-  },
-  {
-    "train_id": "5551C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "17:42:00",
-    "color": "#0084D8",
-    "dest_time": "18:02:00"
-  },
-  {
     "train_id": "2118",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -11197,33 +8589,6 @@
     "time_est": "17:45:00",
     "color": "#16812B",
     "dest_time": "19:37:00"
-  },
-  {
-    "train_id": "D1/14104",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "17:45:00",
-    "color": "#0084D8",
-    "dest_time": "18:31:00"
-  },
-  {
-    "train_id": "6070B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "17:53:00",
-    "color": "#0084D8",
-    "dest_time": "18:38:00"
-  },
-  {
-    "train_id": "D1/5149C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "17:54:00",
-    "color": "#0084D8",
-    "dest_time": "18:15:00"
   },
   {
     "train_id": "2120",
@@ -11235,24 +8600,6 @@
     "dest_time": "18:32:00"
   },
   {
-    "train_id": "D1/5148D",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "17:59:00",
-    "color": "#0084D8",
-    "dest_time": "19:11:00"
-  },
-  {
-    "train_id": "5055B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "18:01:00",
-    "color": "#0084D8",
-    "dest_time": "18:12:00"
-  },
-  {
     "train_id": "2122",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -11262,24 +8609,6 @@
     "dest_time": "19:57:00"
   },
   {
-    "train_id": "5054B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "18:12:00",
-    "color": "#0084D8",
-    "dest_time": "19:01:00"
-  },
-  {
-    "train_id": "5057B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "18:14:00",
-    "color": "#0084D8",
-    "dest_time": "18:26:00"
-  },
-  {
     "train_id": "2124",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -11287,24 +8616,6 @@
     "time_est": "18:15:00",
     "color": "#16812B",
     "dest_time": "19:07:00"
-  },
-  {
-    "train_id": "6072C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "18:21:00",
-    "color": "#0084D8",
-    "dest_time": "19:36:00"
-  },
-  {
-    "train_id": "5553C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "18:24:00",
-    "color": "#0084D8",
-    "dest_time": "18:43:00"
   },
   {
     "train_id": "2126",
@@ -11325,15 +8636,6 @@
     "dest_time": "19:27:00"
   },
   {
-    "train_id": "5056B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "18:37:00",
-    "color": "#0084D8",
-    "dest_time": "19:25:00"
-  },
-  {
     "train_id": "D1/5150C",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-MANGGARAI",
@@ -11352,24 +8654,6 @@
     "dest_time": "20:37:00"
   },
   {
-    "train_id": "5059B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "18:46:00",
-    "color": "#0084D8",
-    "dest_time": "18:57:00"
-  },
-  {
-    "train_id": "5058B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "18:48:00",
-    "color": "#0084D8",
-    "dest_time": "19:36:00"
-  },
-  {
     "train_id": "2132",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -11377,15 +8661,6 @@
     "time_est": "18:55:00",
     "color": "#16812B",
     "dest_time": "19:47:00"
-  },
-  {
-    "train_id": "5555B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "18:57:00",
-    "color": "#0084D8",
-    "dest_time": "19:17:00"
   },
   {
     "train_id": "2134",
@@ -11397,33 +8672,6 @@
     "dest_time": "19:42:00"
   },
   {
-    "train_id": "5061C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "19:08:00",
-    "color": "#0084D8",
-    "dest_time": "19:19:00"
-  },
-  {
-    "train_id": "D1/6074D",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "19:09:00",
-    "color": "#0084D8",
-    "dest_time": "20:19:00"
-  },
-  {
-    "train_id": "D1/5151C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "MANGGARAI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "19:14:00",
-    "color": "#0084D8",
-    "dest_time": "19:35:00"
-  },
-  {
     "train_id": "2136",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -11431,15 +8679,6 @@
     "time_est": "19:15:00",
     "color": "#16812B",
     "dest_time": "21:07:00"
-  },
-  {
-    "train_id": "5060B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "19:24:00",
-    "color": "#0084D8",
-    "dest_time": "20:09:00"
   },
   {
     "train_id": "2138",
@@ -11451,15 +8690,6 @@
     "dest_time": "21:22:00"
   },
   {
-    "train_id": "6076B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-TAMBUN",
-    "dest": "TAMBUN",
-    "time_est": "19:28:00",
-    "color": "#0084D8",
-    "dest_time": "20:25:00"
-  },
-  {
     "train_id": "2140",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -11467,24 +8697,6 @@
     "time_est": "19:35:00",
     "color": "#16812B",
     "dest_time": "20:27:00"
-  },
-  {
-    "train_id": "6078B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "19:38:00",
-    "color": "#0084D8",
-    "dest_time": "20:47:00"
-  },
-  {
-    "train_id": "D1/5557C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "19:39:00",
-    "color": "#0084D8",
-    "dest_time": "19:59:00"
   },
   {
     "train_id": "2142",
@@ -11496,33 +8708,6 @@
     "dest_time": "21:37:00"
   },
   {
-    "train_id": "5063B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "19:45:00",
-    "color": "#0084D8",
-    "dest_time": "19:56:00"
-  },
-  {
-    "train_id": "5062B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "19:46:00",
-    "color": "#0084D8",
-    "dest_time": "20:54:00"
-  },
-  {
-    "train_id": "6080B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "19:52:00",
-    "color": "#0084D8",
-    "dest_time": "20:37:00"
-  },
-  {
     "train_id": "2144",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -11532,15 +8717,6 @@
     "dest_time": "20:47:00"
   },
   {
-    "train_id": "5121B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "19:57:00",
-    "color": "#0084D8",
-    "dest_time": "20:17:00"
-  },
-  {
     "train_id": "2146",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-SERPONG",
@@ -11548,15 +8724,6 @@
     "time_est": "20:05:00",
     "color": "#16812B",
     "dest_time": "20:42:00"
-  },
-  {
-    "train_id": "5065B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "20:08:00",
-    "color": "#0084D8",
-    "dest_time": "20:20:00"
   },
   {
     "train_id": "D1/5152C",
@@ -11577,33 +8744,6 @@
     "dest_time": "22:07:00"
   },
   {
-    "train_id": "6082B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "20:15:00",
-    "color": "#0084D8",
-    "dest_time": "21:05:00"
-  },
-  {
-    "train_id": "5064B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "20:29:00",
-    "color": "#0084D8",
-    "dest_time": "21:43:00"
-  },
-  {
-    "train_id": "5067B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "20:29:00",
-    "color": "#0084D8",
-    "dest_time": "20:40:00"
-  },
-  {
     "train_id": "2150",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -11613,24 +8753,6 @@
     "dest_time": "22:22:00"
   },
   {
-    "train_id": "5123B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "20:35:00",
-    "color": "#0084D8",
-    "dest_time": "20:47:00"
-  },
-  {
-    "train_id": "6084B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "20:38:00",
-    "color": "#0084D8",
-    "dest_time": "21:57:00"
-  },
-  {
     "train_id": "2152",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -11638,33 +8760,6 @@
     "time_est": "20:45:00",
     "color": "#16812B",
     "dest_time": "21:37:00"
-  },
-  {
-    "train_id": "5559B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "20:45:00",
-    "color": "#0084D8",
-    "dest_time": "21:05:00"
-  },
-  {
-    "train_id": "5066B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "20:49:00",
-    "color": "#0084D8",
-    "dest_time": "21:36:00"
-  },
-  {
-    "train_id": "6086B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "20:59:00",
-    "color": "#0084D8",
-    "dest_time": "22:18:00"
   },
   {
     "train_id": "2154",
@@ -11694,15 +8789,6 @@
     "dest_time": "22:32:00"
   },
   {
-    "train_id": "5068B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "21:17:00",
-    "color": "#0084D8",
-    "dest_time": "22:32:00"
-  },
-  {
     "train_id": "2158",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-RANGKASBITUNG",
@@ -11710,42 +8796,6 @@
     "time_est": "21:25:00",
     "color": "#16812B",
     "dest_time": "23:17:00"
-  },
-  {
-    "train_id": "5561B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "21:25:00",
-    "color": "#0084D8",
-    "dest_time": "21:44:00"
-  },
-  {
-    "train_id": "6088B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "21:29:00",
-    "color": "#0084D8",
-    "dest_time": "22:14:00"
-  },
-  {
-    "train_id": "5069B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "BEKASI-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "21:30:00",
-    "color": "#0084D8",
-    "dest_time": "21:42:00"
-  },
-  {
-    "train_id": "5124B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "21:38:00",
-    "color": "#0084D8",
-    "dest_time": "22:23:00"
   },
   {
     "train_id": "2160",
@@ -11784,15 +8834,6 @@
     "dest_time": "22:07:00"
   },
   {
-    "train_id": "5563C",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "22:03:00",
-    "color": "#0084D8",
-    "dest_time": "22:22:00"
-  },
-  {
     "train_id": "2164",
     "ka_name": "SERPONG LINE",
     "route_name": "TANAHABANG-PARUNGPANJANG",
@@ -11800,33 +8841,6 @@
     "time_est": "22:05:00",
     "color": "#16812B",
     "dest_time": "22:57:00"
-  },
-  {
-    "train_id": "6092B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "KAMPUNGBANDAN-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "22:10:00",
-    "color": "#0084D8",
-    "dest_time": "23:05:00"
-  },
-  {
-    "train_id": "5071B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "22:20:00",
-    "color": "#0084D8",
-    "dest_time": "22:31:00"
-  },
-  {
-    "train_id": "5070B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-BEKASI",
-    "dest": "BEKASI",
-    "time_est": "22:26:00",
-    "color": "#0084D8",
-    "dest_time": "23:15:00"
   },
   {
     "train_id": "2166",
@@ -11838,15 +8852,6 @@
     "dest_time": "00:22:00"
   },
   {
-    "train_id": "5073B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-ANGKE",
-    "dest": "ANGKE",
-    "time_est": "22:30:00",
-    "color": "#0084D8",
-    "dest_time": "22:42:00"
-  },
-  {
     "train_id": "6094B",
     "ka_name": "BEKASI LINE",
     "route_name": "KAMPUNGBANDAN-MANGGARAI",
@@ -11854,15 +8859,6 @@
     "time_est": "22:37:00",
     "color": "#0084D8",
     "dest_time": "22:49:00"
-  },
-  {
-    "train_id": "5125B",
-    "ka_name": "BEKASI LINE",
-    "route_name": "CIKARANG-KAMPUNGBANDAN",
-    "dest": "KAMPUNGBANDAN",
-    "time_est": "22:45:00",
-    "color": "#0084D8",
-    "dest_time": "23:07:00"
   },
   {
     "train_id": "2168",
@@ -11874,13 +8870,1308 @@
     "dest_time": "23:27:00"
   },
   {
-    "train_id": "5072B",
+    "train_id": "2400",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "06:04:00",
+    "color": "#DD0067",
+    "dest_time": "06:18:00"
+  },
+  {
+    "train_id": "2401",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "KAMPUNGBANDAN-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "06:05:00",
+    "color": "#DD0067",
+    "dest_time": "06:10:00"
+  },
+  {
+    "train_id": "2402",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "06:24:00",
+    "color": "#DD0067",
+    "dest_time": "06:38:00"
+  },
+  {
+    "train_id": "2403",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "06:44:00",
+    "color": "#DD0067",
+    "dest_time": "06:48:00"
+  },
+  {
+    "train_id": "2404",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "06:44:00",
+    "color": "#DD0067",
+    "dest_time": "06:58:00"
+  },
+  {
+    "train_id": "2405",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "07:04:00",
+    "color": "#DD0067",
+    "dest_time": "07:08:00"
+  },
+  {
+    "train_id": "2406",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "07:04:00",
+    "color": "#DD0067",
+    "dest_time": "07:18:00"
+  },
+  {
+    "train_id": "2407",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "07:24:00",
+    "color": "#DD0067",
+    "dest_time": "07:28:00"
+  },
+  {
+    "train_id": "2408",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "07:24:00",
+    "color": "#DD0067",
+    "dest_time": "07:38:00"
+  },
+  {
+    "train_id": "2409",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "07:44:00",
+    "color": "#DD0067",
+    "dest_time": "07:48:00"
+  },
+  {
+    "train_id": "2410",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "07:44:00",
+    "color": "#DD0067",
+    "dest_time": "07:58:00"
+  },
+  {
+    "train_id": "2411",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "08:04:00",
+    "color": "#DD0067",
+    "dest_time": "08:08:00"
+  },
+  {
+    "train_id": "2412",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "08:04:00",
+    "color": "#DD0067",
+    "dest_time": "08:18:00"
+  },
+  {
+    "train_id": "2413",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "08:24:00",
+    "color": "#DD0067",
+    "dest_time": "08:28:00"
+  },
+  {
+    "train_id": "2414",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "08:24:00",
+    "color": "#DD0067",
+    "dest_time": "08:38:00"
+  },
+  {
+    "train_id": "2415",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "08:44:00",
+    "color": "#DD0067",
+    "dest_time": "08:48:00"
+  },
+  {
+    "train_id": "2416",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "08:44:00",
+    "color": "#DD0067",
+    "dest_time": "08:58:00"
+  },
+  {
+    "train_id": "2417",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "09:04:00",
+    "color": "#DD0067",
+    "dest_time": "09:08:00"
+  },
+  {
+    "train_id": "2418",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "09:04:00",
+    "color": "#DD0067",
+    "dest_time": "09:18:00"
+  },
+  {
+    "train_id": "2419",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "09:24:00",
+    "color": "#DD0067",
+    "dest_time": "09:28:00"
+  },
+  {
+    "train_id": "2420",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "09:24:00",
+    "color": "#DD0067",
+    "dest_time": "09:38:00"
+  },
+  {
+    "train_id": "2421",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "09:44:00",
+    "color": "#DD0067",
+    "dest_time": "09:48:00"
+  },
+  {
+    "train_id": "2422",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "09:44:00",
+    "color": "#DD0067",
+    "dest_time": "09:58:00"
+  },
+  {
+    "train_id": "2423",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "10:04:00",
+    "color": "#DD0067",
+    "dest_time": "10:08:00"
+  },
+  {
+    "train_id": "2424",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "10:04:00",
+    "color": "#DD0067",
+    "dest_time": "10:18:00"
+  },
+  {
+    "train_id": "2425",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "10:24:00",
+    "color": "#DD0067",
+    "dest_time": "10:28:00"
+  },
+  {
+    "train_id": "2426",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "10:24:00",
+    "color": "#DD0067",
+    "dest_time": "10:38:00"
+  },
+  {
+    "train_id": "2427",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "10:44:00",
+    "color": "#DD0067",
+    "dest_time": "10:48:00"
+  },
+  {
+    "train_id": "2428",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "10:44:00",
+    "color": "#DD0067",
+    "dest_time": "10:58:00"
+  },
+  {
+    "train_id": "2429",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "11:04:00",
+    "color": "#DD0067",
+    "dest_time": "11:08:00"
+  },
+  {
+    "train_id": "2430",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "11:04:00",
+    "color": "#DD0067",
+    "dest_time": "11:18:00"
+  },
+  {
+    "train_id": "2431",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "11:24:00",
+    "color": "#DD0067",
+    "dest_time": "11:28:00"
+  },
+  {
+    "train_id": "2432",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "11:24:00",
+    "color": "#DD0067",
+    "dest_time": "11:38:00"
+  },
+  {
+    "train_id": "2433",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "11:44:00",
+    "color": "#DD0067",
+    "dest_time": "11:48:00"
+  },
+  {
+    "train_id": "2434",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "11:44:00",
+    "color": "#DD0067",
+    "dest_time": "11:58:00"
+  },
+  {
+    "train_id": "2435",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "12:04:00",
+    "color": "#DD0067",
+    "dest_time": "12:08:00"
+  },
+  {
+    "train_id": "2436",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "12:04:00",
+    "color": "#DD0067",
+    "dest_time": "12:18:00"
+  },
+  {
+    "train_id": "2437",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "12:24:00",
+    "color": "#DD0067",
+    "dest_time": "12:28:00"
+  },
+  {
+    "train_id": "2438",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "12:24:00",
+    "color": "#DD0067",
+    "dest_time": "12:38:00"
+  },
+  {
+    "train_id": "2439",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "12:44:00",
+    "color": "#DD0067",
+    "dest_time": "12:48:00"
+  },
+  {
+    "train_id": "2440",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "12:44:00",
+    "color": "#DD0067",
+    "dest_time": "12:58:00"
+  },
+  {
+    "train_id": "2441",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "13:04:00",
+    "color": "#DD0067",
+    "dest_time": "13:08:00"
+  },
+  {
+    "train_id": "2442",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "13:04:00",
+    "color": "#DD0067",
+    "dest_time": "13:18:00"
+  },
+  {
+    "train_id": "2443",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "13:24:00",
+    "color": "#DD0067",
+    "dest_time": "13:28:00"
+  },
+  {
+    "train_id": "2444",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "13:24:00",
+    "color": "#DD0067",
+    "dest_time": "13:38:00"
+  },
+  {
+    "train_id": "2445",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "13:44:00",
+    "color": "#DD0067",
+    "dest_time": "13:48:00"
+  },
+  {
+    "train_id": "2446",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "13:44:00",
+    "color": "#DD0067",
+    "dest_time": "13:58:00"
+  },
+  {
+    "train_id": "2447",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "14:04:00",
+    "color": "#DD0067",
+    "dest_time": "14:08:00"
+  },
+  {
+    "train_id": "2448",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "14:04:00",
+    "color": "#DD0067",
+    "dest_time": "14:18:00"
+  },
+  {
+    "train_id": "2449",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "14:24:00",
+    "color": "#DD0067",
+    "dest_time": "14:28:00"
+  },
+  {
+    "train_id": "2450",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "14:24:00",
+    "color": "#DD0067",
+    "dest_time": "14:38:00"
+  },
+  {
+    "train_id": "2451",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "14:44:00",
+    "color": "#DD0067",
+    "dest_time": "14:48:00"
+  },
+  {
+    "train_id": "2452",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "14:44:00",
+    "color": "#DD0067",
+    "dest_time": "14:58:00"
+  },
+  {
+    "train_id": "2453",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "15:04:00",
+    "color": "#DD0067",
+    "dest_time": "15:08:00"
+  },
+  {
+    "train_id": "2454",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "15:04:00",
+    "color": "#DD0067",
+    "dest_time": "15:18:00"
+  },
+  {
+    "train_id": "2455",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "15:24:00",
+    "color": "#DD0067",
+    "dest_time": "15:28:00"
+  },
+  {
+    "train_id": "2456",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "15:24:00",
+    "color": "#DD0067",
+    "dest_time": "15:38:00"
+  },
+  {
+    "train_id": "2457",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "15:44:00",
+    "color": "#DD0067",
+    "dest_time": "15:48:00"
+  },
+  {
+    "train_id": "2458",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "15:44:00",
+    "color": "#DD0067",
+    "dest_time": "15:58:00"
+  },
+  {
+    "train_id": "2459",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "16:04:00",
+    "color": "#DD0067",
+    "dest_time": "16:08:00"
+  },
+  {
+    "train_id": "2460",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "16:04:00",
+    "color": "#DD0067",
+    "dest_time": "16:18:00"
+  },
+  {
+    "train_id": "2461",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "16:24:00",
+    "color": "#DD0067",
+    "dest_time": "16:28:00"
+  },
+  {
+    "train_id": "2462",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "16:24:00",
+    "color": "#DD0067",
+    "dest_time": "16:38:00"
+  },
+  {
+    "train_id": "2463",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "16:44:00",
+    "color": "#DD0067",
+    "dest_time": "16:48:00"
+  },
+  {
+    "train_id": "2464",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "16:44:00",
+    "color": "#DD0067",
+    "dest_time": "16:58:00"
+  },
+  {
+    "train_id": "2465",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "17:04:00",
+    "color": "#DD0067",
+    "dest_time": "17:08:00"
+  },
+  {
+    "train_id": "2466",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "17:04:00",
+    "color": "#DD0067",
+    "dest_time": "17:18:00"
+  },
+  {
+    "train_id": "2467",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "17:24:00",
+    "color": "#DD0067",
+    "dest_time": "17:28:00"
+  },
+  {
+    "train_id": "2468",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "17:24:00",
+    "color": "#DD0067",
+    "dest_time": "17:38:00"
+  },
+  {
+    "train_id": "2469",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "17:44:00",
+    "color": "#DD0067",
+    "dest_time": "17:48:00"
+  },
+  {
+    "train_id": "2470",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "17:44:00",
+    "color": "#DD0067",
+    "dest_time": "17:58:00"
+  },
+  {
+    "train_id": "2471",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "18:04:00",
+    "color": "#DD0067",
+    "dest_time": "18:08:00"
+  },
+  {
+    "train_id": "2472",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "18:04:00",
+    "color": "#DD0067",
+    "dest_time": "18:18:00"
+  },
+  {
+    "train_id": "2473",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "18:24:00",
+    "color": "#DD0067",
+    "dest_time": "18:28:00"
+  },
+  {
+    "train_id": "2474",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "18:24:00",
+    "color": "#DD0067",
+    "dest_time": "18:38:00"
+  },
+  {
+    "train_id": "2475",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "18:44:00",
+    "color": "#DD0067",
+    "dest_time": "18:48:00"
+  },
+  {
+    "train_id": "2476",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "18:44:00",
+    "color": "#DD0067",
+    "dest_time": "18:58:00"
+  },
+  {
+    "train_id": "2477",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "19:04:00",
+    "color": "#DD0067",
+    "dest_time": "19:08:00"
+  },
+  {
+    "train_id": "2478",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "19:04:00",
+    "color": "#DD0067",
+    "dest_time": "19:18:00"
+  },
+  {
+    "train_id": "2479",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "19:24:00",
+    "color": "#DD0067",
+    "dest_time": "19:28:00"
+  },
+  {
+    "train_id": "2480",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "19:24:00",
+    "color": "#DD0067",
+    "dest_time": "19:38:00"
+  },
+  {
+    "train_id": "2481",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "19:44:00",
+    "color": "#DD0067",
+    "dest_time": "19:48:00"
+  },
+  {
+    "train_id": "2482",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "JAKARTAKOTA-TANJUNGPRIUK",
+    "dest": "TANJUNGPRIUK",
+    "time_est": "19:44:00",
+    "color": "#DD0067",
+    "dest_time": "19:58:00"
+  },
+  {
+    "train_id": "2483",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "20:04:00",
+    "color": "#DD0067",
+    "dest_time": "20:08:00"
+  },
+  {
+    "train_id": "2485",
+    "ka_name": "TANJUNGPRIUK LINE",
+    "route_name": "TANJUNGPRIUK-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "20:24:00",
+    "color": "#DD0067",
+    "dest_time": "20:28:00"
+  },
+  {
+    "train_id": "5129",
     "ka_name": "BEKASI LINE",
-    "route_name": "ANGKE-CIKARANG",
-    "dest": "CIKARANG",
-    "time_est": "22:51:00",
-    "color": "#0084D8",
-    "dest_time": "23:59:00"
+    "route_name": "KAMPUNGBANDAN-JAKARTAKOTA",
+    "dest": "JAKARTAKOTA",
+    "time_est": "23:12:00",
+    "color": "#DD0067",
+    "dest_time": "23:17:00"
+  },
+  {
+    "train_id": "4483",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "00:06:00",
+    "color": "#E30A16",
+    "dest_time": "00:13:00"
+  },
+  {
+    "train_id": "4487",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "00:23:00",
+    "color": "#E30A16",
+    "dest_time": "00:30:00"
+  },
+  {
+    "train_id": "4489",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "00:34:00",
+    "color": "#E30A16",
+    "dest_time": "00:41:00"
+  },
+  {
+    "train_id": "4491",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "00:44:00",
+    "color": "#E30A16",
+    "dest_time": "00:51:00"
+  },
+  {
+    "train_id": "4493",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "00:53:00",
+    "color": "#E30A16",
+    "dest_time": "01:00:00"
+  },
+  {
+    "train_id": "4000",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "03:37:00",
+    "color": "#E30A16",
+    "dest_time": "03:59:00"
+  },
+  {
+    "train_id": "4002",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "03:45:00",
+    "color": "#E30A16",
+    "dest_time": "04:07:00"
+  },
+  {
+    "train_id": "4004",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "03:56:00",
+    "color": "#E30A16",
+    "dest_time": "04:18:00"
+  },
+  {
+    "train_id": "4006",
+    "ka_name": "BOGOR LINE (WEEKDAYS ONLY)",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "04:07:00",
+    "color": "#E30A16",
+    "dest_time": "04:29:00"
+  },
+  {
+    "train_id": "4008",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "04:14:00",
+    "color": "#E30A16",
+    "dest_time": "04:36:00"
+  },
+  {
+    "train_id": "4500",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-NAMBO",
+    "dest": "NAMBO",
+    "time_est": "04:20:00",
+    "color": "#F76114",
+    "dest_time": "04:43:00"
+  },
+  {
+    "train_id": "4010",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "04:25:00",
+    "color": "#E30A16",
+    "dest_time": "04:47:00"
+  },
+  {
+    "train_id": "4012",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "04:35:00",
+    "color": "#E30A16",
+    "dest_time": "04:57:00"
+  },
+  {
+    "train_id": "4014",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "04:42:00",
+    "color": "#E30A16",
+    "dest_time": "05:04:00"
+  },
+  {
+    "train_id": "4016",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "04:49:00",
+    "color": "#E30A16",
+    "dest_time": "05:11:00"
+  },
+  {
+    "train_id": "4020",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "05:07:00",
+    "color": "#E30A16",
+    "dest_time": "05:29:00"
+  },
+  {
+    "train_id": "4022",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "05:17:00",
+    "color": "#E30A16",
+    "dest_time": "05:39:00"
+  },
+  {
+    "train_id": "4026",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOJONGGEDE",
+    "dest": "BOJONGGEDE",
+    "time_est": "05:27:00",
+    "color": "#E30A16",
+    "dest_time": "05:34:00"
+  },
+  {
+    "train_id": "D1/14198",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-NAMBO",
+    "dest": "NAMBO",
+    "time_est": "05:36:00",
+    "color": "#F76114",
+    "dest_time": "05:59:00"
+  },
+  {
+    "train_id": "D1/12790",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "05:41:00",
+    "color": "#E30A16",
+    "dest_time": "06:04:00"
+  },
+  {
+    "train_id": "D1/4030A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOJONGGEDE",
+    "dest": "BOJONGGEDE",
+    "time_est": "05:46:00",
+    "color": "#E30A16",
+    "dest_time": "05:53:00"
+  },
+  {
+    "train_id": "D1/4028A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "05:57:00",
+    "color": "#E30A16",
+    "dest_time": "06:19:00"
+  },
+  {
+    "train_id": "D1/4032A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "PASARMINGGU-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "06:01:00",
+    "color": "#E30A16",
+    "dest_time": "06:23:00"
+  },
+  {
+    "train_id": "4034",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "06:07:00",
+    "color": "#E30A16",
+    "dest_time": "06:29:00"
+  },
+  {
+    "train_id": "D1/4044A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "06:12:00",
+    "color": "#E30A16",
+    "dest_time": "06:34:00"
+  },
+  {
+    "train_id": "4038",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "06:22:00",
+    "color": "#E30A16",
+    "dest_time": "06:44:00"
+  },
+  {
+    "train_id": "4040",
+    "ka_name": "BOGOR LINE (WEEKDAYS ONLY)",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "06:27:00",
+    "color": "#E30A16",
+    "dest_time": "06:49:00"
+  },
+  {
+    "train_id": "4042",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "06:37:00",
+    "color": "#E30A16",
+    "dest_time": "06:59:00"
+  },
+  {
+    "train_id": "D1/4046A",
+    "ka_name": "BOGOR LINE (WEEKDAYS ONLY)",
+    "route_name": "DEPOK-BOGOR",
+    "dest": "BOGOR",
+    "time_est": "06:51:00",
+    "color": "#E30A16",
+    "dest_time": "07:13:00"
+  },
+  {
+    "train_id": "D1/4147A",
+    "ka_name": "BOGOR LINE (WEEKDAYS ONLY)",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "08:44:00",
+    "color": "#E30A16",
+    "dest_time": "08:50:00"
+  },
+  {
+    "train_id": "D1/4151A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "08:54:00",
+    "color": "#E30A16",
+    "dest_time": "09:00:00"
+  },
+  {
+    "train_id": "D1/4159A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "09:19:00",
+    "color": "#E30A16",
+    "dest_time": "09:25:00"
+  },
+  {
+    "train_id": "D1/4163A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "09:29:00",
+    "color": "#E30A16",
+    "dest_time": "09:35:00"
+  },
+  {
+    "train_id": "D1/4167A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "09:39:00",
+    "color": "#E30A16",
+    "dest_time": "09:45:00"
+  },
+  {
+    "train_id": "D1/4393A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "19:34:00",
+    "color": "#E30A16",
+    "dest_time": "19:40:00"
+  },
+  {
+    "train_id": "D1/4397A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "19:44:00",
+    "color": "#E30A16",
+    "dest_time": "19:50:00"
+  },
+  {
+    "train_id": "D1/4409A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "20:19:00",
+    "color": "#E30A16",
+    "dest_time": "20:25:00"
+  },
+  {
+    "train_id": "4419",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "20:44:00",
+    "color": "#E30A16",
+    "dest_time": "20:50:00"
+  },
+  {
+    "train_id": "4519",
+    "ka_name": "BOGOR LINE",
+    "route_name": "NAMBO-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "20:54:00",
+    "color": "#F76114",
+    "dest_time": "21:01:00"
+  },
+  {
+    "train_id": "D1/4423A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-MANGGARAI",
+    "dest": "MANGGARAI",
+    "time_est": "20:59:00",
+    "color": "#E30A16",
+    "dest_time": "21:45:00"
+  },
+  {
+    "train_id": "D1/4429A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "21:19:00",
+    "color": "#E30A16",
+    "dest_time": "21:25:00"
+  },
+  {
+    "train_id": "4435",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "21:35:00",
+    "color": "#E30A16",
+    "dest_time": "21:41:00"
+  },
+  {
+    "train_id": "4443",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "21:56:00",
+    "color": "#E30A16",
+    "dest_time": "22:02:00"
+  },
+  {
+    "train_id": "D1/4445A",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "22:07:00",
+    "color": "#E30A16",
+    "dest_time": "22:13:00"
+  },
+  {
+    "train_id": "4521",
+    "ka_name": "BOGOR LINE",
+    "route_name": "NAMBO-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "22:26:00",
+    "color": "#F76114",
+    "dest_time": "22:33:00"
+  },
+  {
+    "train_id": "D1/14108",
+    "ka_name": "BOGOR LINE",
+    "route_name": "DEPOK-NAMBO",
+    "dest": "NAMBO",
+    "time_est": "22:26:00",
+    "color": "#F76114",
+    "dest_time": "22:48:00"
+  },
+  {
+    "train_id": "4453",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "22:29:00",
+    "color": "#E30A16",
+    "dest_time": "22:35:00"
+  },
+  {
+    "train_id": "4457",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "22:45:00",
+    "color": "#E30A16",
+    "dest_time": "22:52:00"
+  },
+  {
+    "train_id": "4459",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "22:50:00",
+    "color": "#E30A16",
+    "dest_time": "22:57:00"
+  },
+  {
+    "train_id": "4461",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "22:56:00",
+    "color": "#E30A16",
+    "dest_time": "23:03:00"
+  },
+  {
+    "train_id": "4463",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "23:01:00",
+    "color": "#E30A16",
+    "dest_time": "23:08:00"
+  },
+  {
+    "train_id": "4467",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "23:14:00",
+    "color": "#E30A16",
+    "dest_time": "23:21:00"
+  },
+  {
+    "train_id": "D1/13835",
+    "ka_name": "BOGOR LINE",
+    "route_name": "NAMBO-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "23:24:00",
+    "color": "#F76114",
+    "dest_time": "23:31:00"
+  },
+  {
+    "train_id": "4471",
+    "ka_name": "BOGOR LINE (WEEKDAYS ONLY)",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "23:27:00",
+    "color": "#E30A16",
+    "dest_time": "23:34:00"
+  },
+  {
+    "train_id": "4473",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "23:33:00",
+    "color": "#E30A16",
+    "dest_time": "23:39:00"
+  },
+  {
+    "train_id": "4475",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "23:37:00",
+    "color": "#E30A16",
+    "dest_time": "23:44:00"
+  },
+  {
+    "train_id": "4477",
+    "ka_name": "BOGOR LINE (WEEKDAYS ONLY)",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "23:42:00",
+    "color": "#E30A16",
+    "dest_time": "23:49:00"
+  },
+  {
+    "train_id": "4479",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "23:51:00",
+    "color": "#E30A16",
+    "dest_time": "23:58:00"
+  },
+  {
+    "train_id": "4481",
+    "ka_name": "BOGOR LINE",
+    "route_name": "BOGOR-DEPOK",
+    "dest": "DEPOK",
+    "time_est": "23:57:00",
+    "color": "#E30A16",
+    "dest_time": "00:04:00"
   }
-  // END TANAH ABANG
 ]

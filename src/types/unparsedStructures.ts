@@ -7,3 +7,14 @@ export interface Train {
   color: string;
   dest_time: string;
 }
+
+export interface TrainSchedule {
+  train_id: string; // '5076B';
+  ka_name: string; // 'BEKASI LINE';
+  station_id: string; // 'KRI';
+  station_name: string; // 'KRANJI';
+  time_est: string; // '00:44:00';
+  transit_station: boolean; // false;
+  color: string; // '#0084D8';
+  transit: string; // '';
+}
