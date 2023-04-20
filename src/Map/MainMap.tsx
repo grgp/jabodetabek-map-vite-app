@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 
-import Color from 'color';
 import { Feature, Map, Overlay, View } from 'ol';
 import { MaplibreLayer } from 'mobility-toolbox-js/ol';
 import 'ol/ol.css';
@@ -11,69 +10,31 @@ import VectorLayer from 'ol/layer/Vector';
 import { Style, Stroke, Fill, Text } from 'ol/style';
 import { Polygon } from 'ol/geom';
 
-// import data from '../data/final/villages-unique-jkt-tgt-349.json';
 import data from '../data/final/villages-unique-jkt-262-minified.json';
 import popsData from '../data/final/villages-pop-data-v1.json';
 
 import { Village, VillagePopData } from '../types/structure';
 import { capitalizeWords } from './utils';
+import { POPUP_STYLES, getColor } from './styles';
+import Color from 'color';
+import { StyleLike } from 'ol/style/Style';
+import { FeatureLike } from 'ol/Feature';
 
 const villages = data as Village[];
-const villagesPopsData = popsData as Record<string, any>;
-const RATIO_NUM = 9000000;
-
-const getColor = (totalPopulation: number, polygonArea: number) => {
-  const minPopulation = 5000; // Define the minimum population here
-  const maxPopulation = 180000; // Define the maximum population here
-  const colorStart = Color('#ccffcc');
-  const colorEnd = Color('#006400');
-
-  const useDensity = true;
-  const densityModifier = useDensity ? (1 / polygonArea) * RATIO_NUM : 3;
-
-  const ratio = Math.min(
-    Math.max(
-      ((totalPopulation - minPopulation) / (maxPopulation - minPopulation)) *
-        densityModifier,
-      0
-    ),
-    1
-  );
-  return colorStart.mix(colorEnd, ratio).alpha(0.8).toString();
-};
+const villagesPopsData = popsData as unknown as Record<string, VillagePopData>;
 
 let hoveredFeature: Feature | null = null;
 
-const defaultStyleFunction = (feature) => {
-  const village = feature.get('villageData') as Village;
-  const polygonArea = feature.get('polygonArea') as number;
-  const villagePopData = villagesPopsData[village.tags?.name?.toUpperCase()];
-
-  return new Style({
-    stroke: new Stroke({
-      color: Color('#3f97da').alpha(0.8).toString(),
-      width: 2
-    }),
-    fill: new Fill({
-      color: getColor(
-        villagePopData ? villagePopData.total_population : null,
-        polygonArea
-      )
-    }),
-    text: new Text({
-      text: village.tags.name,
-      scale: 1.1,
-      font: 'sans-serif',
-      fill: new Fill({
-        color: '#000000'
-      })
-    })
-  });
-};
-
 export function MainMap() {
-  const mapRef = useRef<Map | null>(null);
-  const [mapInstance, setMapInstance] = useState<Map | null>(null);
+  const [mapInstance, setMapInstance] = useState<Map | undefined>(undefined);
+
+  // pull refs
+  const mapElement = useRef<HTMLDivElement | null | undefined>();
+
+  // create state ref that can be accessed in OpenLayers onclick callback
+  // https://stackoverflow.com/a/60643670
+  const mapRef = useRef<Map | undefined>();
+  mapRef.current = mapInstance;
 
   const [popupData, setPopupData] = useState<{
     data: Village;
@@ -90,8 +51,8 @@ export function MainMap() {
 
     console.log('what are jktCoordinates?', jktCoordinates);
 
-    const map = new Map({
-      target: 'map',
+    const initialMap = new Map({
+      target: mapElement.current,
       view: new View({
         center: jktCoordinates,
         zoom: 12,
@@ -110,7 +71,7 @@ export function MainMap() {
     const layer = new MaplibreLayer({
       url: `https://basemaps-api.arcgis.com/arcgis/rest/services/styles/${basemapEnum}?type=style&token=${apiKey}`
     });
-    layer.attachToMap(map);
+    layer.attachToMap(initialMap);
 
     const features = villages.map((village) => {
       const coordinates = village.members
@@ -140,10 +101,10 @@ export function MainMap() {
       style: defaultStyleFunction
     });
 
-    map.addLayer(vectorLayer);
+    initialMap.addLayer(vectorLayer);
 
-    map.on('click', (event) => {
-      const feature = map.forEachFeatureAtPixel(
+    initialMap.on('click', (event) => {
+      const feature = initialMap.forEachFeatureAtPixel(
         event.pixel,
         (feature) => feature
       );
@@ -158,11 +119,10 @@ export function MainMap() {
       // Do something with the clicked village data
     };
 
-    mapRef.current = map;
-    setMapInstance(map);
+    setMapInstance(initialMap);
 
     return () => {
-      map.setTarget(undefined);
+      initialMap.setTarget(undefined);
     };
   }, []);
 
@@ -236,32 +196,12 @@ export function MainMap() {
 
   return (
     <>
-      <div id="map" style={{ width: '100%', height: '100%' }}></div>
+      <div
+        ref={mapElement as React.MutableRefObject<HTMLDivElement>}
+        style={{ width: '100%', height: '100%' }}
+      ></div>
       {popupData && (
-        <div
-          id="popup"
-          className="ol-popup"
-          style={{
-            position: 'absolute',
-            // bottom: 16,
-            // right: 16,
-            top: -999,
-            right: -999,
-            // background: 'linear-gradient(to bottom, #d1e9ffe4, #a2caedde)',
-            // color: '#064e91',
-            // border: '3px solid #216aad',
-            background: 'linear-gradient(to bottom, #2d6daa, #155e92)',
-            color: 'white',
-            padding: 14,
-            boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)',
-            zIndex: 999999,
-            width: '260px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            borderRadius: 8
-          }}
-        >
+        <div id="popup" className="ol-popup" style={POPUP_STYLES}>
           <div>
             <strong>{capitalizeWords(popupData.data.tags?.name)}</strong>
           </div>
@@ -275,3 +215,30 @@ export function MainMap() {
     </>
   );
 }
+
+const defaultStyleFunction: StyleLike = (feature: FeatureLike) => {
+  const village = feature.get('villageData') as Village;
+  const polygonArea = feature.get('polygonArea') as number;
+  const villagePopData = villagesPopsData[village.tags?.name?.toUpperCase()];
+
+  return new Style({
+    stroke: new Stroke({
+      color: Color('#3f97da').alpha(0.8).toString(),
+      width: 2
+    }),
+    fill: new Fill({
+      color: getColor(
+        villagePopData ? villagePopData.total_population : -1,
+        polygonArea
+      )
+    }),
+    text: new Text({
+      text: village.tags.name,
+      scale: 1.1,
+      font: 'sans-serif',
+      fill: new Fill({
+        color: '#000000'
+      })
+    })
+  });
+};
