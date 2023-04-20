@@ -1,3 +1,15 @@
+export interface Station {
+  lat: number;
+  lon: number;
+  station_id: string;
+  station_name: string;
+}
+
+export interface TrainRoute {
+  name: string;
+  station_ids: Station[];
+}
+
 export interface Train {
   train_id: string;
   ka_name: string;

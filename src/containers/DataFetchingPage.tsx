@@ -82,7 +82,7 @@ export function DataFetchingPage() {
 
               console.log('Downloaded #', i + batchSize, ' of schedules...');
 
-              await new Promise((resolve) => setTimeout(resolve, 4000));
+              await new Promise((resolve) => setTimeout(resolve, 2800));
 
               if (i % 100 === 0) {
                 console.log('Current schedules in ' + i, schedules);
