@@ -1,0 +1,152 @@
+[
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "AK",
+    "station_name": "ANGKE",
+    "time_est": "23:51:00",
+    "transit_station": false,
+    "color": "#0084D8",
+    "transit": ""
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "DU",
+    "station_name": "DURI",
+    "time_est": "23:55:00",
+    "transit_station": true,
+    "color": "#0084D8",
+    "transit": ["#d2691e", "#0000ff"]
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "THB",
+    "station_name": "TANAHABANG",
+    "time_est": "00:03:00",
+    "transit_station": true,
+    "color": "#0084D8",
+    "transit": ["#008000", "#0000ff"]
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "KAT",
+    "station_name": "KARET",
+    "time_est": "00:07:00",
+    "transit_station": false,
+    "color": "#0084D8",
+    "transit": ""
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "SUDB",
+    "station_name": "SUDIRMANBARU",
+    "time_est": "00:08:00",
+    "transit_station": false,
+    "color": "#0084D8",
+    "transit": ""
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "SUD",
+    "station_name": "SUDIRMAN",
+    "time_est": "00:09:00",
+    "transit_station": false,
+    "color": "#0084D8",
+    "transit": ""
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "MRI",
+    "station_name": "MANGGARAI",
+    "time_est": "00:16:00",
+    "transit_station": true,
+    "color": "#0084D8",
+    "transit": ["#0000ff", "#ff0000"]
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "MTR",
+    "station_name": "MATRAMAN",
+    "time_est": "00:20:00",
+    "transit_station": false,
+    "color": "#0084D8",
+    "transit": ""
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "JNG",
+    "station_name": "JATINEGARA",
+    "time_est": "00:24:00",
+    "transit_station": true,
+    "color": "#0084D8",
+    "transit": ["#0000ff", "#ffffff"]
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "KLD",
+    "station_name": "KLENDER",
+    "time_est": "00:29:00",
+    "transit_station": false,
+    "color": "#0084D8",
+    "transit": ""
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "BUA",
+    "station_name": "BUARAN",
+    "time_est": "00:32:00",
+    "transit_station": false,
+    "color": "#0084D8",
+    "transit": ""
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "KLDB",
+    "station_name": "KLENDERBARU",
+    "time_est": "00:35:00",
+    "transit_station": false,
+    "color": "#0084D8",
+    "transit": ""
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "CUK",
+    "station_name": "CAKUNG",
+    "time_est": "00:40:00",
+    "transit_station": false,
+    "color": "#0084D8",
+    "transit": ""
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "KRI",
+    "station_name": "KRANJI",
+    "time_est": "00:44:00",
+    "transit_station": false,
+    "color": "#0084D8",
+    "transit": ""
+  },
+  {
+    "train_id": "5076B",
+    "ka_name": "BEKASI LINE",
+    "station_id": "BKS",
+    "station_name": "BEKASI",
+    "time_est": "00:48:00",
+    "transit_station": false,
+    "color": "#0084D8",
+    "transit": ""
+  }
+]
