@@ -64,7 +64,7 @@ export function DataFetchingPage() {
         className={buttonStyle}
         onClick={() => {
           async function fetchTrainSchedules(trains: Train[]): Promise<void> {
-            const batchSize = 3;
+            const batchSize = 4;
 
             const schedules: TrainSchedule[] = [];
 
@@ -82,7 +82,7 @@ export function DataFetchingPage() {
 
               console.log('Downloaded #', i + batchSize, ' of schedules...');
 
-              await new Promise((resolve) => setTimeout(resolve, 2800));
+              await new Promise((resolve) => setTimeout(resolve, 3300));
 
               if (i % 100 === 0) {
                 console.log('Current schedules in ' + i, schedules);
