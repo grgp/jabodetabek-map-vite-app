@@ -17,6 +17,7 @@ export interface Track {
   coordinates: Array<[number, number]>;
 }
 
+// From trains-passing-jakarta.json
 export interface Train {
   train_id: string;
   ka_name: string;
@@ -27,6 +28,7 @@ export interface Train {
   dest_time: string;
 }
 
+// From train-schedules-full.json
 export interface TrainSchedule {
   train_id: string; // '5076B';
   ka_name: string; // 'BEKASI LINE';

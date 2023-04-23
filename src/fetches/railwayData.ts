@@ -1,28 +1,34 @@
+import { overpass } from 'overpass-ts';
 import {
   Station,
   Track,
   Train,
-  TrainRoute,
+  // TrainRoute,
   TrainSchedule
 } from '../types/railway';
 
-const JAKARTA_BOUNDING_BOX = '106.6356,-6.4339,107.1540,-6.0816';
+const OVERPASS_JAKARTA_BOUNDING_BOX = '-6.4339,106.6356,-6.0816,107.1540';
 
-export async function fetchRailwayData(): Promise<TrainRoute[]> {
-  const response = await fetch(
-    `https://api.openrailwaymap.org/0.6.6/map?bbox=${JAKARTA_BOUNDING_BOX}&tags=railway`
-  );
+export async function fetchRailwayData(): Promise<{
+  stations: Station[];
+  tracks: Track[];
+}> {
+  const query = `
+    [out:json];
+    (
+      node["railway"="station"](${OVERPASS_JAKARTA_BOUNDING_BOX});
+      way["railway"="rail"](${OVERPASS_JAKARTA_BOUNDING_BOX});
+    );
+    out body; >; out skel qt;
+  `;
 
-  if (!response.ok) {
-    throw new Error('Failed to fetch railway data');
+  try {
+    const data = await overpass(query);
+    // Transform the fetched data into the specified types
+    return transformRailwayData(data);
+  } catch (error: any) {
+    throw new Error('Failed to fetch railway data: ' + error?.message);
   }
-
-  const data = await response.json();
-
-  console.log('what is fetchRailwayData data', data);
-
-  // Transform the fetched data into the specified types
-  return transformData(data);
 }
 
 export async function fetchTrainSchedules(trains: Train[]): Promise<void> {
@@ -44,8 +50,8 @@ export async function fetchTrainSchedules(trains: Train[]): Promise<void> {
   }
 }
 
-function transformData(data: any): TrainRoute[] {
-  const trainRoutes: TrainRoute[] = [];
+function transformRailwayData(data: any) {
+  // const trainRoutes: TrainRoute[] = [];
   const stations: Station[] = [];
   const tracks: Track[] = [];
   const nodes: { [id: string]: [number, number] } = {};
@@ -75,5 +81,5 @@ function transformData(data: any): TrainRoute[] {
   // Further processing can be done here to create TrainRoute objects based on the fetched stations and tracks,
   // or you can modify the types and return the stations and tracks separately.
 
-  return trainRoutes;
+  return { stations, tracks };
 }

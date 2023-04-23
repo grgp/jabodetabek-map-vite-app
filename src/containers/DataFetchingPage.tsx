@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { uniqBy } from 'lodash';
+import { Link } from 'react-router-dom';
+
 import { fetchJakarta } from '../fetches/villagesData';
 import { Village } from '../types/structure';
 import CSVUploader from './CSVUploader';
-import { Train, TrainSchedule } from '../types/railway';
 
 import trainsInJakarta from '../data/trains/trains-passing-jakarta.json';
 import trainsInJakartaUnique from '../data/trains/trains-passing-jakarta-unique.json';
-import { Link } from 'react-router-dom';
 import { fetchRailwayData, fetchTrainSchedules } from '../fetches/railwayData';
 
 const buttonStyle =
