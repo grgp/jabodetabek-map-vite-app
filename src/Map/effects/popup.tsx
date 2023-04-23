@@ -5,8 +5,8 @@ import { Map, Feature, Overlay } from 'ol';
 import { Style, Stroke, Fill } from 'ol/style';
 import 'ol/ol.css';
 import { Village, VillagePopData } from '../../types/structure';
-import { defaultStyleFunction } from '../MainMap';
 import { villagesPopsData } from '../../data';
+import { defaultStyleFunction } from '../styles';
 
 let hoveredFeature: Feature | null = null;
 

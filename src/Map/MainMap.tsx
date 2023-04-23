@@ -1,30 +1,19 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import 'ol/ol.css';
-import { Feature, Map } from 'ol';
-import { fromLonLat } from 'ol/proj';
-import VectorSource from 'ol/source/Vector';
-import VectorLayer from 'ol/layer/Vector';
-import { Style, Stroke, Fill, Text } from 'ol/style';
-import { Polygon } from 'ol/geom';
+import { Map } from 'ol';
 
-import { Village } from '../types/structure';
 import { capitalizeWords } from './utils';
-import { POPUP_STYLES, getColor } from './styles';
-import Color from 'color';
-import { StyleLike } from 'ol/style/Style';
-import { FeatureLike } from 'ol/Feature';
-import { useMapStore } from '../store/map';
+import { POPUP_STYLES } from './styles';
 import { useInitMap } from './effects/init';
-import { villages, villagesPopsData } from '../data';
 import { usePopupMap } from './effects/popup';
+import { useVectorLayers } from './effects/vectorLayers';
+import { useAddVillages } from './effects/villages';
 
 export function MainMap() {
   const [mapInstance, setMapInstance] = useState<Map | undefined>(undefined);
 
-  const { vectorSourceAndLayers, setVectorSourceAndLayers } = useMapStore();
-
-  // pull refs
+  // Pull refs
   const mapElement = useRef<HTMLDivElement | null | undefined>();
 
   // create state ref that can be accessed in OpenLayers onclick callback
@@ -35,72 +24,14 @@ export function MainMap() {
   // Init map:
   useInitMap({ mapElement, setMapInstance });
 
+  // Popups:
   const { popupData } = usePopupMap({ mapInstance });
 
   // Add villages layer:
-  useEffect(() => {
-    if (mapInstance) {
-      const features = villages.map((village) => {
-        const coordinates = village.members
-          .filter((member) => member.role === 'outer')
-          .flatMap((member) =>
-            member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
-          );
+  useAddVillages({ mapInstance });
 
-        const polygon = new Polygon([coordinates]);
-        const polygonArea = polygon.getArea();
-
-        const feature = new Feature({
-          geometry: polygon,
-          villageData: village,
-          polygonArea
-        });
-        return feature;
-      });
-
-      // Create a vector source from the features
-      const vectorSource = new VectorSource({
-        features
-      });
-
-      const vectorLayer = new VectorLayer({
-        source: vectorSource,
-        style: defaultStyleFunction
-      });
-
-      setVectorSourceAndLayers({
-        villages: {
-          source: vectorSource,
-          layer: vectorLayer,
-          vectorSourceAndLayerId: 'villages'
-        }
-      });
-    }
-  }, [mapInstance]);
-
-  useEffect(() => {
-    if (mapInstance) {
-      Object.values(vectorSourceAndLayers).forEach(({ layer }) => {
-        mapInstance.addLayer(layer);
-
-        mapInstance.on('click', (event) => {
-          const feature = mapInstance.forEachFeatureAtPixel(
-            event.pixel,
-            (feature) => feature
-          );
-          if (feature) {
-            const village = feature.get('villageData') as Village;
-            onClick(village);
-          }
-        });
-
-        const onClick = (data: Village) => {
-          console.log('Clicked on:', data);
-          // Do something with the clicked village data
-        };
-      });
-    }
-  }, [mapInstance, vectorSourceAndLayers]);
+  // Display vector layers:
+  useVectorLayers({ mapInstance });
 
   return (
     <>
@@ -123,30 +54,3 @@ export function MainMap() {
     </>
   );
 }
-
-export const defaultStyleFunction: StyleLike = (feature: FeatureLike) => {
-  const village = feature.get('villageData') as Village;
-  const polygonArea = feature.get('polygonArea') as number;
-  const villagePopData = villagesPopsData[village.tags?.name?.toUpperCase()];
-
-  return new Style({
-    stroke: new Stroke({
-      color: Color('#3f97da').alpha(0.8).toString(),
-      width: 2
-    }),
-    fill: new Fill({
-      color: getColor(
-        villagePopData ? villagePopData.total_population : -1,
-        polygonArea
-      )
-    }),
-    text: new Text({
-      text: village.tags.name,
-      scale: 1.1,
-      font: 'sans-serif',
-      fill: new Fill({
-        color: '#000000'
-      })
-    })
-  });
-};

@@ -1,4 +1,9 @@
 import Color from 'color';
+import { Style, Stroke, Fill, Text } from 'ol/style';
+import { Village } from '../types/structure';
+import { StyleLike } from 'ol/style/Style';
+import { FeatureLike } from 'ol/Feature';
+import { villagesPopsData } from '../data';
 
 const RATIO_NUM = 9000000;
 
@@ -42,3 +47,30 @@ export const POPUP_STYLES = {
   // color: '#064e91',
   // border: '3px solid #216aad',
 } as const;
+
+export const defaultStyleFunction: StyleLike = (feature: FeatureLike) => {
+  const village = feature.get('villageData') as Village;
+  const polygonArea = feature.get('polygonArea') as number;
+  const villagePopData = villagesPopsData[village.tags?.name?.toUpperCase()];
+
+  return new Style({
+    stroke: new Stroke({
+      color: Color('#3f97da').alpha(0.8).toString(),
+      width: 2
+    }),
+    fill: new Fill({
+      color: getColor(
+        villagePopData ? villagePopData.total_population : -1,
+        polygonArea
+      )
+    }),
+    text: new Text({
+      text: village.tags.name,
+      scale: 1.1,
+      font: 'sans-serif',
+      fill: new Fill({
+        color: '#000000'
+      })
+    })
+  });
+};
