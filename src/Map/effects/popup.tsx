@@ -42,7 +42,6 @@ export function usePopupMap({ mapInstance }: { mapInstance: Map | undefined }) {
           if (
             hoveredFeature?.get('villageData').tags.name !== village.tags.name
           ) {
-            // what are cthose, console
             // Places the popup just to the right and down of cursor
             const popupElement = document.getElementById('popup');
             if (popupElement) {
@@ -84,6 +83,12 @@ export function usePopupMap({ mapInstance }: { mapInstance: Map | undefined }) {
 
       mapInstance.addOverlay(popup);
     }
+
+    return () => {
+      if (mapInstance) {
+        mapInstance.removeOverlay(popup);
+      }
+    };
   }, [mapInstance]);
 
   return { popupData };

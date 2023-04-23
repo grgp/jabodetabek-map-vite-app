@@ -42,13 +42,11 @@ export function MainMap() {
 
       <div
         style={{ zIndex: 10000000 }}
-        className="absolute bottom-0 inset-x-0 bg-white shadow-lg md:relative md:flex md:items-center md:justify-center m-4 rounded-md px-4 py-3 shadow-2xl"
+        className="absolute bottom-0 inset-x-0 bg-white shadow-lg md:flex md:items-center md:justify-center m-4 rounded-md px-4 py-3 shadow-2xl"
       >
         <div className="w-full px-4 py-6 md:p-0">
-          {/* Header label */}
           <h2 className="text-lg font-medium mb-4">My Panel Header</h2>
-          {/* Buttons */}
-          <div className="flex justify-end space-x-2 mb-4">
+          <div className="flex space-x-2 mb-4">
             <button className="bg-blue-500 text-white px-4 py-2 rounded-md">
               Button 1
             </button>
@@ -59,7 +57,6 @@ export function MainMap() {
               Button 3
             </button>
           </div>
-          {/* Panel content */}
           <p>This is some panel content.</p>
         </div>
       </div>

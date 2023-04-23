@@ -34,4 +34,4 @@ function App(): ReactElement {
 export default App;
 
 const sidebarStyles =
-  'fixed inset-y-0 right-0 z-50 md:relative md:min-w-[400px] p-4 border shadow-xl border-gray-50 rounded-xl md:overflow-y-scroll hidden md:block animate-slide-in';
+  'fixed inset-y-0 right-0 z-50 md:relative md:min-w-[100px] p-4 border shadow-xl border-gray-50 rounded-xl md:overflow-y-scroll hidden md:block animate-slide-in';

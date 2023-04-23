@@ -41,5 +41,13 @@ export function useVectorLayers({
         };
       });
     }
+
+    return () => {
+      if (mapInstance) {
+        Object.values(vectorSourceAndLayers).forEach(({ layer }) => {
+          mapInstance.removeLayer(layer);
+        });
+      }
+    };
   }, [mapInstance, vectorSourceAndLayers]);
 }
