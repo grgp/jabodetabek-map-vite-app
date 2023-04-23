@@ -34,5 +34,9 @@ export function useInitMap({
     layer.attachToMap(initialMap);
 
     setMapInstance(initialMap);
+
+    return () => {
+      initialMap?.setTarget(undefined);
+    };
   }, []);
 }

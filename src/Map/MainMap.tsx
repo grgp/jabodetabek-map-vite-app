@@ -1,15 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { Feature, Map, Overlay, View } from 'ol';
 import 'ol/ol.css';
-
+import { Feature, Map } from 'ol';
 import { fromLonLat } from 'ol/proj';
 import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
 import { Style, Stroke, Fill, Text } from 'ol/style';
 import { Polygon } from 'ol/geom';
 
-import { Village, VillagePopData } from '../types/structure';
+import { Village } from '../types/structure';
 import { capitalizeWords } from './utils';
 import { POPUP_STYLES, getColor } from './styles';
 import Color from 'color';
@@ -68,29 +67,39 @@ export function MainMap() {
         style: defaultStyleFunction
       });
 
-      mapInstance.addLayer(vectorLayer);
-
-      mapInstance.on('click', (event) => {
-        const feature = mapInstance.forEachFeatureAtPixel(
-          event.pixel,
-          (feature) => feature
-        );
-        if (feature) {
-          const village = feature.get('villageData') as Village;
-          onClick(village);
+      setVectorSourceAndLayers({
+        villages: {
+          source: vectorSource,
+          layer: vectorLayer,
+          vectorSourceAndLayerId: 'villages'
         }
       });
-
-      const onClick = (data: Village) => {
-        console.log('Clicked on:', data);
-        // Do something with the clicked village data
-      };
     }
+  }, []);
 
-    return () => {
-      mapInstance?.setTarget(undefined);
-    };
-  }, [mapInstance]);
+  useEffect(() => {
+    if (mapInstance) {
+      Object.values(vectorSourceAndLayers).forEach(({ layer }) => {
+        mapInstance.addLayer(layer);
+
+        mapInstance.on('click', (event) => {
+          const feature = mapInstance.forEachFeatureAtPixel(
+            event.pixel,
+            (feature) => feature
+          );
+          if (feature) {
+            const village = feature.get('villageData') as Village;
+            onClick(village);
+          }
+        });
+
+        const onClick = (data: Village) => {
+          console.log('Clicked on:', data);
+          // Do something with the clicked village data
+        };
+      });
+    }
+  }, [mapInstance, vectorSourceAndLayers]);
 
   return (
     <>

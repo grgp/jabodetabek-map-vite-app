@@ -10,7 +10,6 @@ export type VectorSourceAndLayer = {
   source: VectorSource<Geometry>;
   layer: VectorLayer<VectorSource<Geometry>>;
   color?: string;
-  annotationId: string;
   vectorSourceAndLayerId: string;
   // interactions?: Array<Modify | Translate | Transform>;
 };
