@@ -9,6 +9,30 @@ import { useInitMap } from './effects/init';
 import { usePopupMap } from './effects/popup';
 import { useVectorLayers } from './effects/vectorLayers';
 import { useAddVillages } from './effects/villages';
+import { Icon } from '@iconify/react';
+
+const BUTTONS = [
+  {
+    id: 'vector-layers',
+    label: 'Kelurahan',
+    icon: 'mingcute:version-fill'
+  },
+  {
+    id: 'railway',
+    label: 'Railway',
+    icon: 'mingcute:train-2-fill'
+  },
+  {
+    id: 'streets',
+    label: 'Jalan',
+    icon: 'mingcute:road-fill'
+  },
+  {
+    id: 'satellite',
+    label: 'Satellite',
+    icon: 'mingcute:camera-2-fill'
+  }
+];
 
 export function MainMap() {
   const [mapInstance, setMapInstance] = useState<Map | undefined>(undefined);
@@ -40,24 +64,31 @@ export function MainMap() {
         style={{ width: '100%', height: '100%' }}
       ></div>
 
+      {/* <div
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          background: 'rgba(255, 219, 195, 0.05)',
+          zIndex: 999999999,
+          top: 0
+        }}
+      /> */}
+
       <div
         style={{ zIndex: 10000000 }}
-        className="absolute bottom-0 inset-x-0 bg-white shadow-lg md:flex md:items-center md:justify-center m-4 rounded-md px-4 py-3 shadow-2xl"
+        className="absolute bottom-0 inset-x-0 md:flex md:items-center md:justify-center m-4 rounded-md px-4 py-3"
       >
-        <div className="w-full px-4 py-6 md:p-0">
-          <h2 className="text-lg font-medium mb-4">My Panel Header</h2>
-          <div className="flex space-x-2 mb-4">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md">
-              Button 1
-            </button>
-            <button className="bg-green-500 text-white px-4 py-2 rounded-md">
-              Button 2
-            </button>
-            <button className="bg-red-500 text-white px-4 py-2 rounded-md">
-              Button 3
-            </button>
-          </div>
-          <p>This is some panel content.</p>
+        <div className="flex">
+          {BUTTONS.map((item) => (
+            <div
+              key={item.id}
+              style={{ background: '#fdffee', marginLeft: -16, fontSize: 44 }}
+              className={`relative w-20 h-20 rounded-full flex items-center justify-center transition duration-300 ease-in-out transform shadow-xl hover:scale-105 text-ac-black-orange hover:text-ac-orange hover:shadow-lg cursor-pointer`}
+            >
+              <Icon style={{ marginLeft: -2 }} icon={item.icon} />
+            </div>
+          ))}
         </div>
       </div>
 

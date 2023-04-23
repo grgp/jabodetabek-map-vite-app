@@ -5,5 +5,13 @@ module.exports = {
     extend: {
       opacity: ['disabled']
     }
+  },
+  theme: {
+    extend: {
+      colors: {
+        'ac-black-orange': '#64625d',
+        'ac-orange': '#EFA72B'
+      }
+    }
   }
-}
+};
