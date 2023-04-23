@@ -34,6 +34,7 @@ export function MainMap() {
 
   // Init map:
   useInitMap({ mapElement, setMapInstance });
+
   const { popupData } = usePopupMap({ mapInstance });
 
   // Add villages layer:
@@ -75,7 +76,7 @@ export function MainMap() {
         }
       });
     }
-  }, []);
+  }, [mapInstance]);
 
   useEffect(() => {
     if (mapInstance) {
