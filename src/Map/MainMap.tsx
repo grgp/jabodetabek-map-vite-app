@@ -23,6 +23,7 @@ import {
   JAKARTA_CENTER_COORDINATES,
   MAPLIBRE_LAYER_URL
 } from '../constants/coordinates';
+import { useMapStore } from '../store/map';
 
 const villages = data as Village[];
 const villagesPopsData = popsData as unknown as Record<string, VillagePopData>;
@@ -31,6 +32,8 @@ let hoveredFeature: Feature | null = null;
 
 export function MainMap() {
   const [mapInstance, setMapInstance] = useState<Map | undefined>(undefined);
+
+  const { vectorSourceAndLayers, setVectorSourceAndLayers } = useMapStore();
 
   // pull refs
   const mapElement = useRef<HTMLDivElement | null | undefined>();
@@ -47,6 +50,7 @@ export function MainMap() {
     polygonArea: number;
   } | null>(null);
 
+  // Init map:
   useEffect(() => {
     console.log('what are jktCoordinates?', JAKARTA_CENTER_COORDINATES);
 
@@ -67,61 +71,66 @@ export function MainMap() {
     const layer = new MaplibreLayer({ url: MAPLIBRE_LAYER_URL });
     layer.attachToMap(initialMap);
 
-    const features = villages.map((village) => {
-      const coordinates = village.members
-        .filter((member) => member.role === 'outer')
-        .flatMap((member) =>
-          member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
-        );
-
-      const polygon = new Polygon([coordinates]);
-      const polygonArea = polygon.getArea();
-
-      const feature = new Feature({
-        geometry: polygon,
-        villageData: village,
-        polygonArea
-      });
-      return feature;
-    });
-
-    // Create a vector source from the features
-    const vectorSource = new VectorSource({
-      features
-    });
-
-    const vectorLayer = new VectorLayer({
-      source: vectorSource,
-      style: defaultStyleFunction
-    });
-
-    initialMap.addLayer(vectorLayer);
-
-    initialMap.on('click', (event) => {
-      const feature = initialMap.forEachFeatureAtPixel(
-        event.pixel,
-        (feature) => feature
-      );
-      if (feature) {
-        const village = feature.get('villageData') as Village;
-        onClick(village);
-      }
-    });
-
-    const onClick = (data: Village) => {
-      console.log('Clicked on:', data);
-      // Do something with the clicked village data
-    };
-
     setMapInstance(initialMap);
-
-    return () => {
-      initialMap.setTarget(undefined);
-    };
   }, []);
 
+  // Add villages layer:
   useEffect(() => {
-    // Add a popup overlay to the map
+    if (mapInstance) {
+      const features = villages.map((village) => {
+        const coordinates = village.members
+          .filter((member) => member.role === 'outer')
+          .flatMap((member) =>
+            member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
+          );
+
+        const polygon = new Polygon([coordinates]);
+        const polygonArea = polygon.getArea();
+
+        const feature = new Feature({
+          geometry: polygon,
+          villageData: village,
+          polygonArea
+        });
+        return feature;
+      });
+
+      // Create a vector source from the features
+      const vectorSource = new VectorSource({
+        features
+      });
+
+      const vectorLayer = new VectorLayer({
+        source: vectorSource,
+        style: defaultStyleFunction
+      });
+
+      mapInstance.addLayer(vectorLayer);
+
+      mapInstance.on('click', (event) => {
+        const feature = mapInstance.forEachFeatureAtPixel(
+          event.pixel,
+          (feature) => feature
+        );
+        if (feature) {
+          const village = feature.get('villageData') as Village;
+          onClick(village);
+        }
+      });
+
+      const onClick = (data: Village) => {
+        console.log('Clicked on:', data);
+        // Do something with the clicked village data
+      };
+    }
+
+    return () => {
+      mapInstance?.setTarget(undefined);
+    };
+  }, [mapInstance]);
+
+  // Add a popup overlay to the map
+  useEffect(() => {
     const popup = new Overlay({
       element: document.getElementById('popup')!,
       positioning: 'bottom-center',

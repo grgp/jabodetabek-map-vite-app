@@ -30,7 +30,7 @@ export type MapState = {
   ) => void;
 };
 
-export const useStore = create<MapState>((set) => ({
+export const useMapStore = create<MapState>((set) => ({
   mapTilesMode: 'satellite',
   setMapTilesMode: (mode) => set({ mapTilesMode: mode }),
 
