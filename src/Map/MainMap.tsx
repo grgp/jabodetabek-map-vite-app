@@ -39,6 +39,31 @@ export function MainMap() {
         ref={mapElement as React.MutableRefObject<HTMLDivElement>}
         style={{ width: '100%', height: '100%' }}
       ></div>
+
+      <div
+        style={{ zIndex: 10000000 }}
+        className="absolute bottom-0 inset-x-0 bg-white shadow-lg md:relative md:flex md:items-center md:justify-center m-4 rounded-md px-4 py-3 shadow-2xl"
+      >
+        <div className="w-full px-4 py-6 md:p-0">
+          {/* Header label */}
+          <h2 className="text-lg font-medium mb-4">My Panel Header</h2>
+          {/* Buttons */}
+          <div className="flex justify-end space-x-2 mb-4">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-md">
+              Button 1
+            </button>
+            <button className="bg-green-500 text-white px-4 py-2 rounded-md">
+              Button 2
+            </button>
+            <button className="bg-red-500 text-white px-4 py-2 rounded-md">
+              Button 3
+            </button>
+          </div>
+          {/* Panel content */}
+          <p>This is some panel content.</p>
+        </div>
+      </div>
+
       {popupData && (
         <div id="popup" className="ol-popup" style={POPUP_STYLES}>
           <div>
