@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { uniqBy } from 'lodash';
-import { fetchJakarta } from '../map/fetches';
+import { fetchJakarta } from '../fetches/villagesData';
 import { Village } from '../types/structure';
 import CSVUploader from './CSVUploader';
 import { Train, TrainSchedule } from '../types/unparsedStructures';
 
 import trainsInJakarta from '../data/trains/trains-passing-jakarta.json';
 import trainsInJakartaUnique from '../data/trains/trains-passing-jakarta-unique.json';
+import { Link } from 'react-router-dom';
 
 const buttonStyle =
   'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded';
@@ -63,35 +64,6 @@ export function DataFetchingPage() {
       <button
         className={buttonStyle}
         onClick={() => {
-          async function fetchTrainSchedules(trains: Train[]): Promise<void> {
-            const batchSize = 4;
-
-            const schedules: TrainSchedule[] = [];
-
-            console.log('Downloading schedules...');
-
-            for (let i = 0; i < trains.length; i += batchSize) {
-              const batch = trains.slice(i, i + batchSize);
-              for (const train of batch) {
-                const url = `https://api-partner.krl.co.id/krlweb/v1/schedule-train?trainid=${train.train_id}`;
-                const response = await fetch(url);
-                const data = await response.json();
-
-                schedules.push(data);
-              }
-
-              console.log('Downloaded #', i + batchSize, ' of schedules...');
-
-              await new Promise((resolve) => setTimeout(resolve, 3300));
-
-              if (i % 100 === 0) {
-                console.log('Current schedules in ' + i, schedules);
-              }
-            }
-
-            console.log('Total schedules:', schedules);
-          }
-
           fetchTrainSchedules(trainsInJakartaUnique as any);
         }}
       >
@@ -99,6 +71,8 @@ export function DataFetchingPage() {
       </button>
 
       <CSVUploader />
+
+      <Link to="/">Go back to the homepage</Link>
     </div>
   );
 }

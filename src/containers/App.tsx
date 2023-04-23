@@ -1,5 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 import { MainMap } from '../map/MainMap';
+import { Link } from 'react-router-dom';
 
 function App(): ReactElement {
   const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App(): ReactElement {
               </button>
             </p>
             <p className="pt-3 pb-3">Content here</p>
+            <Link to="/data">Link to Data</Link>
           </header>
         </div>
       </div>

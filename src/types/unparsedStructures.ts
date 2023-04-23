@@ -3,11 +3,13 @@ export interface Station {
   lon: number;
   station_id: string;
   station_name: string;
+  // add other information here
 }
 
 export interface TrainRoute {
   name: string;
   station_ids: Station[];
+  // add other information here
 }
 
 export interface Train {

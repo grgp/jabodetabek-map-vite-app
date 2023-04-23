@@ -52,7 +52,7 @@ export function MainMap() {
     console.log('what are jktCoordinates?', jktCoordinates);
 
     const initialMap = new Map({
-      target: mapElement.current,
+      target: mapElement.current || undefined,
       view: new View({
         center: jktCoordinates,
         zoom: 12,
