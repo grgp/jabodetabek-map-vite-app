@@ -1,7 +1,8 @@
 import { Map } from 'ol';
-import { MapState, useMapStore } from '../../store/map';
+import { useMapStore } from '../../store/map';
 import { useEffect } from 'react';
 import { Village } from '../../types/structure';
+import { usePrevious } from '../../utils/hooks';
 
 export function useVectorLayers({
   mapInstance
@@ -10,8 +11,15 @@ export function useVectorLayers({
 }) {
   const { vectorSourceAndLayers } = useMapStore();
 
+  const prevVectorSourceAndLayers = usePrevious(vectorSourceAndLayers);
+
   useEffect(() => {
     if (mapInstance) {
+      // Remove previous layers
+      Object.values(prevVectorSourceAndLayers).forEach(({ layer }) => {
+        mapInstance.removeLayer(layer);
+      });
+
       Object.values(vectorSourceAndLayers).forEach(({ layer }) => {
         mapInstance.addLayer(layer);
 
@@ -20,6 +28,7 @@ export function useVectorLayers({
             event.pixel,
             (feature) => feature
           );
+
           if (feature) {
             const village = feature.get('villageData') as Village;
             onClick(village);
