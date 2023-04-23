@@ -4,6 +4,7 @@ import { Village } from '../types/structure';
 import { StyleLike } from 'ol/style/Style';
 import { FeatureLike } from 'ol/Feature';
 import { villagesPopsData } from '../data';
+import { Icon } from '@iconify/react';
 
 const RATIO_NUM = 9000000;
 
@@ -74,3 +75,12 @@ export const defaultStyleFunction: StyleLike = (feature: FeatureLike) => {
     })
   });
 };
+
+export const MapModeButton = (item: { icon: string; onClick: () => void }) => (
+  <div
+    style={{ background: '#fdffee', marginLeft: -16, fontSize: 44 }}
+    className={`relative w-20 h-20 rounded-full flex items-center justify-center transition duration-300 ease-in-out transform shadow-xl hover:scale-105 text-ac-black-orange hover:text-ac-orange hover:shadow-lg cursor-pointer`}
+  >
+    <Icon style={{ marginLeft: -2 }} icon={item.icon} />
+  </div>
+);

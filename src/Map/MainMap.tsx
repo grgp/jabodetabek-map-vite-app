@@ -4,12 +4,11 @@ import 'ol/ol.css';
 import { Map } from 'ol';
 
 import { capitalizeWords } from './utils';
-import { POPUP_STYLES } from './styles';
+import { MapModeButton, POPUP_STYLES } from './styles';
 import { useInitMap } from './effects/init';
 import { usePopupMap } from './effects/popup';
 import { useVectorLayers } from './effects/vectorLayers';
 import { useAddVillages } from './effects/villages';
-import { Icon } from '@iconify/react';
 
 const BUTTONS = [
   {
@@ -64,30 +63,19 @@ export function MainMap() {
         style={{ width: '100%', height: '100%' }}
       ></div>
 
-      {/* <div
-        style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          background: 'rgba(255, 219, 195, 0.05)',
-          zIndex: 999999999,
-          top: 0
-        }}
-      /> */}
-
       <div
         style={{ zIndex: 10000000 }}
         className="absolute bottom-0 inset-x-0 md:flex md:items-center md:justify-center m-4 rounded-md px-4 py-3"
       >
         <div className="flex">
           {BUTTONS.map((item) => (
-            <div
+            <MapModeButton
               key={item.id}
-              style={{ background: '#fdffee', marginLeft: -16, fontSize: 44 }}
-              className={`relative w-20 h-20 rounded-full flex items-center justify-center transition duration-300 ease-in-out transform shadow-xl hover:scale-105 text-ac-black-orange hover:text-ac-orange hover:shadow-lg cursor-pointer`}
-            >
-              <Icon style={{ marginLeft: -2 }} icon={item.icon} />
-            </div>
+              icon={item.icon}
+              onClick={() => {
+                console.log('hey');
+              }}
+            />
           ))}
         </div>
       </div>
