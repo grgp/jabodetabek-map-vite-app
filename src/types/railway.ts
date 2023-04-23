@@ -12,6 +12,11 @@ export interface TrainRoute {
   // add other information here
 }
 
+export interface Track {
+  osm_way_id: string;
+  coordinates: Array<[number, number]>;
+}
+
 export interface Train {
   train_id: string;
   ka_name: string;
