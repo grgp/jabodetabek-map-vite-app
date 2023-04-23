@@ -13,10 +13,10 @@ import { useAddVillages } from './effects/villages';
 export function MainMap() {
   const [mapInstance, setMapInstance] = useState<Map | undefined>(undefined);
 
-  // Pull refs
+  // Pull refs:
   const mapElement = useRef<HTMLDivElement | null | undefined>();
 
-  // create state ref that can be accessed in OpenLayers onclick callback
+  // Create state ref that can be accessed in OpenLayers onclick callback
   // https://stackoverflow.com/a/60643670
   const mapRef = useRef<Map | undefined>();
   mapRef.current = mapInstance;
