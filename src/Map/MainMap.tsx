@@ -19,6 +19,10 @@ import { POPUP_STYLES, getColor } from './styles';
 import Color from 'color';
 import { StyleLike } from 'ol/style/Style';
 import { FeatureLike } from 'ol/Feature';
+import {
+  JAKARTA_CENTER_COORDINATES,
+  MAPLIBRE_LAYER_URL
+} from '../constants/coordinates';
 
 const villages = data as Village[];
 const villagesPopsData = popsData as unknown as Record<string, VillagePopData>;
@@ -44,17 +48,12 @@ export function MainMap() {
   } | null>(null);
 
   useEffect(() => {
-    const longitude = 106.8256;
-    const latitude = -6.2088;
-
-    const jktCoordinates = fromLonLat([longitude, latitude]);
-
-    console.log('what are jktCoordinates?', jktCoordinates);
+    console.log('what are jktCoordinates?', JAKARTA_CENTER_COORDINATES);
 
     const initialMap = new Map({
       target: mapElement.current || undefined,
       view: new View({
-        center: jktCoordinates,
+        center: JAKARTA_CENTER_COORDINATES,
         zoom: 12,
         minZoom: 5
       }),
@@ -65,12 +64,7 @@ export function MainMap() {
       controls: []
     });
 
-    const basemapEnum = 'ArcGIS:LightGray';
-    const apiKey = import.meta.env.VITE_ARC_GIS_API_KEY;
-
-    const layer = new MaplibreLayer({
-      url: `https://basemaps-api.arcgis.com/arcgis/rest/services/styles/${basemapEnum}?type=style&token=${apiKey}`
-    });
+    const layer = new MaplibreLayer({ url: MAPLIBRE_LAYER_URL });
     layer.attachToMap(initialMap);
 
     const features = villages.map((village) => {
