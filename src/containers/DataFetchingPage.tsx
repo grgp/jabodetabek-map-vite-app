@@ -73,8 +73,9 @@ export function DataFetchingPage() {
 
       <button
         className={buttonStyle}
-        onClick={() => {
-          fetchRailwayData();
+        onClick={async () => {
+          const data = await fetchRailwayData();
+          console.log('fetchRailwayData', data);
         }}
       >
         Fetch Railway Data in Jakarta

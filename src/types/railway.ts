@@ -39,3 +39,46 @@ export interface TrainSchedule {
   color: string; // '#0084D8';
   transit: string; // '';
 }
+
+export interface ExtendedTrainRoute {
+  train_id: string;
+  ka_name: string;
+  route_name: string;
+  dest: string;
+  time_est: string;
+  color: string;
+  dest_time: string;
+  stations: Station[];
+  tracks: Track[];
+}
+
+export interface OverpassNode {
+  type: 'node';
+  id: number;
+  lat: number;
+  lon: number;
+  tags?: {
+    [key: string]: string;
+  };
+}
+
+export interface OverpassWay {
+  type: 'way';
+  id: number;
+  nodes: number[];
+  tags?: {
+    [key: string]: string;
+  };
+}
+
+export type OverpassElement = OverpassNode & OverpassWay;
+
+export interface OverpassResponse {
+  version: number;
+  generator: string;
+  osm3s: {
+    timestamp_osm_base: string;
+    copyright: string;
+  };
+  elements: OverpassElement[];
+}
