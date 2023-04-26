@@ -10,6 +10,7 @@ import { usePopupMap } from './effects/popup';
 import { useVectorLayers } from './effects/vectorLayers';
 import { useAddVillages } from './effects/villages';
 import { MapLayerName, useMapStore } from '../store/map';
+import { useAddRailways } from './effects/railways';
 
 const BUTTONS: Array<{ id: MapLayerName; label: string; icon: string }> = [
   {
@@ -23,9 +24,9 @@ const BUTTONS: Array<{ id: MapLayerName; label: string; icon: string }> = [
     icon: 'mingcute:train-2-fill'
   },
   {
-    id: 'streets',
+    id: 'buildings',
     label: 'Jalan',
-    icon: 'mingcute:road-fill'
+    icon: 'mingcute:building-3-fill'
   },
   {
     id: 'satellite',
@@ -51,8 +52,9 @@ export function MainMap() {
   // Popups:
   const { popupData } = usePopupMap({ mapInstance });
 
-  // Add villages layer:
+  // Add vector layers:
   useAddVillages({ mapInstance });
+  useAddRailways({ mapInstance });
 
   // Display vector layers:
   useVectorLayers({ mapInstance });

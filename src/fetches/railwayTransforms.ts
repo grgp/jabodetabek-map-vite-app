@@ -40,10 +40,13 @@ export function transformRailwayData(data: any): {
   return { stations, tracks };
 }
 
-export async function combineData(): Promise<ExtendedTrainRoute[]> {
+export async function combineRailwayData(): Promise<ExtendedTrainRoute[]> {
   const trains = [] as Train[];
   const trainSchedules = [] as TrainSchedule[];
   const railwayData = await fetchRailwayData();
+
+  console.log('railwayData', railwayData);
+
   const stationMap: { [station_id: string]: Station } = {};
   const trainRoutes: { [train_id: string]: ExtendedTrainRoute } = {};
 

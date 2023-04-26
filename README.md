@@ -1,8 +1,10 @@
 # Jabodetabek Map with OpenLayers
 
-⚠️ Still under construction! ⚠️
+Still under construction!
 
 Although there are official interactive maps already from the govt, they usually have data on separate maps. This project _doesn't_ aim to merge all of them, as a personal experiment this will start off with a small scope. The 1st milestone is to display the commuter line map on top of kelurahan data.
+
+⚠️ NOTE: The git repo is currently huge because I checked the map JSON data into the repo. This is not ideal, will fix later.
 
 <img width="1238" alt="image" src="https://user-images.githubusercontent.com/12206156/234661854-13df52ef-8091-4a9f-bef0-85c8a7ab3955.png">
 

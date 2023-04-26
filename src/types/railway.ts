@@ -1,3 +1,4 @@
+/* Defines data from fetchRailwayData from railway-map-overpass.json */
 export interface Station {
   lat: number;
   lon: number;
@@ -6,15 +7,16 @@ export interface Station {
   // add other information here
 }
 
+export interface Track {
+  osm_way_id: string;
+  coordinates: Array<[number, number]>;
+}
+/* End data */
+
 export interface TrainRoute {
   name: string;
   station_ids: Station[];
   // add other information here
-}
-
-export interface Track {
-  osm_way_id: string;
-  coordinates: Array<[number, number]>;
 }
 
 // From trains-passing-jakarta.json

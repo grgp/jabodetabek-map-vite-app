@@ -14,7 +14,7 @@ export type VectorSourceAndLayer = {
   // interactions?: Array<Modify | Translate | Transform>;
 };
 
-export type MapLayerName = 'villages' | 'railway' | 'streets' | 'satellite';
+export type MapLayerName = 'villages' | 'railway' | 'buildings' | 'satellite';
 
 export type MapState = {
   mapTilesMode: 'satellite' | 'traffic' | 'alternate';
@@ -45,7 +45,7 @@ export const useMapStore = create<MapState>((set) => ({
   activeLayers: {
     villages: false,
     railway: false,
-    streets: false,
+    buildings: false,
     satellite: false
   },
   setActiveLayers: (activeLayers) => set({ activeLayers }),
