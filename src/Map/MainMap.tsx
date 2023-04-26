@@ -9,10 +9,11 @@ import { useInitMap } from './effects/init';
 import { usePopupMap } from './effects/popup';
 import { useVectorLayers } from './effects/vectorLayers';
 import { useAddVillages } from './effects/villages';
+import { MapLayerName, useMapStore } from '../store/map';
 
-const BUTTONS = [
+const BUTTONS: Array<{ id: MapLayerName; label: string; icon: string }> = [
   {
-    id: 'vector-layers',
+    id: 'villages',
     label: 'Kelurahan',
     icon: 'mingcute:version-fill'
   },
@@ -56,6 +57,8 @@ export function MainMap() {
   // Display vector layers:
   useVectorLayers({ mapInstance });
 
+  const { activeLayers, setActiveLayers } = useMapStore();
+
   return (
     <>
       <div
@@ -72,9 +75,12 @@ export function MainMap() {
             <MapModeButton
               key={item.id}
               icon={item.icon}
-              isSelected={false}
+              isSelected={activeLayers[item.id]}
               onClick={() => {
-                console.log('hey');
+                setActiveLayers({
+                  ...activeLayers,
+                  [item.id]: !activeLayers[item.id]
+                });
               }}
             />
           ))}

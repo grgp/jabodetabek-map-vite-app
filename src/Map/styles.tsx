@@ -88,6 +88,7 @@ export const MapModeButton = (item: {
         ? 'bg-ac-orange text-white hover:text-ac-black-orange hover:bg-ac-white-off-deselect'
         : 'bg-ac-white-off hover:text-ac-orange'
     }`}
+    onClick={item.onClick}
   >
     <Icon style={{ marginLeft: -2 }} icon={item.icon} />
   </div>

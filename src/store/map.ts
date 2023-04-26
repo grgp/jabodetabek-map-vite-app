@@ -14,6 +14,8 @@ export type VectorSourceAndLayer = {
   // interactions?: Array<Modify | Translate | Transform>;
 };
 
+export type MapLayerName = 'villages' | 'railway' | 'streets' | 'satellite';
+
 export type MapState = {
   mapTilesMode: 'satellite' | 'traffic' | 'alternate';
   setMapTilesMode: (mode: 'satellite' | 'traffic' | 'alternate') => void;
@@ -22,6 +24,9 @@ export type MapState = {
   setVectorSourceAndLayers: (
     vectorSourceAndLayers: MapState['vectorSourceAndLayers']
   ) => void;
+
+  activeLayers: Record<MapLayerName, boolean>;
+  setActiveLayers: (activeLayers: MapState['activeLayers']) => void;
 
   vectorSourceAndLayerGroups: Record<string, string[]>;
   setVectorSourceAndLayerGroups: (
@@ -36,6 +41,14 @@ export const useMapStore = create<MapState>((set) => ({
   vectorSourceAndLayers: {},
   setVectorSourceAndLayers: (vectorSourceAndLayers) =>
     set({ vectorSourceAndLayers }),
+
+  activeLayers: {
+    villages: false,
+    railway: false,
+    streets: false,
+    satellite: false
+  },
+  setActiveLayers: (activeLayers) => set({ activeLayers }),
 
   vectorSourceAndLayerGroups: {},
   setVectorSourceAndLayerGroups: (vectorSourceAndLayerGroups) =>

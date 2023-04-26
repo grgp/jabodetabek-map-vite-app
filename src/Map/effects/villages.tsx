@@ -13,10 +13,14 @@ export function useAddVillages({
 }: {
   mapInstance: Map | undefined;
 }) {
-  const { setVectorSourceAndLayers } = useMapStore();
+  const { activeLayers, setVectorSourceAndLayers } = useMapStore();
+
+  const isVillagesLayerActive = activeLayers.villages;
 
   useEffect(() => {
-    if (mapInstance) {
+    if (!mapInstance) return;
+
+    if (isVillagesLayerActive) {
       const features = villages.map((village) => {
         const coordinates = village.members
           .filter((member) => member.role === 'outer')
@@ -52,6 +56,17 @@ export function useAddVillages({
           vectorSourceAndLayerId: 'villages'
         }
       });
+    } else {
+      // Remove villages layer
+      const villagesLayer = Object.values(
+        useMapStore.getState().vectorSourceAndLayers
+      ).find(
+        ({ vectorSourceAndLayerId }) => vectorSourceAndLayerId === 'villages'
+      );
+
+      if (villagesLayer) {
+        mapInstance.removeLayer(villagesLayer.layer);
+      }
     }
-  }, [mapInstance]);
+  }, [mapInstance, isVillagesLayerActive]);
 }
