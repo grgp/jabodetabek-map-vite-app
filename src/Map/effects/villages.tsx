@@ -13,12 +13,22 @@ export function useAddVillages({
 }: {
   mapInstance: Map | undefined;
 }) {
-  const { activeLayers, setVectorSourceAndLayers } = useMapStore();
+  const { activeLayers, vectorSourceAndLayers, setVectorSourceAndLayers } =
+    useMapStore();
 
   const isVillagesLayerActive = activeLayers.villages;
 
   useEffect(() => {
     if (!mapInstance) return;
+
+    function clearLayers() {
+      // Remove villages layer
+      const villagesLayer = vectorSourceAndLayers.villages;
+
+      if (villagesLayer) {
+        mapInstance?.removeLayer(villagesLayer.layer);
+      }
+    }
 
     if (isVillagesLayerActive) {
       const features = villages.map((village) => {
@@ -50,6 +60,7 @@ export function useAddVillages({
       });
 
       setVectorSourceAndLayers({
+        ...vectorSourceAndLayers,
         villages: {
           source: vectorSource,
           layer: vectorLayer,
@@ -57,16 +68,11 @@ export function useAddVillages({
         }
       });
     } else {
-      // Remove villages layer
-      const villagesLayer = Object.values(
-        useMapStore.getState().vectorSourceAndLayers
-      ).find(
-        ({ vectorSourceAndLayerId }) => vectorSourceAndLayerId === 'villages'
-      );
-
-      if (villagesLayer) {
-        mapInstance.removeLayer(villagesLayer.layer);
-      }
+      clearLayers();
     }
+
+    return () => {
+      clearLayers();
+    };
   }, [mapInstance, isVillagesLayerActive]);
 }

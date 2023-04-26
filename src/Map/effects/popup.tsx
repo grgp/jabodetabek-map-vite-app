@@ -35,7 +35,7 @@ export function usePopupMap({ mapInstance }: { mapInstance: Map | undefined }) {
         );
 
         if (feature) {
-          console.log('on pointermove', event, feature);
+          // console.log('on pointermove', event, feature);
           const village = feature.get('villageData') as Village;
           const polygonArea = feature.get('polygonArea') as number;
 

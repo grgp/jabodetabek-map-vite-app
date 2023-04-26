@@ -27,6 +27,19 @@ export function useAddRailways({
   useEffect(() => {
     if (!mapInstance) return;
 
+    function clearLayers() {
+      const stationsLayer = vectorSourceAndLayers.stations;
+      const tracksLayer = vectorSourceAndLayers.tracks;
+
+      if (stationsLayer) {
+        mapInstance?.removeLayer(stationsLayer.layer);
+      }
+
+      if (tracksLayer) {
+        mapInstance?.removeLayer(tracksLayer.layer);
+      }
+    }
+
     if (isRailwaysLayerActive) {
       const stationSource = new SourceVector();
       const trackSource = new SourceVector();
@@ -58,8 +71,9 @@ export function useAddRailways({
         const trackStyle = new Style({
           stroke: new Stroke({
             color: randomColor,
-            width: 3
-          })
+            width: 6
+          }),
+          zIndex: 10
         });
 
         trackFeature.setStyle(trackStyle);
@@ -75,6 +89,7 @@ export function useAddRailways({
       });
 
       setVectorSourceAndLayers({
+        ...vectorSourceAndLayers,
         stations: {
           source: stationSource,
           layer: stationLayer,
@@ -88,28 +103,23 @@ export function useAddRailways({
       });
     } else {
       // Remove stations and tracks layers
-      const stationsLayer = vectorSourceAndLayers.stations;
-      const tracksLayer = vectorSourceAndLayers.tracks;
-
-      if (stationsLayer) {
-        mapInstance.removeLayer(stationsLayer.layer);
-      }
-
-      if (tracksLayer) {
-        mapInstance.removeLayer(tracksLayer.layer);
-      }
+      clearLayers();
     }
+
+    return () => {
+      clearLayers();
+    };
   }, [mapInstance, isRailwaysLayerActive]);
 }
 
 const colors = [
-  '#a84141',
-  '#b5376d',
-  '#9b3f8c',
-  '#9b4a3f',
-  '#b6863d',
-  '#b3ae45',
-  '#9dad41'
+  '#ff7755',
+  '#f8443a',
+  '#ff616e',
+  '#ff9462',
+  '#ba200c',
+  '#ff6969',
+  '#a32222'
 ];
 
 function getRandomColor(colors: string[]): string {
