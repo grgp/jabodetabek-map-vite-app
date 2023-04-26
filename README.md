@@ -1,6 +1,24 @@
-# vite React TypeScript tailwindcss starter
+# Jabodetabek Map with OpenLayers
 
-Template for vite, React + tailwindcss + TypeScript projects with some tools preconfigured.
+Still under construction!
+
+Although there are official interactive maps already from the govt, they usually have data on separate maps. This project _doesn't_ aim to merge all of them, as a personal experiment this will start off with a small scope. The 1st milestone is to display the commuter line map on top of kelurahan data.
+
+## Usage
+
+Create a new project from this template by clicking the "Use this template" button:
+
+![](assets/template-usage.png)
+
+```bash
+yarn
+yarn dev
+yarn test
+```
+
+---
+
+Generated from this Vite + React + Tailwind + TypeScript [template from PDMLab](https://github.com/PDMLab/vite-react-typescript-tailwind-starter). Original readme below:
 
 ## About
 
@@ -26,15 +44,3 @@ Template for vite, React + tailwindcss + TypeScript projects with some tools pre
 - [husky 8](https://typicode.github.io/husky/#/)
 - [Prettier 2](https://prettier.io/)
 - [VS Code settings](https://code.visualstudio.com/)
-
-## Usage
-
-Create a new project from this template by clicking the "Use this template" button:
-
-![](assets/template-usage.png)
-
-```bash
-yarn
-yarn dev
-yarn test
-```
