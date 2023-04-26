@@ -3,7 +3,7 @@ import { Vector as LayerVector } from 'ol/layer';
 import { Vector as SourceVector } from 'ol/source';
 import { LineString, Point } from 'ol/geom';
 import { fromLonLat } from 'ol/proj';
-import { Style, Stroke, Icon } from 'ol/style';
+import { Style, Stroke, Icon, RegularShape, Fill } from 'ol/style';
 import { Map } from 'ol';
 
 import { Station, Track } from '../../types/railway';
@@ -44,7 +44,7 @@ export function useAddRailways({
       const stationSource = new SourceVector();
       const trackSource = new SourceVector();
 
-      const iconStyle = createIconStyle();
+      const iconStyle = createStationStyle();
 
       data.stations.forEach((station: Station) => {
         const stationFeature = new Feature({
@@ -73,7 +73,7 @@ export function useAddRailways({
             color: randomColor,
             width: 6
           }),
-          zIndex: 10
+          zIndex: 16
         });
 
         trackFeature.setStyle(trackStyle);
@@ -90,16 +90,16 @@ export function useAddRailways({
 
       setVectorSourceAndLayers({
         ...vectorSourceAndLayers,
-        stations: {
-          source: stationSource,
-          layer: stationLayer,
-          vectorSourceAndLayerId: 'stations'
-        },
         tracks: {
           source: trackSource,
           layer: trackLayer,
           vectorSourceAndLayerId: 'tracks'
         }
+        // stations: {
+        //   source: stationSource,
+        //   layer: stationLayer,
+        //   vectorSourceAndLayerId: 'stations'
+        // }
       });
     } else {
       // Remove stations and tracks layers
@@ -112,15 +112,7 @@ export function useAddRailways({
   }, [mapInstance, isRailwaysLayerActive]);
 }
 
-const colors = [
-  '#ff7755',
-  '#f8443a',
-  '#ff616e',
-  '#ff9462',
-  '#ba200c',
-  '#ff6969',
-  '#a32222'
-];
+const colors = ['#ffaa55', '#f8c53a', '#ffdd61', '#e07c20'];
 
 function getRandomColor(colors: string[]): string {
   return colors[Math.floor(Math.random() * colors.length)];
@@ -132,5 +124,23 @@ function createIconStyle(): Style {
       src: 'icon.png', // Path to your icon file
       scale: 0.5 // Adjust the scale to resize the icon
     })
+  });
+}
+
+function createStationStyle(): Style {
+  return new Style({
+    image: new RegularShape({
+      points: 6,
+      radius: 8,
+      angle: Math.PI / 4,
+      // fill: new Fill({
+      //   color: '#ffffff'
+      // }),
+      stroke: new Stroke({
+        color: '#ffaf01',
+        width: 3
+      })
+    }),
+    zIndex: 15
   });
 }
