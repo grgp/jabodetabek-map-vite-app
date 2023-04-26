@@ -2,9 +2,10 @@
 
 Still under construction!
 
-Although there are official interactive maps already from the govt, they usually have data on separate maps. This project _doesn't_ aim to merge all of them, as a personal experiment this will start off with a small scope. The 1st milestone is to display the commuter line map on top of kelurahan data.
-
 ![image](https://user-images.githubusercontent.com/12206156/234661366-cbd97603-89d2-4421-9c8b-6b45cc763364.png)
+
+Although there are official interactive maps already from the govt, they usually have data on separate maps. This project _doesn't_ aim to merge all of them, as a 
+personal experiment this will start off with a small scope. The 1st milestone is to display the commuter line map on top of kelurahan data.
 
 ## Usage
 
