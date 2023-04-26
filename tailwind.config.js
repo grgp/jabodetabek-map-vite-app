@@ -10,7 +10,10 @@ module.exports = {
     extend: {
       colors: {
         'ac-black-orange': '#64625d',
-        'ac-orange': '#EFA72B'
+        'ac-orange': '#EFA72B',
+        'ac-green-dark': '#1c6b1c',
+        'ac-white-off': '#fdffee',
+        'ac-white-off-deselect': '#fefeeb'
       }
     }
   }

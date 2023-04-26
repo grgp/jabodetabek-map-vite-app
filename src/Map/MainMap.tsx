@@ -72,6 +72,7 @@ export function MainMap() {
             <MapModeButton
               key={item.id}
               icon={item.icon}
+              isSelected={false}
               onClick={() => {
                 console.log('hey');
               }}

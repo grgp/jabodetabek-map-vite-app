@@ -76,10 +76,18 @@ export const defaultStyleFunction: StyleLike = (feature: FeatureLike) => {
   });
 };
 
-export const MapModeButton = (item: { icon: string; onClick: () => void }) => (
+export const MapModeButton = (item: {
+  icon: string;
+  isSelected: boolean;
+  onClick: () => void;
+}) => (
   <div
-    style={{ background: '#fdffee', marginLeft: -16, fontSize: 44 }}
-    className={`relative w-20 h-20 rounded-full flex items-center justify-center transition duration-300 ease-in-out transform shadow-xl hover:scale-105 text-ac-black-orange hover:text-ac-orange hover:shadow-lg cursor-pointer`}
+    style={{ marginLeft: -16, fontSize: 44 }}
+    className={`relative w-20 h-20 rounded-full flex items-center justify-center transition duration-300 ease-in-out transform shadow-xl hover:scale-105 text-ac-black-orange hover:shadow-lg cursor-pointer ${
+      item.isSelected
+        ? 'bg-ac-orange text-white hover:text-ac-black-orange hover:bg-ac-white-off-deselect'
+        : 'bg-ac-white-off hover:text-ac-orange'
+    }`}
   >
     <Icon style={{ marginLeft: -2 }} icon={item.icon} />
   </div>
