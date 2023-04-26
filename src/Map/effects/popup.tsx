@@ -70,7 +70,7 @@ export function usePopupMap({ mapInstance }: { mapInstance: Map | undefined }) {
                 width: 4
               }),
               fill: new Fill({
-                color: Color('#148be6').alpha(0.85).toString()
+                color: Color('#ff880a').alpha(0.85).toString()
               })
             })
           );

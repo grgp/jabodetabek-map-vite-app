@@ -38,6 +38,9 @@ export function useAddRailways({
       if (tracksLayer) {
         mapInstance?.removeLayer(tracksLayer.layer);
       }
+
+      const { tracks, stations, ...rest } = vectorSourceAndLayers;
+      setVectorSourceAndLayers({ ...rest });
     }
 
     if (isRailwaysLayerActive) {
@@ -81,11 +84,13 @@ export function useAddRailways({
       });
 
       const stationLayer = new LayerVector({
-        source: stationSource
+        source: stationSource,
+        zIndex: 25
       });
 
       const trackLayer = new LayerVector({
-        source: trackSource
+        source: trackSource,
+        zIndex: 20
       });
 
       setVectorSourceAndLayers({
@@ -94,12 +99,12 @@ export function useAddRailways({
           source: trackSource,
           layer: trackLayer,
           vectorSourceAndLayerId: 'tracks'
+        },
+        stations: {
+          source: stationSource,
+          layer: stationLayer,
+          vectorSourceAndLayerId: 'stations'
         }
-        // stations: {
-        //   source: stationSource,
-        //   layer: stationLayer,
-        //   vectorSourceAndLayerId: 'stations'
-        // }
       });
     } else {
       // Remove stations and tracks layers
@@ -131,13 +136,13 @@ function createStationStyle(): Style {
   return new Style({
     image: new RegularShape({
       points: 6,
-      radius: 8,
+      radius: 6,
       angle: Math.PI / 4,
-      // fill: new Fill({
-      //   color: '#ffffff'
-      // }),
+      fill: new Fill({
+        color: '#71513a'
+      }),
       stroke: new Stroke({
-        color: '#ffaf01',
+        color: '#ffcc5f',
         width: 3
       })
     }),

@@ -28,6 +28,9 @@ export function useAddVillages({
       if (villagesLayer) {
         mapInstance?.removeLayer(villagesLayer.layer);
       }
+
+      const { villages, ...rest } = vectorSourceAndLayers;
+      setVectorSourceAndLayers({ ...rest });
     }
 
     if (isVillagesLayerActive) {

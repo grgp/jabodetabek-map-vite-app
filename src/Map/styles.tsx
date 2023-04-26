@@ -32,8 +32,8 @@ export const POPUP_STYLES = {
   top: -999,
   right: -999,
   position: 'absolute',
-  background: 'linear-gradient(to bottom, #2d6daa, #155e92)',
-  color: 'white',
+  background: '#FDF7DF',
+  color: '#746726',
   padding: 14,
   boxShadow: '0 1px 4px rgba(0, 0, 0, 0.2)',
   zIndex: 999999,
@@ -56,7 +56,7 @@ export const defaultStyleFunction: StyleLike = (feature: FeatureLike) => {
 
   return new Style({
     stroke: new Stroke({
-      color: Color('#3f97da').alpha(0.8).toString(),
+      color: Color('#d5b570').alpha(0.8).toString(),
       width: 2
     }),
     fill: new Fill({
