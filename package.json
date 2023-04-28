@@ -12,7 +12,7 @@
   "dependencies": {
     "@iconify/react": "^4.1.0",
     "@turf/turf": "^6.5.0",
-    "cesium": "1.97.0",
+    "cesium": "1.104.0",
     "color": "^4.2.3",
     "lodash": "^4.17.21",
     "mapbox-gl": "1",

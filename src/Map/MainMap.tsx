@@ -51,7 +51,11 @@ export function MainMap() {
   // Init map:
   useInitMap({ mapElement, setMapInstance });
 
+  // Regular
   useInitCesiumReg3D({ mapInstance });
+
+  // OL-Cesium
+  useInitCesiumOL3D({ mapInstance });
 
   // Popups:
   const { popupData } = usePopupMap({ mapInstance });
@@ -76,7 +80,7 @@ export function MainMap() {
 
       <div
         style={{ zIndex: 10000000 }}
-        className="absolute bottom-0 inset-x-0 md:flex md:items-center md:justify-center m-4 rounded-md px-4 py-3"
+        className="absolute top-0 inset-x-0 md:flex md:items-center md:justify-center m-8 rounded-md px-4 py-3"
       >
         <div className="flex">
           {BUTTONS.map((item) => (

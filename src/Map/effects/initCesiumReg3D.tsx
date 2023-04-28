@@ -2,14 +2,11 @@ import { Ion, Viewer, createOsmBuildings, Cartesian3, Math } from 'cesium';
 
 import { Map } from 'ol';
 import { useEffect } from 'react';
-import OLCesium from 'olcs/src/olcs/OLCesium';
 import { OLCS_ION_TOKEN } from '../../constants/tokens';
 import {
   JAKARTA_CENTER_LATITUDE,
   JAKARTA_CENTER_LONGITUDE
 } from '../../constants/coordinates';
-
-console.log('what is OLCSeuuius', OLCesium);
 
 Ion.defaultAccessToken = OLCS_ION_TOKEN;
 
