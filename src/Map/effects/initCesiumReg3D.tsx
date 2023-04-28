@@ -1,14 +1,4 @@
-import {
-  Ion,
-  ImageryLayer,
-  Viewer,
-  createWorldTerrain,
-  createOsmBuildings,
-  Cartesian3,
-  Math,
-  OpenStreetMapImageryProvider
-} from 'cesium';
-import 'cesium/Build/Cesium/Widgets/widgets.css';
+import { Ion, Viewer, createOsmBuildings, Cartesian3, Math } from 'cesium';
 
 import { Map } from 'ol';
 import { useEffect } from 'react';
@@ -21,13 +11,14 @@ Ion.defaultAccessToken = OLCS_ION_TOKEN;
 
 export function useInitCesiumReg3D({ mapInstance }: { mapInstance?: Map }) {
   useEffect(() => {
+    // const osmImageryProvider = new OpenStreetMapImageryProvider({
+    //   url: 'https://a.tile.openstreetmap.org/'
+    // });
+
     // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
-    const osmImageryProvider = new OpenStreetMapImageryProvider({
-      url: 'https://a.tile.openstreetmap.org/'
-    });
 
     const viewer = new Viewer('cesiumContainer', {
-      terrainProvider: createWorldTerrain()
+      // terrainProvider: createWorldTerrain()
       // baseLayerPicker: new ImageryLayer(osmImageryProvider)
     });
 
