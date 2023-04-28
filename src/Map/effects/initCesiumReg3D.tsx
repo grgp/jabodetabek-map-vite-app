@@ -4,6 +4,10 @@ import { Map } from 'ol';
 import { useEffect } from 'react';
 import OLCesium from 'olcs/src/olcs/OLCesium';
 import { OLCS_ION_TOKEN } from '../../constants/tokens';
+import {
+  JAKARTA_CENTER_LATITUDE,
+  JAKARTA_CENTER_LONGITUDE
+} from '../../constants/coordinates';
 
 console.log('what is OLCSeuuius', OLCesium);
 
@@ -27,7 +31,11 @@ export function useInitCesiumReg3D({ mapInstance }: { mapInstance?: Map }) {
 
     // Fly the camera to San Francisco at the given longitude, latitude, and height.
     viewer.camera.flyTo({
-      destination: Cartesian3.fromDegrees(-122.4175, 37.655, 400),
+      destination: Cartesian3.fromDegrees(
+        JAKARTA_CENTER_LONGITUDE,
+        JAKARTA_CENTER_LATITUDE,
+        400
+      ),
       orientation: {
         heading: Math.toRadians(0.0),
         pitch: Math.toRadians(-15.0)
