@@ -43,10 +43,10 @@ export const useMapStore = create<MapState>((set) => ({
     set({ vectorSourceAndLayers }),
 
   activeLayers: {
-    villages: false,
-    railway: false,
-    buildings: false,
-    satellite: false
+    villages: true,
+    railway: true,
+    buildings: true,
+    satellite: true
   },
   setActiveLayers: (activeLayers) => set({ activeLayers }),
 

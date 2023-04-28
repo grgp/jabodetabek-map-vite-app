@@ -48,6 +48,8 @@ export function MainMap() {
   const mapRef = useRef<Map | undefined>();
   mapRef.current = mapInstance;
 
+  const [count, setCount] = useState(0);
+
   // Init map:
   useInitMap({ mapElement, setMapInstance });
 
@@ -55,17 +57,17 @@ export function MainMap() {
   useInitCesiumReg3D({ mapInstance });
 
   // OL-Cesium
-  useInitCesiumOL3D({ mapInstance });
+  useInitCesiumOL3D({ mapInstance, count });
 
   // Popups:
   const { popupData } = usePopupMap({ mapInstance });
 
   // Add vector layers:
-  // useAddVillages({ mapInstance });
-  // useAddRailways({ mapInstance });
+  useAddVillages({ mapInstance });
+  useAddRailways({ mapInstance });
 
   // Display vector layers:
-  // useVectorLayers({ mapInstance });
+  useVectorLayers({ mapInstance });
 
   const { activeLayers, setActiveLayers } = useMapStore();
 
@@ -89,6 +91,7 @@ export function MainMap() {
               icon={item.icon}
               isSelected={activeLayers[item.id]}
               onClick={() => {
+                setCount(count + 1);
                 setActiveLayers({
                   ...activeLayers,
                   [item.id]: !activeLayers[item.id]
