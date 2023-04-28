@@ -11,6 +11,8 @@ import { useVectorLayers } from './effects/vectorLayers';
 import { useAddVillages } from './effects/villages';
 import { MapLayerName, useMapStore } from '../store/map';
 import { useAddRailways } from './effects/railways';
+import { useInitCesiumOL3D } from './effects/initCesiumOL3D';
+import { useInitCesiumReg3D } from './effects/initCesiumReg3D';
 
 const BUTTONS: Array<{ id: MapLayerName; label: string; icon: string }> = [
   {
@@ -49,24 +51,28 @@ export function MainMap() {
   // Init map:
   useInitMap({ mapElement, setMapInstance });
 
+  useInitCesiumReg3D({ mapInstance });
+
   // Popups:
   const { popupData } = usePopupMap({ mapInstance });
 
   // Add vector layers:
-  useAddVillages({ mapInstance });
-  useAddRailways({ mapInstance });
+  // useAddVillages({ mapInstance });
+  // useAddRailways({ mapInstance });
 
   // Display vector layers:
-  useVectorLayers({ mapInstance });
+  // useVectorLayers({ mapInstance });
 
   const { activeLayers, setActiveLayers } = useMapStore();
 
   return (
     <>
-      <div
+      {/* <div
         ref={mapElement as React.MutableRefObject<HTMLDivElement>}
         style={{ width: '100%', height: '100%' }}
-      ></div>
+      ></div> */}
+
+      <div id="cesiumContainer"></div>
 
       <div
         style={{ zIndex: 10000000 }}
