@@ -22,7 +22,7 @@ export function useInitCesiumOL3D({ mapInstance }: { mapInstance?: Map }) {
 
   useEffect(() => {
     if (mapInstance) {
-      let tileWorldImagery = new TileLayer({
+      const tileWorldImagery = new TileLayer({
         source: new XYZ({
           url: 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
           crossOrigin: 'Anonymous'
@@ -44,13 +44,15 @@ export function useInitCesiumOL3D({ mapInstance }: { mapInstance?: Map }) {
       });
 
       // Only these are really required
-      const ol3d = new OLCesium({
-        map: map,
-        time: () => Cesium.JulianDate.now(),
-        target: 'cesiumContainer'
-      });
-      ol3d.setEnabled(true);
-      ol3dRef.current = ol3d;
+      setTimeout(() => {
+        const ol3d = new OLCesium({
+          map: mapInstance,
+          time: () => Cesium.JulianDate.now(),
+          target: 'cesiumContainer'
+        });
+        ol3d.setEnabled(true);
+        ol3dRef.current = ol3d;
+      }, 3000);
     }
 
     return () => {
