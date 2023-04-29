@@ -1,15 +1,10 @@
-import { Map } from 'ol';
 import { useMapStore } from '../../store/map';
 import { useEffect } from 'react';
 import { Village } from '../../types/structure';
 import { usePrevious } from '../../utils/hooks';
 
-export function useVectorLayers({
-  mapInstance
-}: {
-  mapInstance: Map | undefined;
-}) {
-  const { vectorSourceAndLayers } = useMapStore();
+export function useVectorLayers() {
+  const { mapInstance, vectorSourceAndLayers } = useMapStore();
 
   const prevVectorSourceAndLayers = usePrevious(vectorSourceAndLayers);
 

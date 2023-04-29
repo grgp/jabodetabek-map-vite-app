@@ -8,13 +8,13 @@ import { villages } from '../../data';
 import { useMapStore } from '../../store/map';
 import { defaultStyleFunction } from '../styles';
 
-export function useAddVillages({
-  mapInstance
-}: {
-  mapInstance: Map | undefined;
-}) {
-  const { activeLayers, vectorSourceAndLayers, setVectorSourceAndLayers } =
-    useMapStore();
+export function useAddVillages() {
+  const {
+    mapInstance,
+    activeLayers,
+    vectorSourceAndLayers,
+    setVectorSourceAndLayers
+  } = useMapStore();
 
   const isVillagesLayerActive = activeLayers.villages;
 

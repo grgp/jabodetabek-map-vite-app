@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 import 'ol/ol.css';
-import { Map } from 'ol';
 
+import { Map } from 'ol';
 import { capitalizeWords } from './utils';
 import { MapModeButton, POPUP_STYLES } from './styles';
 import { useInitMap } from './effects/init';
@@ -11,8 +11,6 @@ import { useVectorLayers } from './effects/vectorLayers';
 import { useAddVillages } from './effects/villages';
 import { MapLayerName, useMapStore } from '../store/map';
 import { useAddRailways } from './effects/railways';
-import { useInitCesiumOL3D } from './effects/initCesiumOL3D';
-import { useInitCesiumReg3D } from './effects/initCesiumReg3D';
 import { ENABLE_CESIUM } from '../constants/flags';
 
 const BUTTONS: Array<{ id: MapLayerName; label: string; icon: string }> = [
@@ -39,7 +37,8 @@ const BUTTONS: Array<{ id: MapLayerName; label: string; icon: string }> = [
 ];
 
 export function MainMap() {
-  const [mapInstance, setMapInstance] = useState<Map | undefined>(undefined);
+  const { mapInstance, activeLayers, setActiveLayers } = useMapStore();
+
   const mapElement = useRef<HTMLDivElement | null | undefined>();
 
   // state ref for onclick callback https://stackoverflow.com/a/60643670
@@ -47,19 +46,17 @@ export function MainMap() {
   mapRef.current = mapInstance;
 
   // Init map:
-  useInitMap({ mapElement, setMapInstance });
+  useInitMap({ mapElement });
 
   // Popups:
-  const { popupData } = usePopupMap({ mapInstance });
+  const { popupData } = usePopupMap();
 
   // Add vector layers:
-  useAddVillages({ mapInstance });
-  useAddRailways({ mapInstance });
+  useAddVillages();
+  useAddRailways();
 
   // Display vector layers:
-  useVectorLayers({ mapInstance });
-
-  const { activeLayers, setActiveLayers } = useMapStore();
+  useVectorLayers();
 
   return (
     <>

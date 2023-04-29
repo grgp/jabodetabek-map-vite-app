@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react';
 
 import Color from 'color';
-import { Map, Feature, Overlay } from 'ol';
+import { Feature, Overlay } from 'ol';
 import { Style, Stroke, Fill } from 'ol/style';
 import 'ol/ol.css';
 import { Village, VillagePopData } from '../../types/structure';
 import { villagesPopsData } from '../../data';
 import { defaultStyleFunction } from '../styles';
+import { useMapStore } from '../../store/map';
 
 let hoveredFeature: Feature | null = null;
 
-export function usePopupMap({ mapInstance }: { mapInstance: Map | undefined }) {
+export function usePopupMap() {
+  const { mapInstance } = useMapStore();
+
   const [popupData, setPopupData] = useState<{
     data: Village;
     popData?: VillagePopData;

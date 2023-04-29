@@ -7,10 +7,13 @@ import {
   JAKARTA_CENTER_LATITUDE,
   JAKARTA_CENTER_LONGITUDE
 } from '../../constants/coordinates';
+import { useMapStore } from '../../store/map';
 
 Ion.defaultAccessToken = OLCS_ION_TOKEN;
 
-export function useInitCesiumReg3D({ mapInstance }: { mapInstance?: Map }) {
+export function useInitCesiumReg3D() {
+  const { mapInstance } = useMapStore();
+
   useEffect(() => {
     // const osmImageryProvider = new OpenStreetMapImageryProvider({
     //   url: 'https://a.tile.openstreetmap.org/'

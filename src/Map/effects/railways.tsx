@@ -4,7 +4,6 @@ import { Vector as SourceVector } from 'ol/source';
 import { LineString, Point } from 'ol/geom';
 import { fromLonLat } from 'ol/proj';
 import { Style, Stroke, Icon, RegularShape, Fill } from 'ol/style';
-import { Map } from 'ol';
 
 import { Station, Track } from '../../types/railway';
 import { fetchRailwayData } from '../../fetches/railwayData';
@@ -14,11 +13,9 @@ import { useEffect } from 'react';
 const data = await fetchRailwayData();
 
 // Function to add stations and tracks to the map
-export function useAddRailways({
-  mapInstance
-}: {
-  mapInstance: Map | undefined;
-}) {
+export function useAddRailways() {
+  const { mapInstance } = useMapStore();
+
   const { activeLayers, vectorSourceAndLayers, setVectorSourceAndLayers } =
     useMapStore();
 

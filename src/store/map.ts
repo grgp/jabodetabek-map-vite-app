@@ -1,5 +1,6 @@
 // useStore.ts
 
+import { Map } from 'ol';
 import { Geometry } from 'ol/geom';
 import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
@@ -17,6 +18,9 @@ export type VectorSourceAndLayer = {
 export type MapLayerName = 'villages' | 'railway' | 'buildings' | 'satellite';
 
 export type MapState = {
+  mapInstance?: Map;
+  setMapInstance: (mapInstance: Map) => void;
+
   mapTilesMode: 'satellite' | 'traffic' | 'alternate';
   setMapTilesMode: (mode: 'satellite' | 'traffic' | 'alternate') => void;
 
@@ -35,6 +39,9 @@ export type MapState = {
 };
 
 export const useMapStore = create<MapState>((set) => ({
+  mapInstance: undefined,
+  setMapInstance: (mapInstance) => set({ mapInstance }),
+
   mapTilesMode: 'satellite',
   setMapTilesMode: (mode) => set({ mapTilesMode: mode }),
 

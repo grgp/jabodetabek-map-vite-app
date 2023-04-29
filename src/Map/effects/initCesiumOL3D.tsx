@@ -11,17 +11,14 @@ import * as Cesium from 'cesium';
 
 // @ts-ignore
 import * as OLCesium from './olcesium.umd.js';
+import { useMapStore } from '../../store/map.js';
 
 console.log('what is olcesium?', OLCesium);
 
 (window as any).Cesium = Cesium; // expose Cesium to the OL-Cesium library
 
-export function useInitCesiumOL3D({
-  mapInstance
-}: {
-  mapInstance?: OL.Map;
-  count: number;
-}) {
+export function useInitCesiumOL3D() {
+  const { mapInstance } = useMapStore();
   const ol3dRef = useRef<any | undefined>(undefined);
 
   useEffect(() => {
