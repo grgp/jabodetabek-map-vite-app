@@ -3,17 +3,23 @@
 // window.Cesium = Cesium; // expose Cesium to the OL-Cesium library
 // import 'cesium/Build/Cesium/Widgets/widgets.css';
 
-import { Map } from 'ol';
+import * as OL from 'ol';
 import { useEffect, useRef } from 'react';
 import * as Cesium from 'cesium';
-import OLCesium from 'olcs/src/olcs/OLCesium';
+
+(window as any).ol = OL;
+
+// @ts-ignore
+import * as OLCesium from './olcesium.umd.js';
+
+console.log('what is olcesium?', OLCesium);
 
 (window as any).Cesium = Cesium; // expose Cesium to the OL-Cesium library
 
 export function useInitCesiumOL3D({
   mapInstance
 }: {
-  mapInstance?: Map;
+  mapInstance?: OL.Map;
   count: number;
 }) {
   const ol3dRef = useRef<any | undefined>(undefined);
