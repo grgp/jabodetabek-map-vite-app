@@ -13,6 +13,7 @@ import { MapLayerName, useMapStore } from '../store/map';
 import { useAddRailways } from './effects/railways';
 import { useInitCesiumOL3D } from './effects/initCesiumOL3D';
 import { useInitCesiumReg3D } from './effects/initCesiumReg3D';
+import { ENABLE_CESIUM } from '../constants/flags';
 
 const BUTTONS: Array<{ id: MapLayerName; label: string; icon: string }> = [
   {
@@ -39,25 +40,14 @@ const BUTTONS: Array<{ id: MapLayerName; label: string; icon: string }> = [
 
 export function MainMap() {
   const [mapInstance, setMapInstance] = useState<Map | undefined>(undefined);
-
-  // Pull refs:
   const mapElement = useRef<HTMLDivElement | null | undefined>();
 
-  // Create state ref that can be accessed in OpenLayers onclick callback
-  // https://stackoverflow.com/a/60643670
+  // state ref for onclick callback https://stackoverflow.com/a/60643670
   const mapRef = useRef<Map | undefined>();
   mapRef.current = mapInstance;
 
-  const [count, setCount] = useState(0);
-
   // Init map:
   useInitMap({ mapElement, setMapInstance });
-
-  // Regular
-  // useInitCesiumReg3D({ mapInstance });
-
-  // OL-Cesium
-  useInitCesiumOL3D({ mapInstance, count });
 
   // Popups:
   const { popupData } = usePopupMap({ mapInstance });
@@ -75,10 +65,10 @@ export function MainMap() {
     <>
       <div
         ref={mapElement as React.MutableRefObject<HTMLDivElement>}
-        style={{ width: '100%', height: '50%' }}
+        style={{ width: '100%', height: ENABLE_CESIUM ? '50%' : '100%' }}
       ></div>
 
-      <div id="cesiumContainer"></div>
+      {ENABLE_CESIUM && <div id="cesiumContainer"></div>}
 
       <div
         style={{ zIndex: 10000000 }}
@@ -91,7 +81,6 @@ export function MainMap() {
               icon={item.icon}
               isSelected={activeLayers[item.id]}
               onClick={() => {
-                setCount(count + 1);
                 setActiveLayers({
                   ...activeLayers,
                   [item.id]: !activeLayers[item.id]
