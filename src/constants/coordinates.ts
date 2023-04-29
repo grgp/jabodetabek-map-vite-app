@@ -1,7 +1,7 @@
 import { fromLonLat } from 'ol/proj';
 
-const JAKARTA_CENTER_LONGITUDE = 106.8256;
-const JAKARTA_CENTER_LATITUDE = -6.2488;
+export const JAKARTA_CENTER_LONGITUDE = 106.8256;
+export const JAKARTA_CENTER_LATITUDE = -6.2488;
 
 export const JAKARTA_CENTER_COORDINATES = fromLonLat([
   JAKARTA_CENTER_LONGITUDE,

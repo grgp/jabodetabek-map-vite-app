@@ -62,6 +62,8 @@ export function useAddVillages({
         style: defaultStyleFunction
       });
 
+      vectorLayer.set('altitudeMode', 'clampToGround');
+
       setVectorSourceAndLayers({
         ...vectorSourceAndLayers,
         villages: {
