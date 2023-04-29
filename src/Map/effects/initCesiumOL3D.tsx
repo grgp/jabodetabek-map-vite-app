@@ -3,12 +3,12 @@
 // window.Cesium = Cesium; // expose Cesium to the OL-Cesium library
 // import 'cesium/Build/Cesium/Widgets/widgets.css';
 
-import { Map, View } from 'ol';
+import { Map } from 'ol';
 import { useEffect, useRef } from 'react';
 import * as Cesium from 'cesium';
 import OLCesium from 'olcs/src/olcs/OLCesium';
 
-window.Cesium = Cesium; // expose Cesium to the OL-Cesium library
+(window as any).Cesium = Cesium; // expose Cesium to the OL-Cesium library
 
 export function useInitCesiumOL3D({
   mapInstance
@@ -20,9 +20,10 @@ export function useInitCesiumOL3D({
 
   useEffect(() => {
     if (mapInstance) {
+      console.log('am i called for olcesium');
       // Only these are really required
-      // @ts-ignore
       setTimeout(() => {
+        // @ts-ignore
         const ol3d = new OLCesium({
           map: mapInstance,
           time: () => Cesium.JulianDate.now(),
@@ -31,8 +32,10 @@ export function useInitCesiumOL3D({
         ol3d.setEnabled(true);
         ol3dRef.current = ol3d;
 
+        console.log('what is ol3d');
+
         ol3d.enableAutoRenderLoop();
-      }, 3000);
+      }, 5000);
     }
 
     return () => {

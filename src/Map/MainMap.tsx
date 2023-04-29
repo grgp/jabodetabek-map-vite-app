@@ -54,7 +54,7 @@ export function MainMap() {
   useInitMap({ mapElement, setMapInstance });
 
   // Regular
-  useInitCesiumReg3D({ mapInstance });
+  // useInitCesiumReg3D({ mapInstance });
 
   // OL-Cesium
   useInitCesiumOL3D({ mapInstance, count });
