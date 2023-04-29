@@ -11,8 +11,7 @@ import OLCesium from 'olcs/src/olcs/OLCesium';
 window.Cesium = Cesium; // expose Cesium to the OL-Cesium library
 
 export function useInitCesiumOL3D({
-  mapInstance,
-  count
+  mapInstance
 }: {
   mapInstance?: Map;
   count: number;
@@ -41,5 +40,5 @@ export function useInitCesiumOL3D({
         // ol3dRef?.current.setEnabled(false);
       }
     };
-  }, [mapInstance, count]);
+  }, [mapInstance]);
 }

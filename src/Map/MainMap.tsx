@@ -73,10 +73,10 @@ export function MainMap() {
 
   return (
     <>
-      {/* <div
+      <div
         ref={mapElement as React.MutableRefObject<HTMLDivElement>}
-        style={{ width: '100%', height: '100%' }}
-      ></div> */}
+        style={{ width: '100%', height: '50%' }}
+      ></div>
 
       <div id="cesiumContainer"></div>
 
