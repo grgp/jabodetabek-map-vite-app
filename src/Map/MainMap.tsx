@@ -58,8 +58,6 @@ export function MainMap() {
   // Display vector layers:
   useVectorLayers();
 
-  // useAddFlyer();
-
   return (
     <>
       <div

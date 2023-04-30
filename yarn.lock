@@ -1280,11 +1280,6 @@
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.5.0.tgz#57618e57942a5f0131374a9fdb0167e25a117fdc"
   integrity sha512-bkUDCp8o1MvFO+qxkODcbhSqRa6P2GXgrGZVpt0dCXNW2HCSCqYI0ZoAqEOSAjRWmmlKcYgFvN4B4S+zo/f8kg==
 
-"@rollup/plugin-virtual@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-virtual/-/plugin-virtual-3.0.1.tgz#cea7e489481cc0ca91516c047f8c53c1cfb1adf6"
-  integrity sha512-fK8O0IL5+q+GrsMLuACVNk2x21g3yaw+sG2qn16SnUd3IlBsQyvWxLMGHmCmXRMecPjGRSZ/1LmZB4rjQm68og==
-
 "@rollup/pluginutils@^4.0.0":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.2.1.tgz#e6c6c3aba0744edce3fb2074922d3776c0af2a6d"
@@ -5845,18 +5840,6 @@ object.values@^1.1.6:
     call-bind "^1.0.2"
     define-properties "^1.1.4"
     es-abstract "^1.20.4"
-
-ol-ext@>=3.0.3, ol-ext@^4.0.7:
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/ol-ext/-/ol-ext-4.0.7.tgz#de1cd75c8fa8278e5dae27b11478505d98d18476"
-  integrity sha512-7ctK7nxR/F27bh11Y+WEVuq8xdkLRTutVxQTov/jg89s9yyXgNFtswaJsREtckhYhbMFP5aXyVNvLkAcPOzguA==
-
-ol-games@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ol-games/-/ol-games-2.0.0.tgz#425c675468924dbec12b83b5bbc5324dff9f8f8b"
-  integrity sha512-Dt+jk0rOjJMNWYqHvR3otU/9SMF1OF9und4cavKiqnccUHqnUkj74yVUHmARkyCCIQiHcgd0Fv1gjuUkJi5oNQ==
-  dependencies:
-    ol-ext ">=3.0.3"
 
 ol-mapbox-style@^9.2.0:
   version "9.7.0"

@@ -1,10 +1,6 @@
 import { useEffect } from 'react';
 import { MaplibreLayer } from 'mobility-toolbox-js/ol';
-// import * as ol from 'ol';
-// window.ol = ol;
-// global.ol = ol;
-import ol from '../../vendors/ol-games';
-
+import { Map, View } from 'ol';
 import {
   JAKARTA_CENTER_COORDINATES,
   MAPLIBRE_LAYER_URL
@@ -21,9 +17,9 @@ export function useInitMap({
   useEffect(() => {
     console.log('what are jktCoordinates?', JAKARTA_CENTER_COORDINATES);
 
-    const initialMap = new ol.Game({
+    const initialMap = new Map({
       target: mapElement.current || undefined,
-      view: new ol.View({
+      view: new View({
         center: JAKARTA_CENTER_COORDINATES,
         zoom: 12,
         minZoom: 5
