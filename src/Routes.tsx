@@ -2,12 +2,14 @@ import * as React from 'react';
 import { Routes as RouterRoutes, Route, Outlet } from 'react-router-dom';
 import App from './containers/App';
 import { DataFetchingPage } from './containers/DataFetchingPage';
+import CesiumApp from './containers/CesiumApp';
 
 export function Routes() {
   return (
     <RouterRoutes>
       <Route path="/" element={<Layout />}>
         <Route index element={<App />} />
+        <Route path="3d" element={<CesiumApp />} />
         <Route path="data" element={<DataFetchingPage />} />
       </Route>
     </RouterRoutes>

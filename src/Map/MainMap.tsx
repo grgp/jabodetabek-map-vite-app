@@ -9,32 +9,10 @@ import { useInitMap } from './effects/init';
 import { usePopupMap } from './effects/popup';
 import { useVectorLayers } from './effects/vectorLayers';
 import { useAddVillages } from './effects/villages';
-import { MapLayerName, useMapStore } from '../store/map';
+import { useMapStore } from '../store/map';
 import { useAddRailways } from './effects/railways';
 import { ENABLE_CESIUM } from '../constants/flags';
-
-const BUTTONS: Array<{ id: MapLayerName; label: string; icon: string }> = [
-  {
-    id: 'villages',
-    label: 'Kelurahan',
-    icon: 'mingcute:version-fill'
-  },
-  {
-    id: 'railway',
-    label: 'Railway',
-    icon: 'mingcute:train-2-fill'
-  },
-  {
-    id: 'buildings',
-    label: 'Jalan',
-    icon: 'mingcute:building-3-fill'
-  },
-  {
-    id: 'satellite',
-    label: 'Satellite',
-    icon: 'mingcute:camera-2-fill'
-  }
-];
+import { LAYER_BUTTONS } from '../controls/layerButtons';
 
 export function MainMap() {
   const { mapInstance, activeLayers, setActiveLayers } = useMapStore();
@@ -72,7 +50,7 @@ export function MainMap() {
         className="absolute top-0 inset-x-0 md:flex md:items-center md:justify-center m-8 rounded-md px-4 py-3"
       >
         <div className="flex">
-          {BUTTONS.map((item) => (
+          {LAYER_BUTTONS.map((item) => (
             <MapModeButton
               key={item.id}
               icon={item.icon}
