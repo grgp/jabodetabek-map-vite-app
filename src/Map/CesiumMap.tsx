@@ -1,6 +1,7 @@
 import { CameraFlyTo, Viewer, Entity, PolygonGraphics } from 'resium';
 import { VillageEntities } from './resium/VillageEntities';
 import { Cartesian3 } from 'cesium';
+import { useEffect, useState } from 'react';
 
 function CesiumMap() {
   return (
@@ -11,9 +12,10 @@ function CesiumMap() {
       />
       <Entity>
         <PolygonGraphics
+          key="hehe"
           hierarchy={Cartesian3.fromDegreesArray([
-            106.806024, -6.182291, 106.806024, -6.232975, 106.863187, -6.232975,
-            106.863187, -6.182291
+            106.826024, -6.192291, 106.826024, -6.222975, 106.863187, -6.222975,
+            106.863187, -6.192291
           ])}
           // material={ResiumColor.RED.withAlpha(0.6)}
           extrudedHeight={2000}
