@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Feature, Map } from 'ol';
+import { Feature } from 'ol';
 import { fromLonLat } from 'ol/proj';
 import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
@@ -7,6 +7,16 @@ import { Polygon } from 'ol/geom';
 import { villages } from '../../data';
 import { useMapStore } from '../../store/map';
 import { defaultStyleFunction } from '../styles';
+
+export const displayedVillages = villages.map((village) => {
+  const coordinates = village.members
+    .filter((member) => member.role === 'outer')
+    .flatMap((member) =>
+      member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
+    );
+
+  return { village, coordinates };
+});
 
 export function useAddVillages() {
   const {
@@ -34,13 +44,7 @@ export function useAddVillages() {
     }
 
     if (isVillagesLayerActive) {
-      const features = villages.map((village) => {
-        const coordinates = village.members
-          .filter((member) => member.role === 'outer')
-          .flatMap((member) =>
-            member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
-          );
-
+      const features = displayedVillages.map(({ village, coordinates }) => {
         const polygon = new Polygon([coordinates]);
         const polygonArea = polygon.getArea();
 
