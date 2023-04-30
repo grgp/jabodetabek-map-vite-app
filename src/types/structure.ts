@@ -1,3 +1,6 @@
+import { Coordinate } from 'ol/coordinate';
+import { Polygon } from 'ol/geom';
+
 export type Village = {
   type: 'relation';
   id: 10989417;
@@ -27,6 +30,13 @@ export type MemberItem = {
     lat: number;
     lon: number;
   }>;
+};
+
+export type VillageFullData = {
+  village: Village;
+  coordinates: Coordinate[];
+  polygon: Polygon; // ol.Polygon
+  polygonArea: number;
 };
 
 export type VillagePopData = {

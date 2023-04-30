@@ -7,15 +7,19 @@ import { Polygon } from 'ol/geom';
 import { villages } from '../../data';
 import { useMapStore } from '../../store/map';
 import { defaultStyleFunction } from '../styles';
+import { VillageFullData } from '../../types/structure';
 
-export const displayedVillages = villages.map((village) => {
+export const displayedVillages: VillageFullData[] = villages.map((village) => {
   const coordinates = village.members
     .filter((member) => member.role === 'outer')
     .flatMap((member) =>
       member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
     );
 
-  return { village, coordinates };
+  const polygon = new Polygon([coordinates]);
+  const polygonArea = polygon.getArea();
+
+  return { village, coordinates, polygon, polygonArea };
 });
 
 export function useAddVillages() {
@@ -44,17 +48,16 @@ export function useAddVillages() {
     }
 
     if (isVillagesLayerActive) {
-      const features = displayedVillages.map(({ village, coordinates }) => {
-        const polygon = new Polygon([coordinates]);
-        const polygonArea = polygon.getArea();
-
-        const feature = new Feature({
-          geometry: polygon,
-          villageData: village,
-          polygonArea
-        });
-        return feature;
-      });
+      const features = displayedVillages.map(
+        ({ village, polygon, polygonArea }) => {
+          const feature = new Feature({
+            geometry: polygon,
+            villageData: village,
+            polygonArea
+          });
+          return feature;
+        }
+      );
 
       // Create a vector source from the features
       const vectorSource = new VectorSource({
