@@ -34,15 +34,31 @@ export function splitBigRectangle(
   return grid;
 }
 
-export function randomRectangleColor() {
-  const red = Color('rgb(255, 50, 50)');
-  const orange = Color('rgb(255, 185, 25)');
+export function randomMixColor() {
+  const firstColor = Color('rgb(50, 230, 50)');
+  const secondColor = Color('rgb(20, 125, 25)');
 
   // Generate a random value between 0 and 1
   const randomValue = Math.random();
 
   // Interpolate between red and orange using the random value
-  const randomColor = red.mix(orange, randomValue);
+  const randomColor = firstColor.mix(secondColor, randomValue);
+
+  return randomColor.toString();
+}
+
+export function randomSaturationLightnessColor(
+  saturationRange: number[],
+  lightnessRange: number[]
+) {
+  const randomHue = Math.random() * 360;
+  const randomSaturation =
+    saturationRange[0] +
+    Math.random() * (saturationRange[1] - saturationRange[0]);
+  const randomLightness =
+    lightnessRange[0] + Math.random() * (lightnessRange[1] - lightnessRange[0]);
+
+  const randomColor = Color.hsl(randomHue, randomSaturation, randomLightness);
 
   return randomColor.toString();
 }

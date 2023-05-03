@@ -1,10 +1,11 @@
 import React from 'react';
-import Color from 'color';
+import ColorUtils from 'color';
 import { Entity, PolygonGraphics } from 'resium';
-import { Cartesian3 } from 'cesium';
+import { Cartesian3, Color } from 'cesium';
 import { Polygon } from 'ol/geom';
 import { VillageFullData } from '../../types/structure';
 import { villages } from '../../data';
+import { randomMixColor, randomSaturationLightnessColor } from './utils';
 
 const displayedVillagesOLCoordinates: VillageFullData[] = villages.map(
   (village) => {
@@ -34,7 +35,8 @@ export const VillageEntities = () => {
           coord[0]
         ]);
         const population = parseInt(data.village.tags.admin_level, 10);
-        const height = population / data.polygonArea;
+        const density = population / data.polygonArea;
+        const height = density / 30;
 
         const polygonHierarchy = Cartesian3.fromDegreesArray(
           coordinates.flat()
@@ -51,11 +53,10 @@ export const VillageEntities = () => {
           <Entity key={index}>
             <PolygonGraphics
               hierarchy={polygonHierarchy}
-              // material={Color(`hsla(${Math.random() * 360}, 100%, 50%, 0.6)`)
-              //   .rgb()
-              //   .array()}
-              // extrudedHeight={height * 5000000000000}
-              extrudedHeight={height / 50}
+              material={Color.fromCssColorString(
+                randomSaturationLightnessColor([30, 60], [40, 60])
+              )}
+              extrudedHeight={height}
             />
           </Entity>
         );

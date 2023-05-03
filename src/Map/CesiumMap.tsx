@@ -2,7 +2,7 @@ import { CameraFlyTo, Viewer, Entity, PolygonGraphics } from 'resium';
 import { VillageEntities } from './resium/VillageEntities';
 import { Cartesian3, Color } from 'cesium';
 import { useEffect, useState } from 'react';
-import { randomRectangleColor, splitBigRectangle } from './resium/utils';
+import { randomMixColor, splitBigRectangle } from './resium/utils';
 
 const rectangles = splitBigRectangle(
   [
@@ -28,7 +28,7 @@ function CesiumMap() {
             <PolygonGraphics
               hierarchy={Cartesian3.fromDegreesArray(coordinates)}
               // material={ResiumColor.RED.withAlpha(0.6)}
-              material={Color.fromCssColorString(randomRectangleColor())}
+              material={Color.fromCssColorString(randomMixColor())}
               extrudedHeight={200 + Math.random() * 1000}
             />
           </Entity>
