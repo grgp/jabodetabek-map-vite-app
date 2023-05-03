@@ -1,6 +1,6 @@
 import React from 'react';
 import ColorUtils from 'color';
-import { Entity, PolygonGraphics } from 'resium';
+import { Entity, EntityDescription, PolygonGraphics } from 'resium';
 import { Cartesian3, Color } from 'cesium';
 import { Polygon } from 'ol/geom';
 import { VillageFullData } from '../../types/structure';
@@ -22,7 +22,9 @@ const displayedVillagesOLCoordinates: VillageFullData[] = villages.map(
   }
 );
 
-export const VillageEntities = () => {
+export const VillageEntities: React.FC<{ polygonEntity: any }> = ({
+  polygonEntity
+}) => {
   const villageData = displayedVillagesOLCoordinates;
 
   console.log('what are villageData', villageData);
@@ -50,11 +52,21 @@ export const VillageEntities = () => {
         });
 
         return (
-          <Entity key={index}>
+          <Entity
+            key={index}
+            ref={(element) => {
+              if (element) {
+                polygonEntity.merge(element.cesiumElement);
+              }
+            }}
+          >
+            <EntityDescription>
+              <div>Name: {data.village.tags.name}</div>
+            </EntityDescription>
             <PolygonGraphics
               hierarchy={polygonHierarchy}
               material={Color.fromCssColorString(
-                randomSaturationLightnessColor([30, 60], [40, 60])
+                randomSaturationLightnessColor([40, 60], [40, 50])
               )}
               extrudedHeight={height}
             />
