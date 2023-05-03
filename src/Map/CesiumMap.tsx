@@ -22,17 +22,18 @@ function CesiumMap() {
         destination={Cartesian3.fromDegrees(106.84513, -6.20876, 50000)}
         duration={0}
       />
-      {rectangles.map((coordinates) => (
-        <Entity>
-          <PolygonGraphics
-            hierarchy={Cartesian3.fromDegreesArray(coordinates)}
-            // material={ResiumColor.RED.withAlpha(0.6)}
-            material={Color.fromCssColorString(randomRectangleColor())}
-            extrudedHeight={200 + Math.random() * 1000}
-          />
-        </Entity>
-      ))}
-      {/* <VillageEntities /> */}
+      {false &&
+        rectangles.map((coordinates) => (
+          <Entity key={JSON.stringify(coordinates)}>
+            <PolygonGraphics
+              hierarchy={Cartesian3.fromDegreesArray(coordinates)}
+              // material={ResiumColor.RED.withAlpha(0.6)}
+              material={Color.fromCssColorString(randomRectangleColor())}
+              extrudedHeight={200 + Math.random() * 1000}
+            />
+          </Entity>
+        ))}
+      <VillageEntities />
     </Viewer>
   );
 }

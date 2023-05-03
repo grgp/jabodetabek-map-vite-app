@@ -2,14 +2,33 @@ import React from 'react';
 import Color from 'color';
 import { Entity, PolygonGraphics } from 'resium';
 import { Cartesian3 } from 'cesium';
-import { displayedVillages } from '../effects/villages';
+import { Polygon } from 'ol/geom';
+import { VillageFullData } from '../../types/structure';
+import { villages } from '../../data';
+
+const displayedVillagesOLCoordinates: VillageFullData[] = villages.map(
+  (village) => {
+    const coordinates = village.members
+      .filter((member) => member.role === 'outer')
+      .flatMap((member) =>
+        member.geometry.map((point) => [point.lat, point.lon])
+      );
+
+    const polygon = new Polygon([coordinates]);
+    const polygonArea = polygon.getArea();
+
+    return { village, coordinates, polygon, polygonArea };
+  }
+);
 
 export const VillageEntities = () => {
-  const villageData = displayedVillages;
+  const villageData = displayedVillagesOLCoordinates;
+
+  console.log('what are villageData', villageData);
 
   return (
     <>
-      {villageData.slice(0, 5).map((data, index) => {
+      {villageData.map((data, index) => {
         const coordinates = data.coordinates.map((coord) => [
           coord[1],
           coord[0]
@@ -21,10 +40,11 @@ export const VillageEntities = () => {
           coordinates.flat()
         ) as any;
 
-        console.log('what is polygonHierarch', {
-          polygonHierarchy,
-          population,
-          height
+        console.log('what is polygonHierarchy', {
+          coordFlat: coordinates.flat()
+          // polygonHierarchy,
+          // population,
+          // height
         });
 
         return (
@@ -34,7 +54,8 @@ export const VillageEntities = () => {
               // material={Color(`hsla(${Math.random() * 360}, 100%, 50%, 0.6)`)
               //   .rgb()
               //   .array()}
-              extrudedHeight={height * 5000000000000}
+              // extrudedHeight={height * 5000000000000}
+              extrudedHeight={height / 50}
             />
           </Entity>
         );

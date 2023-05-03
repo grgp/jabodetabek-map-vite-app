@@ -9,18 +9,20 @@ import { useMapStore } from '../../store/map';
 import { defaultStyleFunction } from '../styles';
 import { VillageFullData } from '../../types/structure';
 
-export const displayedVillages: VillageFullData[] = villages.map((village) => {
-  const coordinates = village.members
-    .filter((member) => member.role === 'outer')
-    .flatMap((member) =>
-      member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
-    );
+const displayedVillagesOLCoordinates: VillageFullData[] = villages.map(
+  (village) => {
+    const coordinates = village.members
+      .filter((member) => member.role === 'outer')
+      .flatMap((member) =>
+        member.geometry.map((point) => fromLonLat([point.lon, point.lat]))
+      );
 
-  const polygon = new Polygon([coordinates]);
-  const polygonArea = polygon.getArea();
+    const polygon = new Polygon([coordinates]);
+    const polygonArea = polygon.getArea();
 
-  return { village, coordinates, polygon, polygonArea };
-});
+    return { village, coordinates, polygon, polygonArea };
+  }
+);
 
 export function useAddVillages() {
   const {
@@ -48,7 +50,7 @@ export function useAddVillages() {
     }
 
     if (isVillagesLayerActive) {
-      const features = displayedVillages.map(
+      const features = displayedVillagesOLCoordinates.map(
         ({ village, polygon, polygonArea }) => {
           const feature = new Feature({
             geometry: polygon,
