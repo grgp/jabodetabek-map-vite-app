@@ -5,7 +5,10 @@ import { Cartesian3, Color } from 'cesium';
 import { Polygon } from 'ol/geom';
 import { VillageFullData } from '../../types/structure';
 import { villages } from '../../data';
+import { villagesPopsData } from '../../data';
 import { randomMixColor, randomSaturationLightnessColor } from './utils';
+import { POPUP_STYLES } from '../styles';
+import { capitalizeWords } from '../utils';
 
 const displayedVillagesOLCoordinates: VillageFullData[] = villages.map(
   (village) => {
@@ -36,20 +39,28 @@ export const VillageEntities: React.FC<{ polygonEntity: any }> = ({
           coord[1],
           coord[0]
         ]);
-        const population = parseInt(data.village.tags.admin_level, 10);
+
+        const popData =
+          villagesPopsData[data.village.tags?.name?.toUpperCase()];
+
+        if (!popData) {
+          return;
+        }
+
+        const population = popData.total_population;
         const density = population / data.polygonArea;
-        const height = density / 30;
+        const height = density / 100000;
 
         const polygonHierarchy = Cartesian3.fromDegreesArray(
           coordinates.flat()
         ) as any;
 
-        console.log('what is polygonHierarchy', {
-          coordFlat: coordinates.flat()
-          // polygonHierarchy,
-          // population,
-          // height
-        });
+        // console.log('what is polygonHierarchy', {
+        //   coordFlat: coordinates.flat()
+        //   // polygonHierarchy,
+        //   // population,
+        //   // height
+        // });
 
         return (
           <Entity
@@ -61,7 +72,13 @@ export const VillageEntities: React.FC<{ polygonEntity: any }> = ({
             }}
           >
             <EntityDescription>
-              <div>Name: {data.village.tags.name}</div>
+              <div style={{ minHeight: 40 }}>
+                <div>
+                  <strong>{capitalizeWords(data.village.tags?.name)}</strong>
+                  <div>Population: {population}</div>
+                  <div>Density: {(density / 10000000).toFixed(2)} * 10^7</div>
+                </div>
+              </div>
             </EntityDescription>
             <PolygonGraphics
               hierarchy={polygonHierarchy}

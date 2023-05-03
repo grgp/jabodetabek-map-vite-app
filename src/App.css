@@ -8,3 +8,7 @@
   background-color: rgb(156, 197, 220);
   z-index: 100;
 }
+
+.cesium-infoBox {
+  max-width: 200px;
+}

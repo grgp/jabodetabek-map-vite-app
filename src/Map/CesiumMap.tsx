@@ -1,11 +1,4 @@
-import {
-  CameraFlyTo,
-  Viewer,
-  Entity,
-  PolygonGraphics,
-  InfoBox,
-  EntityDescription
-} from 'resium';
+import { CameraFlyTo, Viewer, Entity, PolygonGraphics } from 'resium';
 import { VillageEntities } from './resium/VillageEntities';
 import {
   Cartesian3,
@@ -42,12 +35,7 @@ function CesiumMap() {
 
       const pickedObject = viewer.scene.pick(endPosition);
 
-      console.log('what is', { pickedObject });
       if (pickedObject && pickedObject.id === polygonEntity) {
-        // console.log('what are', { pickedObject, polygonEntity });
-        const entity = pickedObject.id;
-        const description = entity.description.getValue();
-        // console.log('what is description', description);
         setSelectedEntity(polygonEntity);
       } else {
         setSelectedEntity(null);
@@ -68,7 +56,6 @@ function CesiumMap() {
 
   return (
     <Viewer full shadows ref={viewerRef}>
-      <InfoBox selectedEntity={selectedEntity} />
       <CustomInfoBox entity={selectedEntity} />
       <CameraFlyTo
         destination={Cartesian3.fromDegrees(106.84513, -6.20876, 50000)}
@@ -99,9 +86,9 @@ const CustomInfoBox = ({ entity }: any) => {
   const info = JSON.parse(entity.description.getValue());
 
   return (
-    <div className="info-box">
-      <h3>{info.title}</h3>
-      <p>{info.content}</p>
+    <div style={{ height: 'auto', maxWidth: 100 }}>
+      <h5>{info.title}</h5>
+      <div>{info.content}</div>
     </div>
   );
 };
