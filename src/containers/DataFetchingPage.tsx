@@ -10,6 +10,7 @@ import trainsInJakarta from '../data/trains/trains-passing-jakarta.json';
 import trainsInJakartaUnique from '../data/trains/trains-passing-jakarta-unique.json';
 import { fetchRailwayData, fetchTrainSchedules } from '../fetches/railwayData';
 import { combineRailwayData } from '../fetches/railwayTransforms';
+import { fetchAndCombineGeoJSONs } from '../fetches/rukunTetanggaData';
 
 const buttonStyle =
   'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded';
@@ -90,6 +91,16 @@ export function DataFetchingPage() {
         }}
       >
         Combine Fetched Railway Data
+      </button>
+
+      <button
+        className={buttonStyle}
+        onClick={async () => {
+          const data = await fetchAndCombineGeoJSONs();
+          console.log('Rukun Tetangga', data);
+        }}
+      >
+        Combine Fetched Rukun Tetangga
       </button>
 
       <CSVUploader />
