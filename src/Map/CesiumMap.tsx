@@ -74,7 +74,7 @@ function CesiumMap() {
             />
           </Entity>
         ))}
-      <VillageEntities polygonEntity={polygonEntity} />
+      {/* <VillageEntities polygonEntity={polygonEntity} /> */}
       <RukunTetanggaEntities polygonEntity={polygonEntity} />
     </Viewer>
   );
