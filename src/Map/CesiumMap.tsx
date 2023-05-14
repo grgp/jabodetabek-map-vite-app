@@ -9,6 +9,7 @@ import {
 } from 'cesium';
 import { useEffect, useRef, useState } from 'react';
 import { randomMixColor, splitBigRectangle } from './resium/utils';
+import { RukunTetanggaEntities } from './resium/RukunTetanggaEntities';
 
 const rectangles = splitBigRectangle(
   [
@@ -74,6 +75,7 @@ function CesiumMap() {
           </Entity>
         ))}
       <VillageEntities polygonEntity={polygonEntity} />
+      <RukunTetanggaEntities polygonEntity={polygonEntity} />
     </Viewer>
   );
 }

@@ -1,8 +1,6 @@
+import { transform } from 'ol/proj';
 import urls from '../data/pops/kependudukan-fetch-urls.json';
-import {
-  RukunTetanggaGeoJSON,
-  RukunTetanggaFeature
-} from '../types/rukunTetangga';
+import { RukunTetanggaGeoJSON } from '../types/rukunTetangga';
 
 // Function to fetch a GeoJSON object from a URL
 async function fetchGeoJSON(url: string): Promise<RukunTetanggaGeoJSON> {
@@ -13,10 +11,11 @@ async function fetchGeoJSON(url: string): Promise<RukunTetanggaGeoJSON> {
 
 function parseGeoJSON(geoJSON: RukunTetanggaGeoJSON): RukunTetanggaGeoJSON {
   const parsedFeatures = geoJSON.features.map((feature) => {
-    const coordinates = feature.geometry.coordinates[0].map(([x, y]) => [
-      y,
-      x
-    ]) as Array<[number, number]>;
+    const coordinates = feature.geometry.coordinates[0].map(([x, y]) => {
+      const coords = transform([x, y], 'EPSG:3857', 'EPSG:4326');
+
+      return [coords[1], coords[0]];
+    }) as Array<[number, number]>;
 
     return {
       ...feature,
@@ -36,10 +35,15 @@ function parseGeoJSON(geoJSON: RukunTetanggaGeoJSON): RukunTetanggaGeoJSON {
 const batchSize = 3;
 
 // Fetch GeoJSON objects from the URLs and store them in an array
-export async function fetchAndCombineGeoJSONs(): Promise<RukunTetanggaGeoJSON> {
+export async function fetchAndCombineGeoJSONs(): Promise<
+  Record<string, RukunTetanggaGeoJSON>
+> {
   const parsedGeoJsons: RukunTetanggaGeoJSON[] = [];
 
-  for (let i = 0; i < urls.length; i += batchSize) {
+  let numberOfUrls = urls.length;
+  numberOfUrls = 1;
+
+  for (let i = 0; i < numberOfUrls; i += batchSize) {
     const batchUrls = urls.slice(i, i + batchSize);
     const geoJsons = await Promise.all(batchUrls.map(fetchGeoJSON));
     const parsedBatchGeoJsons = geoJsons
@@ -59,17 +63,15 @@ export async function fetchAndCombineGeoJSONs(): Promise<RukunTetanggaGeoJSON> {
     return ax - bx;
   });
 
-  // Combine the sorted objects into a single GeoJSON object
-  const combinedGeoJSON: RukunTetanggaGeoJSON = {
-    type: 'FeatureCollection',
-    crs: parsedGeoJsons[0].crs,
-    transform: parsedGeoJsons[0].transform,
-    features: ([] as RukunTetanggaFeature[]).concat(
-      ...parsedGeoJsons.map((g) => g.features)
-    )
-  };
+  const result = {} as Record<string, RukunTetanggaGeoJSON>;
 
-  return combinedGeoJSON;
+  parsedGeoJsons.forEach((item) => {
+    const [x, y] = item.transform.translate;
+
+    result[`key-${x}-${y}`] = item;
+  });
+
+  return result;
 }
 
 // Usage example
