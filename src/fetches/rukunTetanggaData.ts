@@ -1,6 +1,7 @@
 import { transform } from 'ol/proj';
 import urls from '../data/pops/kependudukan-fetch-urls.json';
 import { RukunTetanggaGeoJSON } from '../types/rukunTetangga';
+import { saveToFile } from '../utils/files';
 
 // Function to fetch a GeoJSON object from a URL
 async function fetchGeoJSON(url: string): Promise<RukunTetanggaGeoJSON> {
@@ -40,8 +41,8 @@ export async function fetchAndCombineGeoJSONs(): Promise<
 > {
   const parsedGeoJsons: RukunTetanggaGeoJSON[] = [];
 
-  let numberOfUrls = urls.length;
-  numberOfUrls = 1;
+  const numberOfUrls = urls.length;
+  // numberOfUrls = 1;
 
   for (let i = 0; i < numberOfUrls; i += batchSize) {
     const batchUrls = urls.slice(i, i + batchSize);
@@ -70,6 +71,8 @@ export async function fetchAndCombineGeoJSONs(): Promise<
 
     result[`key-${x}-${y}`] = item;
   });
+
+  saveToFile(result);
 
   return result;
 }
