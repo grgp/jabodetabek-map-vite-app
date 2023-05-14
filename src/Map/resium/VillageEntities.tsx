@@ -40,7 +40,7 @@ export const VillageEntities: React.FC<{ polygonEntity: any }> = ({
           coord[0]
         ]);
 
-        console.log('what are coordinates in villages', coordinates);
+        // console.log('what are coordinates in villages', coordinates);
 
         const popData =
           villagesPopsData[data.village.tags?.name?.toUpperCase()];
