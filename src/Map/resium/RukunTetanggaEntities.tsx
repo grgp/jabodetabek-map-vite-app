@@ -33,11 +33,11 @@ export const RukunTetanggaEntities: React.FC<{ polygonEntity: any }> = ({
           //   return;
           // }
 
-          // const population = popData.total_population;
+          // const population = feature.properties.TOTAL_PENDUDUK;
           // const density = population / data.polygonArea;
-          // const height = density / 100000;
 
-          const height = Math.random() * 1000 + 500;
+          const density = feature.properties.KEPADATAN;
+          const height = density / 100;
 
           const flatCoordinates = coordinates.flat();
 
