@@ -37,5 +37,5 @@ export interface RukunTetanggaGeoJSON {
   type: GeoJSONType;
   crs: CRS;
   transform: Transform;
-  features: RukunTetanggaFeature[];
+  features: RukunTetanggaFeature[]; // might be undefined from the API
 }
