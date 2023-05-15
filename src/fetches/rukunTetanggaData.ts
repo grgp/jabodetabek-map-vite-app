@@ -1,5 +1,5 @@
 import { transform } from 'ol/proj';
-import urls from '../data/pops/kependudukan-fetch-urls.json';
+import urls from '../data/pops/kependudukan-fetch-urls-fix-1.json';
 import { RukunTetanggaGeoJSON } from '../types/rukunTetangga';
 import { saveToFile } from '../utils/files';
 

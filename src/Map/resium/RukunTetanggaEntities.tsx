@@ -22,7 +22,7 @@ export const RukunTetanggaEntities: React.FC<{ polygonEntity: any }> = ({
                 .filter(
                   (c) => typeof c[0] === 'number' && typeof c[1] === 'number'
                 )
-                .filter((c) => c.length === 2)
+                .filter((c) => c.length % 2 === 0)
                 .map((c) => [c[1], c[0]])
             );
 
