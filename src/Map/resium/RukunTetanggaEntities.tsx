@@ -3,8 +3,7 @@ import { Entity, EntityDescription, PolygonGraphics } from 'resium';
 import { Cartesian3, Color } from 'cesium';
 
 import { rukunTetanggaData } from '../../data';
-import { randomSaturationLightnessColor } from './utils';
-import { capitalizeWords } from '../utils';
+import { getColorFromDensity } from '../styles';
 
 export const RukunTetanggaEntities: React.FC<{ polygonEntity: any }> = ({
   polygonEntity
@@ -58,6 +57,8 @@ export const RukunTetanggaEntities: React.FC<{ polygonEntity: any }> = ({
             //   // height
             // });
 
+            const densityColor = getColorFromDensity(density);
+
             return (
               <Entity
                 key={`${groupIdx}-${index}`}
@@ -78,9 +79,10 @@ export const RukunTetanggaEntities: React.FC<{ polygonEntity: any }> = ({
                 </EntityDescription>
                 <PolygonGraphics
                   hierarchy={polygonHierarchy}
-                  material={Color.fromCssColorString(
-                    randomSaturationLightnessColor([40, 60], [40, 50])
-                  )}
+                  // material={Color.fromCssColorString(
+                  //   randomSaturationLightnessColor([40, 60], [40, 50])
+                  // )}
+                  material={Color.fromCssColorString(densityColor)}
                   extrudedHeight={height}
                 />
               </Entity>

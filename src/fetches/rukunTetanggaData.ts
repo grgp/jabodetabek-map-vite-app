@@ -44,7 +44,7 @@ export async function fetchAndCombineGeoJSONs(): Promise<
   const numberOfUrls = urls.length;
   // numberOfUrls = 1;
 
-  for (let i = 0; i < numberOfUrls; i += batchSize) {
+  for (let i = numberOfUrls / 2; i < numberOfUrls; i += batchSize) {
     const batchUrls = urls.slice(i, i + batchSize);
     const geoJsons = await Promise.all(batchUrls.map(fetchGeoJSON));
     const parsedBatchGeoJsons = geoJsons

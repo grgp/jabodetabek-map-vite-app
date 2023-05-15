@@ -28,6 +28,16 @@ export const getColor = (totalPopulation: number, polygonArea: number) => {
   return colorStart.mix(colorEnd, ratio).alpha(0.8).toString();
 };
 
+export const getColorFromDensity = (density: number) => {
+  const colorStart = Color('#e6ffcc');
+  const colorEnd = Color('#006400');
+
+  const modifier = 0.000023;
+
+  const ratio = Math.min(Math.max(density * modifier, 0), 1);
+  return colorStart.mix(colorEnd, ratio).toString();
+};
+
 export const POPUP_STYLES = {
   top: -999,
   right: -999,

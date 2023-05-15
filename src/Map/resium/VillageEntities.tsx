@@ -7,7 +7,7 @@ import { VillageFullData } from '../../types/structure';
 import { villages } from '../../data';
 import { villagesPopsData } from '../../data';
 import { randomMixColor, randomSaturationLightnessColor } from './utils';
-import { POPUP_STYLES } from '../styles';
+import { POPUP_STYLES, getColorFromDensity } from '../styles';
 import { capitalizeWords } from '../utils';
 
 const displayedVillagesOLCoordinates: VillageFullData[] = villages.map(
