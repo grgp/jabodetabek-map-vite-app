@@ -32,10 +32,22 @@ export const getColorFromDensity = (density: number) => {
   const colorStart = Color('#e6ffcc');
   const colorEnd = Color('#006400');
 
-  const modifier = 0.000023;
+  const minDensity = 5000;
+  const maxDensity = 50000;
 
-  const ratio = Math.min(Math.max(density * modifier, 0), 1);
-  return colorStart.mix(colorEnd, ratio).toString();
+  const modifier = 0.4;
+
+  const ratio = Math.min(
+    Math.max(
+      ((density - minDensity) / (maxDensity - minDensity)) * modifier,
+      0.01
+    ),
+    1
+  );
+
+  const alphaValue = ratio > 0.3 ? 1 : ratio * 10;
+
+  return colorStart.mix(colorEnd, ratio).alpha(alphaValue).toString();
 };
 
 export const POPUP_STYLES = {

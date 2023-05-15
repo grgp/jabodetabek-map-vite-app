@@ -1,4 +1,5 @@
 import React from 'react';
+import ColorColor from 'color';
 import { Entity, EntityDescription, PolygonGraphics } from 'resium';
 import { Cartesian3, Color } from 'cesium';
 
@@ -38,7 +39,7 @@ export const RukunTetanggaEntities: React.FC<{ polygonEntity: any }> = ({
             // const density = population / data.polygonArea;
 
             const density = feature.properties.KEPADATAN;
-            const height = density / 100;
+            const height = Math.max(density / 200, 0);
 
             const flatCoordinates = coordinates.flat();
 
