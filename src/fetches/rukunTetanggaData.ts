@@ -33,7 +33,7 @@ function parseGeoJSON(geoJSON: RukunTetanggaGeoJSON): RukunTetanggaGeoJSON {
   };
 }
 
-const batchSize = 3;
+const batchSize = 5;
 
 // Fetch GeoJSON objects from the URLs and store them in an array
 export async function fetchAndCombineGeoJSONs(): Promise<
@@ -41,11 +41,12 @@ export async function fetchAndCombineGeoJSONs(): Promise<
 > {
   const parsedGeoJsons: RukunTetanggaGeoJSON[] = [];
 
-  const numberOfUrls = urls.length;
+  const uniqueUrls = Array.from(new Set(urls));
+  const numberOfUrls = uniqueUrls.length;
   // numberOfUrls = 1;
 
-  for (let i = numberOfUrls / 2; i < numberOfUrls; i += batchSize) {
-    const batchUrls = urls.slice(i, i + batchSize);
+  for (let i = 0; i <= numberOfUrls; i += batchSize) {
+    const batchUrls = uniqueUrls.slice(i, i + batchSize);
     const geoJsons = await Promise.all(batchUrls.map(fetchGeoJSON));
     const parsedBatchGeoJsons = geoJsons
       .filter((item) => item.features)
@@ -54,22 +55,22 @@ export async function fetchAndCombineGeoJSONs(): Promise<
   }
 
   // Sort the fetched objects based on their `translate` values
-  parsedGeoJsons.sort((a, b) => {
-    const [ax, ay] = a.transform.translate;
-    const [bx, by] = b.transform.translate;
+  // parsedGeoJsons.sort((a, b) => {
+  //   const [ax, ay] = a.transform.translate;
+  //   const [bx, by] = b.transform.translate;
 
-    if (ay !== by) {
-      return ay - by;
-    }
-    return ax - bx;
-  });
+  //   if (ay !== by) {
+  //     return ay - by;
+  //   }
+  //   return ax - bx;
+  // });
 
   const result = {} as Record<string, RukunTetanggaGeoJSON>;
 
   parsedGeoJsons.forEach((item) => {
     const [x, y] = item.transform.translate;
 
-    result[`key-${x}-${y}`] = item;
+    result[`key-${x}-${y}-${Math.random().toFixed(5)}`] = item;
   });
 
   saveToFile(result);
